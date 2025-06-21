@@ -1,4 +1,4 @@
-""" # auth.py
+# auth.py
 import os
 from datetime import datetime, timedelta, timezone
 from typing import Optional
@@ -376,4 +376,3 @@ async def read_conversations(current_user: User = Depends(get_current_active_use
         return conversations
     finally:
         db.close()
- """

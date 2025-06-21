@@ -19,7 +19,8 @@ from loguru import logger
 from pydantic import BaseModel, Field
 from utils.llm_tools import init_qdrant_db, llm_pipeline
 from utils.whatsapp import whatsapp_messenger
-
+from utils.routers import auth
+from middleware.auth_middleware import auth_middleware
 #Company specific data paths. Includes inventory
 knowledge_base = ["utils/data/data.csv", "utils/data/tires.csv"]
 
@@ -48,8 +49,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # Add middleware
-#app.middleware("http")(auth_middleware)
-
+app.middleware("http")(auth_middleware)
+app.include_router(auth.router)
 # load the env
 load_dotenv()
 
@@ -123,6 +124,8 @@ async def generate_text(request: GenerationRequest):
 
         # Run the model and store the results
         web_prompt_reply =await llm_pipeline(request=request, source="WEB")
+        cleaned_reply=convert_llm_output_to_readable(web_prompt_reply)
+        logger.info(cleaned_reply)
         return convert_llm_output_to_readable(web_prompt_reply)
 
     except httpx.HTTPStatusError as e:

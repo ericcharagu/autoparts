@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 
-import json
-import os
 from datetime import datetime, timedelta, timezone
+from typing import Any, List
 
-from typing import Any, Dict, List, Tuple
-import asyncio
 from dotenv import load_dotenv
-from loguru import logger
-from transformers.utils import get_json_schema
 from duckduckgo_search import DDGS
+from loguru import logger
+from ollama import AsyncClient
+from pydantic import BaseModel
+from transformers.utils import get_json_schema
+
 from utils.db import HybridRetriever
 from utils.orders import Orders
 from utils.payment import Payments
-from ollama import AsyncClient
+
 # Load environment variables
 load_dotenv()
 
@@ -210,9 +210,15 @@ def low_similarity(user_input: str):
 
 tools = [get_json_schema(format_quotation), get_json_schema(payment_methods), get_json_schema(low_similarity)]
 
+# Define request models
+class GenerationRequest(BaseModel):
+    prompt: str
+    prompt_timestamp: datetime = datetime.now(timezone.utc)
+
+
 
 # Optimized LLM pipeline
-async def llm_pipeline(request, source:str, top_k=3) -> Any:
+async def llm_pipeline(request:GenerationRequest, source:str, top_k=3) -> Any:
 
     try:
         # Load the context as the questions generated fron the OCR

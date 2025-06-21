@@ -12,6 +12,9 @@ services:
         condition: service_healthy
       qdrant:
         condition: service_healthy
+      postgres:
+        condition: service_healthy
+
     volumes:
       - ./:/app
       - ./logs:/app/logs
@@ -100,6 +103,29 @@ services:
     volumes:
       - autoparts_qdrant_data:/qdrant/storage
 
+  postgres:
+    image: docker.io/library/postgres:17.5-alpine
+    container_name: db_server
+    ports:
+      - "5432:5432"
+    volumes:
+      - autoparts_postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=autoparts_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_secrets
+    secrets:
+      - postgres_secrets
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d autoparts_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - autoparts_network
+
 configs:
   qdrant_config:
     content: |
@@ -113,7 +139,11 @@ volumes:
   autoparts_ollama_data:
   autoparts_embeddings_data:
   autoparts_qdrant_data:
+  autoparts_postgres_data:
+
 
 secrets:
+  postgres_secrets:
+    file: ./secrets/postgres_secrets.txt
   whatsapp_secrets:
     file: ./secrets/whatsapp_secrets.txt

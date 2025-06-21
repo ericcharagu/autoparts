@@ -12,7 +12,7 @@ QDRANT_HOST = "http://host.docker.internal:6333"
 
 COLLECTION_NAME = "autoparts_test"
 DIMENSION = 768
-CHUNK_SIZE = 1000
+CHUNK_SIZE = 200
 
 
 class HybridRetriever:
