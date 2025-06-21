@@ -1,0 +1,3392 @@
+[
+    {
+        "item_name": "035MF NSL POWERLAST",
+        "product_code": "POW-35-MF-NSL",
+        "retail_selling_price": "7393.4",
+        "units": "5",
+        "buying_price": "5,281",
+        "wholesale_selling_price": "5809.1",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "045MF NSL POWERLAST",
+        "product_code": "POW-45-MF-NSL",
+        "retail_selling_price": "8897",
+        "units": "5",
+        "buying_price": "6,355",
+        "wholesale_selling_price": "6990.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N50MFL CHLORIDE EXIDE MAXX",
+        "product_code": "MAXX-50-N-MFL",
+        "retail_selling_price": "9664.2",
+        "units": "5",
+        "buying_price": "6,903",
+        "wholesale_selling_price": "7593.3",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N50 L MF POWERLAST (SHORT BOX)",
+        "product_code": "POW-50-N-MF",
+        "retail_selling_price": "10159.8",
+        "units": "5",
+        "buying_price": "7,257",
+        "wholesale_selling_price": "7982.7",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "NS70MFL/R POWERLAST",
+        "product_code": "POW-70-MF-NSL",
+        "retail_selling_price": "10942.4",
+        "units": "5",
+        "buying_price": "7,816",
+        "wholesale_selling_price": "8597.6",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N70MFL/R POWERLAST",
+        "product_code": "POW-70-N-MFL",
+        "retail_selling_price": "13290.2",
+        "units": "5",
+        "buying_price": "9,493",
+        "wholesale_selling_price": "10442.3",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N70MFL/R CHLORIDE EXIDE MAXX",
+        "product_code": "MAXX-70-N-MFL",
+        "retail_selling_price": "14334.6",
+        "units": "5",
+        "buying_price": "10,239",
+        "wholesale_selling_price": "11262.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N70ZMF L/R POWERLAST",
+        "product_code": "POW-N70-ZMF-L/R",
+        "retail_selling_price": "15146.6",
+        "units": "5",
+        "buying_price": "10,819",
+        "wholesale_selling_price": "11900.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "090 MFR/L POWERLAST",
+        "product_code": "POW-090-MFR/L",
+        "retail_selling_price": "16007.6",
+        "units": "5",
+        "buying_price": "11,434",
+        "wholesale_selling_price": "12577.4",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N100MFR POWERLAST",
+        "product_code": "POW-N10.0-MFR",
+        "retail_selling_price": "17880.8",
+        "units": "5",
+        "buying_price": "12,772",
+        "wholesale_selling_price": "14049.2",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N120MF R POWERLAST",
+        "product_code": "POW-N120-MFR",
+        "retail_selling_price": "22881.6",
+        "units": "5",
+        "buying_price": "16,344",
+        "wholesale_selling_price": "17978.4",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N150 MFR POWERLAST",
+        "product_code": "POW-N150-MFR",
+        "retail_selling_price": "29037.4",
+        "units": "5",
+        "buying_price": "20,741",
+        "wholesale_selling_price": "22815.1",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N180 MFR POWERLAST",
+        "product_code": "POW-N180-MFR",
+        "retail_selling_price": "32753",
+        "units": "5",
+        "buying_price": "23,395",
+        "wholesale_selling_price": "25734.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N200 MFR POWERLAST",
+        "product_code": "POW-N200-MFR",
+        "retail_selling_price": "37604",
+        "units": "5",
+        "buying_price": "26,860",
+        "wholesale_selling_price": "29546",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N220 MFR POWERLAST",
+        "product_code": "POW-N220-MFR",
+        "retail_selling_price": "44123.8",
+        "units": "5",
+        "buying_price": "31,517",
+        "wholesale_selling_price": "34668.7",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "DIN55 MF POWERLAST",
+        "product_code": "POW-DIN-55-MF",
+        "retail_selling_price": "12208",
+        "units": "5",
+        "buying_price": "8,720",
+        "wholesale_selling_price": "9592",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "DIN66 MF POWERLAST",
+        "product_code": "POW-DIN-66-MF",
+        "retail_selling_price": "14904.4",
+        "units": "5",
+        "buying_price": "10,646",
+        "wholesale_selling_price": "11710.6",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "DIN75 MF POWERLAST",
+        "product_code": "POW-DIN-75-MF",
+        "retail_selling_price": "15864.8",
+        "units": "5",
+        "buying_price": "11,332",
+        "wholesale_selling_price": "12465.2",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "DIN80 MF POWERLAST",
+        "product_code": "POW-DIN-80-MF",
+        "retail_selling_price": "17585.4",
+        "units": "5",
+        "buying_price": "12,561",
+        "wholesale_selling_price": "13817.1",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "DIN88 MF POWERLAST",
+        "product_code": "POW-DIN-88-MF",
+        "retail_selling_price": "18649.4",
+        "units": "5",
+        "buying_price": "13,321",
+        "wholesale_selling_price": "14653.1",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "DIN100 MF POWERLAST",
+        "product_code": "POW-DIN-100-MF",
+        "retail_selling_price": "23098.6",
+        "units": "5",
+        "buying_price": "16,499",
+        "wholesale_selling_price": "18148.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "035MF NSL SPARK",
+        "product_code": "SPAR-035-MF-NSL",
+        "retail_selling_price": "7105",
+        "units": "5",
+        "buying_price": "5,075",
+        "wholesale_selling_price": "5582.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "045MF NSL SPARK",
+        "product_code": "SPAR-045-MF-NSL",
+        "retail_selling_price": "7502.6",
+        "units": "5",
+        "buying_price": "5,359",
+        "wholesale_selling_price": "5894.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "NS70MFL/R SPARK",
+        "product_code": "SPAR-NS70-MFL/R",
+        "retail_selling_price": "10512.6",
+        "units": "5",
+        "buying_price": "7,509",
+        "wholesale_selling_price": "8259.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N70 MFL/R SPARK",
+        "product_code": "SPAR-N70-MFL/R",
+        "retail_selling_price": "12861.8",
+        "units": "5",
+        "buying_price": "9,187",
+        "wholesale_selling_price": "10105.7",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "026 MF SOLAR POWERLAST",
+        "product_code": "POW-026-SOL-MF",
+        "retail_selling_price": "5742.8",
+        "units": "5",
+        "buying_price": "4,102",
+        "wholesale_selling_price": "4512.2",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "050 MF SOLAR POWERLAST",
+        "product_code": "POW-050-SOL-MF",
+        "retail_selling_price": "8688.4",
+        "units": "5",
+        "buying_price": "6,206",
+        "wholesale_selling_price": "6826.6",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "075 MF SOLAR POWERLAST",
+        "product_code": "POW-075-SOL-MF",
+        "retail_selling_price": "11095",
+        "units": "5",
+        "buying_price": "7,925",
+        "wholesale_selling_price": "8717.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "100 MF SOLAR POWERLAST",
+        "product_code": "POW-100-SOL-MF",
+        "retail_selling_price": "16611",
+        "units": "5",
+        "buying_price": "11,865",
+        "wholesale_selling_price": "13051.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "026 MF SOLAR SPARK",
+        "product_code": "SPAR-026-SOL-MF",
+        "retail_selling_price": "4874.1",
+        "units": "5",
+        "buying_price": "3,481.50",
+        "wholesale_selling_price": "3829.65",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "050 MF SOLAR SPARK",
+        "product_code": "SPAR-050-SOL-MF",
+        "retail_selling_price": "7314.23",
+        "units": "5",
+        "buying_price": "5,224.45",
+        "wholesale_selling_price": "5746.895",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "075 MF SOLAR SPARK",
+        "product_code": "SPAR-075-SOL-MF",
+        "retail_selling_price": "10505.88",
+        "units": "5",
+        "buying_price": "7,504.20",
+        "wholesale_selling_price": "8254.62",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "100 MF SOLAR SPARK",
+        "product_code": "SPAR-100-SOL-MF",
+        "retail_selling_price": "13613.6",
+        "units": "5",
+        "buying_price": "9,724.00",
+        "wholesale_selling_price": "10696.4",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N50 SBR CHLORIDE EXIDE",
+        "product_code": "SBR-N50",
+        "retail_selling_price": "9303",
+        "units": "5",
+        "buying_price": "6,645",
+        "wholesale_selling_price": "7309.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "NS70 SBL/SBR CHLORIDE EXIDE",
+        "product_code": "SBR-NS70-SBL",
+        "retail_selling_price": "9795.8",
+        "units": "5",
+        "buying_price": "6,997",
+        "wholesale_selling_price": "7696.7",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N70SBR/SBL CHLORIDE EXIDE",
+        "product_code": "SBR-N70-SBL",
+        "retail_selling_price": "10957.8",
+        "units": "5",
+        "buying_price": "7,827",
+        "wholesale_selling_price": "8609.7",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N70SBR CHLORIDE EXIDE MAXX MATATU",
+        "product_code": "SBR-N70-MAT",
+        "retail_selling_price": "11786.6",
+        "units": "5",
+        "buying_price": "8,419",
+        "wholesale_selling_price": "9260.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N100 SBR CHLORIDE EXIDE",
+        "product_code": "SBR-N100",
+        "retail_selling_price": "13592.6",
+        "units": "5",
+        "buying_price": "9,709",
+        "wholesale_selling_price": "10679.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "120/12/SBR PP LOCAL",
+        "product_code": "SBR-120-PP",
+        "retail_selling_price": "19661.6",
+        "units": "5",
+        "buying_price": "14,044",
+        "wholesale_selling_price": "15448.4",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N150 SBR CHLORIDE EXIDE",
+        "product_code": "SBR-N150",
+        "retail_selling_price": "23328.2",
+        "units": "5",
+        "buying_price": "16,663",
+        "wholesale_selling_price": "18329.3",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "N200 SBR CHLORIDE EXIDE",
+        "product_code": "SBR-N200",
+        "retail_selling_price": "28954.8",
+        "units": "5",
+        "buying_price": "20,682",
+        "wholesale_selling_price": "22750.2",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "026 SOLAR CHLORIDE EXIDE",
+        "product_code": "SOL-026",
+        "retail_selling_price": "5611.2",
+        "units": "5",
+        "buying_price": "4,008",
+        "wholesale_selling_price": "4408.8",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "050 SOLAR CHLORIDE EXIDE",
+        "product_code": "SOL-050",
+        "retail_selling_price": "7975.8",
+        "units": "5",
+        "buying_price": "5,697",
+        "wholesale_selling_price": "6266.7",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "075 SOLAR CHLORIDE EXIDE",
+        "product_code": "SOL-075",
+        "retail_selling_price": "10732.4",
+        "units": "5",
+        "buying_price": "7,666",
+        "wholesale_selling_price": "8432.6",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "100 SOLAR CHLORIDE EXIDE",
+        "product_code": "SOL-100",
+        "retail_selling_price": "15673",
+        "units": "5",
+        "buying_price": "11,195",
+        "wholesale_selling_price": "12314.5",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "20LTRS MIXED ACID -1240SG",
+        "product_code": "MA-1240SG",
+        "retail_selling_price": "2182.6",
+        "units": "5",
+        "buying_price": "1,559.00",
+        "wholesale_selling_price": "1714.9",
+        "minimum_order_quantity": "1",
+        "discount": "10"
+    },
+    {
+        "item_name": "BOTTLED ACID 1 LTR",
+        "product_code": "BA-1L",
+        "retail_selling_price": "1559.6",
+        "units": "5",
+        "buying_price": "1,114.00",
+        "wholesale_selling_price": "1225.4",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "I LITRE DE-IONIZED WATER",
+        "product_code": "DE-1L-H20",
+        "retail_selling_price": "1216.6",
+        "units": "5",
+        "buying_price": "869",
+        "wholesale_selling_price": "955.9",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "20 LITRE DE-IONIZED WATER CHLORIDE EXIDE",
+        "product_code": "DE-20L-H20",
+        "retail_selling_price": "1156.4",
+        "units": "5",
+        "buying_price": "826",
+        "wholesale_selling_price": "908.6",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery NS60LH GS Yuasa",
+        "product_code": "YMF-NS60-LH",
+        "retail_selling_price": "12,500.00",
+        "units": "5",
+        "buying_price": "9375",
+        "wholesale_selling_price": "10312.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery NS70LH GS Yuasa",
+        "product_code": "YMF-NS70-LH",
+        "retail_selling_price": "18,500.00",
+        "units": "5",
+        "buying_price": "13875",
+        "wholesale_selling_price": "15262.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery NS70RH GS Yuasa",
+        "product_code": "YMF-NS70-RH",
+        "retail_selling_price": "18,500.00",
+        "units": "5",
+        "buying_price": "13875",
+        "wholesale_selling_price": "15262.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N70LH GS Yuasa",
+        "product_code": "YMF-N70-LH",
+        "retail_selling_price": "25,000.00",
+        "units": "5",
+        "buying_price": "18750",
+        "wholesale_selling_price": "20625",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N70RH GS Yuasa",
+        "product_code": "YMF-N70-RH",
+        "retail_selling_price": "25,000.00",
+        "units": "5",
+        "buying_price": "18750",
+        "wholesale_selling_price": "20625",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N90LH GS Yuasa",
+        "product_code": "YMF-N90-LH",
+        "retail_selling_price": "30,160.00",
+        "units": "5",
+        "buying_price": "22620",
+        "wholesale_selling_price": "24882",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N90RH GS Yuasa",
+        "product_code": "YMF-N90-RH",
+        "retail_selling_price": "30,160.00",
+        "units": "5",
+        "buying_price": "22620",
+        "wholesale_selling_price": "24882",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N120 GS Yuasa",
+        "product_code": "YMF-N120",
+        "retail_selling_price": "41,760.00",
+        "units": "5",
+        "buying_price": "31320",
+        "wholesale_selling_price": "34452",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N150 GS Yuasa",
+        "product_code": "YMF-N150",
+        "retail_selling_price": "48,720.00",
+        "units": "5",
+        "buying_price": "36540",
+        "wholesale_selling_price": "40194",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N200 GS Yuasa",
+        "product_code": "YMF-N200",
+        "retail_selling_price": "64,960.00",
+        "units": "5",
+        "buying_price": "48720",
+        "wholesale_selling_price": "53592",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery N250 GS Yuasa",
+        "product_code": "YMF-N250",
+        "retail_selling_price": "55,680.00",
+        "units": "5",
+        "buying_price": "41760",
+        "wholesale_selling_price": "45936",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery DIN55 GS Yuasa",
+        "product_code": "YMF-DIN-55",
+        "retail_selling_price": "20,300.00",
+        "units": "5",
+        "buying_price": "15225",
+        "wholesale_selling_price": "16747.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery DIN66/74 GS Yuasa",
+        "product_code": "YMF-DIN-66-74",
+        "retail_selling_price": "25,520.00",
+        "units": "5",
+        "buying_price": "19140",
+        "wholesale_selling_price": "21054",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "MF Battery DIN88/100 GS Yuasa",
+        "product_code": "YMF-DIN-88-100",
+        "retail_selling_price": "31,320.00",
+        "units": "5",
+        "buying_price": "23490",
+        "wholesale_selling_price": "25839",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter Toyota",
+        "product_code": "17801-21050",
+        "retail_selling_price": "1000",
+        "units": "5",
+        "buying_price": "850",
+        "wholesale_selling_price": "935",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-28030",
+        "retail_selling_price": "910.6",
+        "units": "5",
+        "buying_price": "774.01",
+        "wholesale_selling_price": "851.411",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-28030",
+        "retail_selling_price": "1000",
+        "units": "5",
+        "buying_price": "850",
+        "wholesale_selling_price": "935",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-0C020",
+        "retail_selling_price": "2500",
+        "units": "5",
+        "buying_price": "2125",
+        "wholesale_selling_price": "2337.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-31120",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-20040",
+        "retail_selling_price": "900",
+        "units": "5",
+        "buying_price": "765",
+        "wholesale_selling_price": "841.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-17020",
+        "retail_selling_price": "2800",
+        "units": "5",
+        "buying_price": "2380",
+        "wholesale_selling_price": "2618",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-60130",
+        "retail_selling_price": "1500",
+        "units": "5",
+        "buying_price": "1275",
+        "wholesale_selling_price": "1402.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-30040",
+        "retail_selling_price": "1500",
+        "units": "5",
+        "buying_price": "1275",
+        "wholesale_selling_price": "1402.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-22020",
+        "retail_selling_price": "754",
+        "units": "5",
+        "buying_price": "640.9",
+        "wholesale_selling_price": "704.99",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-75010",
+        "retail_selling_price": "1200",
+        "units": "5",
+        "buying_price": "1020",
+        "wholesale_selling_price": "1122",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-0L040 17801-0L050",
+        "retail_selling_price": "1500",
+        "units": "5",
+        "buying_price": "1275",
+        "wholesale_selling_price": "1402.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-21040",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-28010",
+        "retail_selling_price": "1000",
+        "units": "5",
+        "buying_price": "850",
+        "wholesale_selling_price": "935",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-31110",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-38050",
+        "retail_selling_price": "1500",
+        "units": "5",
+        "buying_price": "1275",
+        "wholesale_selling_price": "1402.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-21030",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-23030",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-31131",
+        "retail_selling_price": "1300",
+        "units": "5",
+        "buying_price": "1105",
+        "wholesale_selling_price": "1215.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-74020",
+        "retail_selling_price": "950",
+        "units": "5",
+        "buying_price": "807.5",
+        "wholesale_selling_price": "888.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-31090",
+        "retail_selling_price": "986",
+        "units": "5",
+        "buying_price": "838.1",
+        "wholesale_selling_price": "921.91",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-31131",
+        "retail_selling_price": "1300",
+        "units": "5",
+        "buying_price": "1105",
+        "wholesale_selling_price": "1215.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-70050",
+        "retail_selling_price": "1200",
+        "units": "5",
+        "buying_price": "1020",
+        "wholesale_selling_price": "1122",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-0R030",
+        "retail_selling_price": "1300",
+        "units": "5",
+        "buying_price": "1105",
+        "wholesale_selling_price": "1215.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-51020",
+        "retail_selling_price": "2200",
+        "units": "5",
+        "buying_price": "1870",
+        "wholesale_selling_price": "2057",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-B1010",
+        "retail_selling_price": "1050",
+        "units": "5",
+        "buying_price": "892.5",
+        "wholesale_selling_price": "981.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-30060",
+        "retail_selling_price": "1500",
+        "units": "5",
+        "buying_price": "1275",
+        "wholesale_selling_price": "1402.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17801-BZ050",
+        "retail_selling_price": "1050",
+        "units": "5",
+        "buying_price": "892.5",
+        "wholesale_selling_price": "981.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Cabin Filter",
+        "product_code": "87139-30040",
+        "retail_selling_price": "1200",
+        "units": "5",
+        "buying_price": "1020",
+        "wholesale_selling_price": "1122",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Cabin Filter",
+        "product_code": "87139-28010",
+        "retail_selling_price": "900",
+        "units": "5",
+        "buying_price": "765",
+        "wholesale_selling_price": "841.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Cabin Filter",
+        "product_code": "87139-12010",
+        "retail_selling_price": "760",
+        "units": "5",
+        "buying_price": "646",
+        "wholesale_selling_price": "710.6",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Cabin Filter",
+        "product_code": "87139-48030",
+        "retail_selling_price": "850",
+        "units": "5",
+        "buying_price": "722.5",
+        "wholesale_selling_price": "794.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Cabin Filter",
+        "product_code": "87139-50100",
+        "retail_selling_price": "1740",
+        "units": "5",
+        "buying_price": "1479",
+        "wholesale_selling_price": "1626.9",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-YZZE1",
+        "retail_selling_price": "500",
+        "units": "5",
+        "buying_price": "425",
+        "wholesale_selling_price": "467.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-YZZE2",
+        "retail_selling_price": "550",
+        "units": "5",
+        "buying_price": "467.5",
+        "wholesale_selling_price": "514.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-YZZD2",
+        "retail_selling_price": "550",
+        "units": "5",
+        "buying_price": "467.5",
+        "wholesale_selling_price": "514.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-YZZD4",
+        "retail_selling_price": "650",
+        "units": "5",
+        "buying_price": "552.5",
+        "wholesale_selling_price": "607.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-TD004",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-03003",
+        "retail_selling_price": "1160",
+        "units": "5",
+        "buying_price": "986",
+        "wholesale_selling_price": "1084.6",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "90915-30002",
+        "retail_selling_price": "1500",
+        "units": "5",
+        "buying_price": "1275",
+        "wholesale_selling_price": "1402.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "04152-38020",
+        "retail_selling_price": "750",
+        "units": "5",
+        "buying_price": "637.5",
+        "wholesale_selling_price": "701.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "04152-37010",
+        "retail_selling_price": "700",
+        "units": "5",
+        "buying_price": "595",
+        "wholesale_selling_price": "654.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "04152-31090",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "04152-38010",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Diesel Filter",
+        "product_code": "23390-0L041",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL FILTER",
+        "product_code": "23390-0L070",
+        "retail_selling_price": "2900",
+        "units": "5",
+        "buying_price": "2465",
+        "wholesale_selling_price": "2711.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL FILTER",
+        "product_code": "AB39-9176-AC U2Y0-13-ZA5",
+        "retail_selling_price": "2900",
+        "units": "5",
+        "buying_price": "2465",
+        "wholesale_selling_price": "2711.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Normal K16R-U11",
+        "product_code": "90919-01164",
+        "retail_selling_price": "350",
+        "units": "5",
+        "buying_price": "297.5",
+        "wholesale_selling_price": "327.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Normal K16TR11",
+        "product_code": "90919-01192",
+        "retail_selling_price": "400",
+        "units": "5",
+        "buying_price": "340",
+        "wholesale_selling_price": "374",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Normal K20RU-11",
+        "product_code": "90919-01184",
+        "retail_selling_price": "400",
+        "units": "5",
+        "buying_price": "340",
+        "wholesale_selling_price": "374",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Normal K20HR-U11",
+        "product_code": "90919-01235",
+        "retail_selling_price": "400",
+        "units": "5",
+        "buying_price": "340",
+        "wholesale_selling_price": "374",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs T*T K20TT",
+        "product_code": "Universal",
+        "retail_selling_price": "470",
+        "units": "5",
+        "buying_price": "399.5",
+        "wholesale_selling_price": "439.45",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs T*T K16TT",
+        "product_code": "Universal",
+        "retail_selling_price": "470",
+        "units": "5",
+        "buying_price": "399.5",
+        "wholesale_selling_price": "439.45",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs SC20HR11",
+        "product_code": "90919-01253",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "W16EXR-U",
+        "product_code": "90919-01091/01064/",
+        "retail_selling_price": "300",
+        "units": "5",
+        "buying_price": "255",
+        "wholesale_selling_price": "280.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IXUH20I",
+        "product_code": "1822A130(ILKR6K8)",
+        "retail_selling_price": "2500",
+        "units": "5",
+        "buying_price": "2125",
+        "wholesale_selling_price": "2337.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VXEHC24G",
+        "product_code": "12290-5AP-A01",
+        "retail_selling_price": "3000",
+        "units": "5",
+        "buying_price": "2550",
+        "wholesale_selling_price": "2805",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs",
+        "product_code": "90919-01249/01263/01279/01263",
+        "retail_selling_price": "2700",
+        "units": "5",
+        "buying_price": "2295",
+        "wholesale_selling_price": "2524.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK22",
+        "product_code": "MD319586",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH16",
+        "product_code": "90919-01243",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKA20",
+        "product_code": "90919-01221",
+        "retail_selling_price": "2150",
+        "units": "5",
+        "buying_price": "1827.5",
+        "wholesale_selling_price": "2010.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VCH20",
+        "product_code": "90919-01253",
+        "retail_selling_price": "2200",
+        "units": "5",
+        "buying_price": "1870",
+        "wholesale_selling_price": "2057",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFKBH20",
+        "product_code": "90919-01249",
+        "retail_selling_price": "3150",
+        "units": "5",
+        "buying_price": "2677.5",
+        "wholesale_selling_price": "2945.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VXU22",
+        "product_code": "90048-51188",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20",
+        "product_code": "90919-01210",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK16",
+        "product_code": "90919-01217/40",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20",
+        "product_code": "90919-01191",
+        "retail_selling_price": "1750",
+        "units": "5",
+        "buying_price": "1487.5",
+        "wholesale_selling_price": "1636.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFKH16",
+        "product_code": "90919-01243",
+        "retail_selling_price": "2700",
+        "units": "5",
+        "buying_price": "2295",
+        "wholesale_selling_price": "2524.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFKH20",
+        "product_code": "90919-01247",
+        "retail_selling_price": "2700",
+        "units": "5",
+        "buying_price": "2295",
+        "wholesale_selling_price": "2524.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IKH16",
+        "product_code": "90919-01243",
+        "retail_selling_price": "1450",
+        "units": "5",
+        "buying_price": "1232.5",
+        "wholesale_selling_price": "1355.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IKH20",
+        "product_code": "90919-01191",
+        "retail_selling_price": "1450",
+        "units": "5",
+        "buying_price": "1232.5",
+        "wholesale_selling_price": "1355.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IKH16",
+        "product_code": "90919-01233",
+        "retail_selling_price": "1508",
+        "units": "5",
+        "buying_price": "1281.8",
+        "wholesale_selling_price": "1409.98",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power",
+        "product_code": "90919-01217/40",
+        "retail_selling_price": "1400",
+        "units": "5",
+        "buying_price": "1190",
+        "wholesale_selling_price": "1309",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IK20",
+        "product_code": "90919-01210",
+        "retail_selling_price": "1400",
+        "units": "5",
+        "buying_price": "1190",
+        "wholesale_selling_price": "1309",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IXU22",
+        "product_code": "90048-51188",
+        "retail_selling_price": "1229.6",
+        "units": "5",
+        "buying_price": "1045.16",
+        "wholesale_selling_price": "1149.676",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "90919-02258/90919-02252",
+        "retail_selling_price": "5500",
+        "units": "5",
+        "buying_price": "4675",
+        "wholesale_selling_price": "5142.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "9091902265/02240",
+        "retail_selling_price": "6000",
+        "units": "5",
+        "buying_price": "5100",
+        "wholesale_selling_price": "5610",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "90919-02259/90919-02249",
+        "retail_selling_price": "6000",
+        "units": "5",
+        "buying_price": "5100",
+        "wholesale_selling_price": "5610",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "90919-T2008/T2001/02248",
+        "retail_selling_price": "4900",
+        "units": "5",
+        "buying_price": "4165",
+        "wholesale_selling_price": "4581.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "90080-19023/02244/02266",
+        "retail_selling_price": "4900",
+        "units": "5",
+        "buying_price": "4165",
+        "wholesale_selling_price": "4581.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "90919-02256/A2005/A2003/C2004",
+        "retail_selling_price": "6500",
+        "units": "5",
+        "buying_price": "5525",
+        "wholesale_selling_price": "6077.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Igniter Coils",
+        "product_code": "9008-19015/1919/T2002/02239",
+        "retail_selling_price": "4600",
+        "units": "5",
+        "buying_price": "3910",
+        "wholesale_selling_price": "4301",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL PUMP",
+        "product_code": "195150-6651",
+        "retail_selling_price": "9000",
+        "units": "5",
+        "buying_price": "7650",
+        "wholesale_selling_price": "8415",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL PUMP",
+        "product_code": "195150-6010",
+        "retail_selling_price": "9000",
+        "units": "5",
+        "buying_price": "7650",
+        "wholesale_selling_price": "8415",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "",
+        "product_code": "195150-6320",
+        "retail_selling_price": "9000",
+        "units": "5",
+        "buying_price": "7650",
+        "wholesale_selling_price": "8415",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL PUMP",
+        "product_code": "23221-46010/0D070/21020",
+        "retail_selling_price": "9000",
+        "units": "5",
+        "buying_price": "7650",
+        "wholesale_selling_price": "8415",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL PUMP",
+        "product_code": "23221-46060/50060/46070/32020/46100",
+        "retail_selling_price": "10000",
+        "units": "5",
+        "buying_price": "8500",
+        "wholesale_selling_price": "9350",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL PUMP",
+        "product_code": "",
+        "retail_selling_price": "9000",
+        "units": "5",
+        "buying_price": "7650",
+        "wholesale_selling_price": "8415",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL PUMP",
+        "product_code": "",
+        "retail_selling_price": "10000",
+        "units": "5",
+        "buying_price": "8500",
+        "wholesale_selling_price": "9350",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "RADIATOR CAP",
+        "product_code": "",
+        "retail_selling_price": "1200",
+        "units": "5",
+        "buying_price": "1020",
+        "wholesale_selling_price": "1122",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "COMPRESSOR ASSY",
+        "product_code": "88320-60700/ 6A010",
+        "retail_selling_price": "60000",
+        "units": "5",
+        "buying_price": "51000",
+        "wholesale_selling_price": "56100",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "COMPRESSOR ASSY",
+        "product_code": "88320-60700/6A010",
+        "retail_selling_price": "60000",
+        "units": "5",
+        "buying_price": "51000",
+        "wholesale_selling_price": "56100",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "COMPRESSOR ASSY Toyota",
+        "product_code": "88320-6A320/6A100/6A350",
+        "retail_selling_price": "65000",
+        "units": "5",
+        "buying_price": "55250",
+        "wholesale_selling_price": "60775",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Gas R134A Valve 1/4",
+        "product_code": "All Application",
+        "retail_selling_price": "20000",
+        "units": "5",
+        "buying_price": "17000",
+        "wholesale_selling_price": "18700",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Alternator Price List",
+        "product_code": "27060-21042",
+        "retail_selling_price": "14500",
+        "units": "5",
+        "buying_price": "12325",
+        "wholesale_selling_price": "13557.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Alternator Price List",
+        "product_code": "27060-30171",
+        "retail_selling_price": "27000",
+        "units": "5",
+        "buying_price": "22950",
+        "wholesale_selling_price": "25245",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Alternator Price List",
+        "product_code": "27060-37180",
+        "retail_selling_price": "27000",
+        "units": "5",
+        "buying_price": "22950",
+        "wholesale_selling_price": "25245",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Alternator Price List",
+        "product_code": "27060-38110",
+        "retail_selling_price": "27500",
+        "units": "5",
+        "buying_price": "23375",
+        "wholesale_selling_price": "25712.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Alternator Price List",
+        "product_code": "27060-31120",
+        "retail_selling_price": "23000",
+        "units": "5",
+        "buying_price": "19550",
+        "wholesale_selling_price": "21505",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG014",
+        "retail_selling_price": "550",
+        "units": "5",
+        "buying_price": "467.5",
+        "wholesale_selling_price": "514.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG016",
+        "retail_selling_price": "600",
+        "units": "5",
+        "buying_price": "510",
+        "wholesale_selling_price": "561",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG018",
+        "retail_selling_price": "600",
+        "units": "5",
+        "buying_price": "510",
+        "wholesale_selling_price": "561",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG019",
+        "retail_selling_price": "700",
+        "units": "5",
+        "buying_price": "595",
+        "wholesale_selling_price": "654.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG022",
+        "retail_selling_price": "750",
+        "units": "5",
+        "buying_price": "637.5",
+        "wholesale_selling_price": "701.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG024",
+        "retail_selling_price": "850",
+        "units": "5",
+        "buying_price": "722.5",
+        "wholesale_selling_price": "794.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCSG026",
+        "retail_selling_price": "850",
+        "units": "5",
+        "buying_price": "722.5",
+        "wholesale_selling_price": "794.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP014",
+        "retail_selling_price": "539.4",
+        "units": "5",
+        "buying_price": "458.49",
+        "wholesale_selling_price": "504.339",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP016",
+        "retail_selling_price": "1050",
+        "units": "5",
+        "buying_price": "892.5",
+        "wholesale_selling_price": "981.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP018",
+        "retail_selling_price": "1050",
+        "units": "5",
+        "buying_price": "892.5",
+        "wholesale_selling_price": "981.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP019",
+        "retail_selling_price": "1050",
+        "units": "5",
+        "buying_price": "892.5",
+        "wholesale_selling_price": "981.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP022",
+        "retail_selling_price": "1300",
+        "units": "5",
+        "buying_price": "1105",
+        "wholesale_selling_price": "1215.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP024",
+        "retail_selling_price": "1300",
+        "units": "5",
+        "buying_price": "1105",
+        "wholesale_selling_price": "1215.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DCP026",
+        "retail_selling_price": "922.2",
+        "units": "5",
+        "buying_price": "783.87",
+        "wholesale_selling_price": "862.257",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS014",
+        "retail_selling_price": "1160",
+        "units": "5",
+        "buying_price": "986",
+        "wholesale_selling_price": "1084.6",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS016",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS018",
+        "retail_selling_price": "1850",
+        "units": "5",
+        "buying_price": "1572.5",
+        "wholesale_selling_price": "1729.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS019",
+        "retail_selling_price": "1890",
+        "units": "5",
+        "buying_price": "1606.5",
+        "wholesale_selling_price": "1767.15",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS022",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS024",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Wiper Blades",
+        "product_code": "DDS026",
+        "retail_selling_price": "2200",
+        "units": "5",
+        "buying_price": "1870",
+        "wholesale_selling_price": "2057",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "15400-PLM-A01",
+        "retail_selling_price": "500",
+        "units": "5",
+        "buying_price": "425",
+        "wholesale_selling_price": "467.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17220-PNA-0+E8+E85",
+        "retail_selling_price": "1015",
+        "units": "5",
+        "buying_price": "862.75",
+        "wholesale_selling_price": "949.025",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17220-0RN-AA00",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "17220-PLC-Y00",
+        "retail_selling_price": "690.2",
+        "units": "5",
+        "buying_price": "586.67",
+        "wholesale_selling_price": "645.337",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "1722-R5A-A00",
+        "retail_selling_price": "1160",
+        "units": "5",
+        "buying_price": "986",
+        "wholesale_selling_price": "1084.6",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VXUHC22G",
+        "product_code": "12290-R40-A02",
+        "retail_selling_price": "2500",
+        "units": "5",
+        "buying_price": "2125",
+        "wholesale_selling_price": "2337.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VXEHC24G",
+        "product_code": "12290-5Z2-004",
+        "retail_selling_price": "3000",
+        "units": "5",
+        "buying_price": "2550",
+        "wholesale_selling_price": "2805",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20",
+        "product_code": "98079-5615G",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFKH20",
+        "product_code": "-",
+        "retail_selling_price": "2308.4",
+        "units": "5",
+        "buying_price": "1962.14",
+        "wholesale_selling_price": "2158.354",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFK20F",
+        "product_code": "12290-RTW-004",
+        "retail_selling_price": "2800",
+        "units": "5",
+        "buying_price": "2380",
+        "wholesale_selling_price": "2618",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20",
+        "product_code": "-",
+        "retail_selling_price": "1900",
+        "units": "5",
+        "buying_price": "1615",
+        "wholesale_selling_price": "1776.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "B671-14-302",
+        "retail_selling_price": "550",
+        "units": "5",
+        "buying_price": "467.5",
+        "wholesale_selling_price": "514.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "-",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "L321-14-302",
+        "retail_selling_price": "655.4",
+        "units": "5",
+        "buying_price": "557.09",
+        "wholesale_selling_price": "612.799",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "LF50-13-Z40TT",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "PE07-13-3A0",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "ZJ101-13-Z40T",
+        "retail_selling_price": "916.4",
+        "units": "5",
+        "buying_price": "778.94",
+        "wholesale_selling_price": "856.834",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough",
+        "product_code": "FEDMN-18-110",
+        "retail_selling_price": "1218",
+        "units": "5",
+        "buying_price": "1035.3",
+        "wholesale_selling_price": "1138.83",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough",
+        "product_code": "Mazda",
+        "retail_selling_price": "2100",
+        "units": "5",
+        "buying_price": "1785",
+        "wholesale_selling_price": "1963.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VT20",
+        "product_code": "Mazda",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IT16",
+        "product_code": "Mazda",
+        "retail_selling_price": "1276",
+        "units": "5",
+        "buying_price": "1084.6",
+        "wholesale_selling_price": "1193.06",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IT20",
+        "product_code": "Mazda",
+        "retail_selling_price": "1276",
+        "units": "5",
+        "buying_price": "1084.6",
+        "wholesale_selling_price": "1193.06",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power",
+        "product_code": "Mazda",
+        "retail_selling_price": "1400",
+        "units": "5",
+        "buying_price": "1190",
+        "wholesale_selling_price": "1309",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK16",
+        "product_code": "Z601-18-110",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFK16",
+        "product_code": "ZYYI-18-110",
+        "retail_selling_price": "2700",
+        "units": "5",
+        "buying_price": "2295",
+        "wholesale_selling_price": "2524.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VCH20",
+        "product_code": "PE5S-18-110",
+        "retail_selling_price": "2200",
+        "units": "5",
+        "buying_price": "1870",
+        "wholesale_selling_price": "2057",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "MZ690115",
+        "retail_selling_price": "500",
+        "units": "5",
+        "buying_price": "425",
+        "wholesale_selling_price": "467.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "1230A114",
+        "retail_selling_price": "1200",
+        "units": "5",
+        "buying_price": "1020",
+        "wholesale_selling_price": "1122",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Diesel Filter",
+        "product_code": "1770A233",
+        "retail_selling_price": "1798",
+        "units": "5",
+        "buying_price": "1528.3",
+        "wholesale_selling_price": "1681.13",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "15000A098",
+        "retail_selling_price": "1300",
+        "units": "5",
+        "buying_price": "1105",
+        "wholesale_selling_price": "1215.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "1500A023",
+        "retail_selling_price": "2000",
+        "units": "5",
+        "buying_price": "1700",
+        "wholesale_selling_price": "1870",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "1500A098",
+        "retail_selling_price": "900",
+        "units": "5",
+        "buying_price": "765",
+        "wholesale_selling_price": "841.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "MZ690193",
+        "retail_selling_price": "945.4",
+        "units": "5",
+        "buying_price": "803.59",
+        "wholesale_selling_price": "883.949",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Cabin Filter",
+        "product_code": "MZ600143",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "FUEL FILTER",
+        "product_code": "1770A337/A338",
+        "retail_selling_price": "2300",
+        "units": "5",
+        "buying_price": "1955",
+        "wholesale_selling_price": "2150.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough",
+        "product_code": "18846-08060, MQ510099(ILZKR6F11)",
+        "retail_selling_price": "3000",
+        "units": "5",
+        "buying_price": "2550",
+        "wholesale_selling_price": "2805",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20",
+        "product_code": "MS851728",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFK16",
+        "product_code": "Mitsubishi",
+        "retail_selling_price": "2700",
+        "units": "5",
+        "buying_price": "2295",
+        "wholesale_selling_price": "2524.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VXUH22",
+        "product_code": "Mitsubishi",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20",
+        "product_code": "Mitsubishi",
+        "retail_selling_price": "1900",
+        "units": "5",
+        "buying_price": "1615",
+        "wholesale_selling_price": "1776.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK16",
+        "product_code": "MS851727",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK22",
+        "product_code": "MD319586",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKA20",
+        "product_code": "Mitsubishi",
+        "retail_selling_price": "2100",
+        "units": "5",
+        "buying_price": "1785",
+        "wholesale_selling_price": "1963.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VW16",
+        "product_code": "MS851417",
+        "retail_selling_price": "1218",
+        "units": "5",
+        "buying_price": "1035.3",
+        "wholesale_selling_price": "1138.83",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VW22",
+        "product_code": "MD343244",
+        "retail_selling_price": "1334",
+        "units": "5",
+        "buying_price": "1133.9",
+        "wholesale_selling_price": "1247.29",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IK22",
+        "product_code": "MZ602042",
+        "retail_selling_price": "1450",
+        "units": "5",
+        "buying_price": "1232.5",
+        "wholesale_selling_price": "1355.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "15208-65F00",
+        "retail_selling_price": "600",
+        "units": "5",
+        "buying_price": "510",
+        "wholesale_selling_price": "561",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "16546-ED000",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "16546-74S00",
+        "retail_selling_price": "800",
+        "units": "5",
+        "buying_price": "680",
+        "wholesale_selling_price": "748",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "16546-EB70A",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK16",
+        "product_code": "-",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20",
+        "product_code": "-",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFXEH20E",
+        "product_code": "22401-ED71B",
+        "retail_selling_price": "2850",
+        "units": "5",
+        "buying_price": "2422.5",
+        "wholesale_selling_price": "2664.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20",
+        "product_code": "-",
+        "retail_selling_price": "1900",
+        "units": "5",
+        "buying_price": "1615",
+        "wholesale_selling_price": "1776.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "15208AA100",
+        "retail_selling_price": "550",
+        "units": "5",
+        "buying_price": "467.5",
+        "wholesale_selling_price": "514.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "16546-AA020",
+        "retail_selling_price": "750",
+        "units": "5",
+        "buying_price": "637.5",
+        "wholesale_selling_price": "701.25",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "16546AA090",
+        "retail_selling_price": "1100",
+        "units": "5",
+        "buying_price": "935",
+        "wholesale_selling_price": "1028.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20",
+        "product_code": "22401AA320",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK16",
+        "product_code": "-",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20",
+        "product_code": "SAB330DE2670",
+        "retail_selling_price": "1900",
+        "units": "5",
+        "buying_price": "1615",
+        "wholesale_selling_price": "1776.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20Y",
+        "product_code": "Subaru",
+        "retail_selling_price": "2250",
+        "units": "5",
+        "buying_price": "1912.5",
+        "wholesale_selling_price": "2103.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20Y",
+        "product_code": "SAB330DE4540",
+        "retail_selling_price": "1334",
+        "units": "5",
+        "buying_price": "1133.9",
+        "wholesale_selling_price": "1247.29",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VFKH20",
+        "product_code": "22401AA700",
+        "retail_selling_price": "2308.4",
+        "units": "5",
+        "buying_price": "1962.14",
+        "wholesale_selling_price": "2158.354",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IK22",
+        "product_code": "Subaru",
+        "retail_selling_price": "1450",
+        "units": "5",
+        "buying_price": "1232.5",
+        "wholesale_selling_price": "1355.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "15601-97202",
+        "retail_selling_price": "450",
+        "units": "5",
+        "buying_price": "382.5",
+        "wholesale_selling_price": "420.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK20",
+        "product_code": "09482-00508",
+        "retail_selling_price": "1600",
+        "units": "5",
+        "buying_price": "1360",
+        "wholesale_selling_price": "1496",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VK16",
+        "product_code": "99000-79K73-K16",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VKH20",
+        "product_code": "-",
+        "retail_selling_price": "1900",
+        "units": "5",
+        "buying_price": "1615",
+        "wholesale_selling_price": "1776.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "8-98165071-0",
+        "retail_selling_price": "600",
+        "units": "5",
+        "buying_price": "510",
+        "wholesale_selling_price": "561",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "8-94114584-0",
+        "retail_selling_price": "603.2",
+        "units": "5",
+        "buying_price": "512.72",
+        "wholesale_selling_price": "563.992",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Diesel Filter",
+        "product_code": "8-98159693-0",
+        "retail_selling_price": "1798",
+        "units": "5",
+        "buying_price": "1528.3",
+        "wholesale_selling_price": "1681.13",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Air Filter",
+        "product_code": "8-98027480-0",
+        "retail_selling_price": "1200",
+        "units": "5",
+        "buying_price": "1020",
+        "wholesale_selling_price": "1122",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "26300-35503",
+        "retail_selling_price": "533.6",
+        "units": "5",
+        "buying_price": "453.56",
+        "wholesale_selling_price": "498.916",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IK24",
+        "product_code": "Volkswagen",
+        "retail_selling_price": "1624",
+        "units": "5",
+        "buying_price": "1380.4",
+        "wholesale_selling_price": "1518.44",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Power IK24",
+        "product_code": "Audi",
+        "retail_selling_price": "1624",
+        "units": "5",
+        "buying_price": "1380.4",
+        "wholesale_selling_price": "1518.44",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "2711800009",
+        "retail_selling_price": "1229.6",
+        "units": "5",
+        "buying_price": "1045.16",
+        "wholesale_selling_price": "1149.676",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "1191800009",
+        "retail_selling_price": "800.4",
+        "units": "5",
+        "buying_price": "680.34",
+        "wholesale_selling_price": "748.374",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "CG Oil Filter",
+        "product_code": "1121800009",
+        "retail_selling_price": "603.2",
+        "units": "5",
+        "buying_price": "512.72",
+        "wholesale_selling_price": "563.992",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Spark Plugs Iridium Tough VXUH22",
+        "product_code": "Mercedez",
+        "retail_selling_price": "1800",
+        "units": "5",
+        "buying_price": "1530",
+        "wholesale_selling_price": "1683",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446535290",
+        "product_code": "04465-YZZE1",
+        "retail_selling_price": "9,024",
+        "units": "5",
+        "buying_price": "7670.4",
+        "wholesale_selling_price": "8437.44",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446535260",
+        "product_code": "04465-35260",
+        "retail_selling_price": "7,966",
+        "units": "5",
+        "buying_price": "6771.1",
+        "wholesale_selling_price": "7448.21",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446512490",
+        "product_code": "04465-12490",
+        "retail_selling_price": "7,769",
+        "units": "5",
+        "buying_price": "6603.65",
+        "wholesale_selling_price": "7264.015",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446542060",
+        "product_code": "04465-42060",
+        "retail_selling_price": "8,555",
+        "units": "5",
+        "buying_price": "7271.75",
+        "wholesale_selling_price": "7998.925",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "04465-12581",
+        "retail_selling_price": "7,612",
+        "units": "5",
+        "buying_price": "6470.2",
+        "wholesale_selling_price": "7117.22",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446533240",
+        "product_code": "04465-33240",
+        "retail_selling_price": "6,994",
+        "units": "5",
+        "buying_price": "5944.9",
+        "wholesale_selling_price": "6539.39",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446565021",
+        "product_code": "04465-65021",
+        "retail_selling_price": "8,182",
+        "units": "5",
+        "buying_price": "6954.7",
+        "wholesale_selling_price": "7650.17",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446548100",
+        "product_code": "04465-48100",
+        "retail_selling_price": "12,113",
+        "units": "5",
+        "buying_price": "10296.05",
+        "wholesale_selling_price": "11325.655",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "04465-52190/52270",
+        "retail_selling_price": "11,000",
+        "units": "5",
+        "buying_price": "9350",
+        "wholesale_selling_price": "10285",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446560230",
+        "product_code": "04465-60230",
+        "retail_selling_price": "12,813",
+        "units": "5",
+        "buying_price": "10891.05",
+        "wholesale_selling_price": "11980.155",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "04465-0K340/0K240/0K260/0K300/0K330",
+        "retail_selling_price": "11,845",
+        "units": "5",
+        "buying_price": "10068.25",
+        "wholesale_selling_price": "11075.075",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "04465-26420",
+        "retail_selling_price": "11,461",
+        "units": "5",
+        "buying_price": "9741.85",
+        "wholesale_selling_price": "10716.035",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "04465-02160, 02170, 02210,02270,02330",
+        "retail_selling_price": "9,032",
+        "units": "5",
+        "buying_price": "7677.2",
+        "wholesale_selling_price": "8444.92",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad0446660290",
+        "product_code": "04466-60290",
+        "retail_selling_price": "7,850",
+        "units": "5",
+        "buying_price": "6672.5",
+        "wholesale_selling_price": "7339.75",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pads 0446660120",
+        "product_code": "04466-60120",
+        "retail_selling_price": "8,272",
+        "units": "5",
+        "buying_price": "7031.2",
+        "wholesale_selling_price": "7734.32",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad REAR",
+        "product_code": "04466-12130/12150",
+        "retail_selling_price": "7,813",
+        "units": "5",
+        "buying_price": "6641.05",
+        "wholesale_selling_price": "7305.155",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad Rear",
+        "product_code": "04466-05010/04466-05020/04466-28110",
+        "retail_selling_price": "5,451",
+        "units": "5",
+        "buying_price": "4633.35",
+        "wholesale_selling_price": "5096.685",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Rear Disc Brake RR 4773034030",
+        "product_code": "47750-34030",
+        "retail_selling_price": "23,667",
+        "units": "5",
+        "buying_price": "20116.95",
+        "wholesale_selling_price": "22128.645",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Rear Disc Brake RR 4783060080",
+        "product_code": "47850-60070",
+        "retail_selling_price": "18,253",
+        "units": "5",
+        "buying_price": "15515.05",
+        "wholesale_selling_price": "17066.555",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 47730-60261",
+        "product_code": "47750-60130/60261",
+        "retail_selling_price": "39,685",
+        "units": "5",
+        "buying_price": "33732.25",
+        "wholesale_selling_price": "37105.475",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 4773060090",
+        "product_code": "47750-60090",
+        "retail_selling_price": "51,041",
+        "units": "5",
+        "buying_price": "43384.85",
+        "wholesale_selling_price": "47723.335",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 4773060120",
+        "product_code": "47750-60120",
+        "retail_selling_price": "33,876",
+        "units": "5",
+        "buying_price": "28794.6",
+        "wholesale_selling_price": "31674.06",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 47730-60280",
+        "product_code": "47750-60280",
+        "retail_selling_price": "55,430",
+        "units": "5",
+        "buying_price": "47115.5",
+        "wholesale_selling_price": "51827.05",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Rear Disc Brake RR 4775034030",
+        "product_code": "47730-34030",
+        "retail_selling_price": "23,667",
+        "units": "5",
+        "buying_price": "20116.95",
+        "wholesale_selling_price": "22128.645",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Rear Disc Brake RR 4785060070",
+        "product_code": "47830-60080",
+        "retail_selling_price": "18,253",
+        "units": "5",
+        "buying_price": "15515.05",
+        "wholesale_selling_price": "17066.555",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 47750-60261",
+        "product_code": "4773060130/60261",
+        "retail_selling_price": "41,689",
+        "units": "5",
+        "buying_price": "35435.65",
+        "wholesale_selling_price": "38979.215",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 4775060090",
+        "product_code": "47730-60090",
+        "retail_selling_price": "50,222",
+        "units": "5",
+        "buying_price": "42688.7",
+        "wholesale_selling_price": "46957.57",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 4775060120",
+        "product_code": "477306-0120",
+        "retail_selling_price": "33,876",
+        "units": "5",
+        "buying_price": "28794.6",
+        "wholesale_selling_price": "31674.06",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Cylinder Assy, Front Disc Brake FF 47750-60280",
+        "product_code": "47730-60280",
+        "retail_selling_price": "55,430",
+        "units": "5",
+        "buying_price": "47115.5",
+        "wholesale_selling_price": "51827.05",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Shoe0449512100",
+        "product_code": "04495-12100",
+        "retail_selling_price": "7,906",
+        "units": "5",
+        "buying_price": "6720.1",
+        "wholesale_selling_price": "7392.11",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pads AY040NS138",
+        "product_code": "AY040-NS138",
+        "retail_selling_price": "10,287",
+        "units": "5",
+        "buying_price": "8743.95",
+        "wholesale_selling_price": "9618.345",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pads AY040NS095",
+        "product_code": "AY040-NS085",
+        "retail_selling_price": "11,334",
+        "units": "5",
+        "buying_price": "9633.9",
+        "wholesale_selling_price": "10597.29",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pads AY040NS121",
+        "product_code": "AY040-NS121",
+        "retail_selling_price": "9,389",
+        "units": "5",
+        "buying_price": "7980.65",
+        "wholesale_selling_price": "8778.715",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "1N26-33-28Z",
+        "retail_selling_price": "7,400",
+        "units": "5",
+        "buying_price": "6290",
+        "wholesale_selling_price": "6919",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Brake Master Cyln4720126520",
+        "product_code": "47201-26520",
+        "retail_selling_price": "22,236",
+        "units": "5",
+        "buying_price": "18900.6",
+        "wholesale_selling_price": "20790.66",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Brake Master Cyln4720160720",
+        "product_code": "47201-60720",
+        "retail_selling_price": "14,643",
+        "units": "5",
+        "buying_price": "12446.55",
+        "wholesale_selling_price": "13691.205",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Brake Master Cylin 4720160832",
+        "product_code": "47201-60831",
+        "retail_selling_price": "17,706",
+        "units": "5",
+        "buying_price": "15050.1",
+        "wholesale_selling_price": "16555.11",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Brake Master Cyln472010K020",
+        "product_code": "472010K020",
+        "retail_selling_price": "21,346",
+        "units": "5",
+        "buying_price": "18144.1",
+        "wholesale_selling_price": "19958.51",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 45022SCC000",
+        "product_code": "45022-SCC-000",
+        "retail_selling_price": "9,937",
+        "units": "5",
+        "buying_price": "8446.45",
+        "wholesale_selling_price": "9291.095",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 45022SHJA50",
+        "product_code": "45022-SHJ-A50",
+        "retail_selling_price": "11,267",
+        "units": "5",
+        "buying_price": "9576.95",
+        "wholesale_selling_price": "10534.645",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 43022SAAJ51",
+        "product_code": "43022-SAA-J51",
+        "retail_selling_price": "8,294",
+        "units": "5",
+        "buying_price": "7049.9",
+        "wholesale_selling_price": "7754.89",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 43022S9A010",
+        "product_code": "43022-S9A-010",
+        "retail_selling_price": "9,844",
+        "units": "5",
+        "buying_price": "8367.4",
+        "wholesale_selling_price": "9204.14",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Master Cyln 3142026200",
+        "product_code": "31420-26200",
+        "retail_selling_price": "7,444",
+        "units": "5",
+        "buying_price": "6327.4",
+        "wholesale_selling_price": "6960.14",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Master Cyln 314200k013",
+        "product_code": "31420-0K013",
+        "retail_selling_price": "6,785",
+        "units": "5",
+        "buying_price": "5767.25",
+        "wholesale_selling_price": "6343.975",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Set DT-036 CTX-073",
+        "product_code": "CTX-073/DT-036",
+        "retail_selling_price": "18,607",
+        "units": "5",
+        "buying_price": "15815.95",
+        "wholesale_selling_price": "17397.545",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Set DT-094L CTX-084",
+        "product_code": "CTX-084/DT-094L",
+        "retail_selling_price": "34,848",
+        "units": "5",
+        "buying_price": "29620.8",
+        "wholesale_selling_price": "32582.88",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch  Cover",
+        "product_code": "31210-36029",
+        "retail_selling_price": "12,038",
+        "units": "5",
+        "buying_price": "10232.3",
+        "wholesale_selling_price": "11255.53",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch  Cover3121060171",
+        "product_code": "31210-60171",
+        "retail_selling_price": "22,128",
+        "units": "5",
+        "buying_price": "18808.8",
+        "wholesale_selling_price": "20689.68",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "4605A530",
+        "retail_selling_price": "10,127",
+        "units": "5",
+        "buying_price": "8607.95",
+        "wholesale_selling_price": "9468.745",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Disc 3125012361",
+        "product_code": "31250-12361",
+        "retail_selling_price": "8,447",
+        "units": "5",
+        "buying_price": "7179.95",
+        "wholesale_selling_price": "7897.945",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Disc 3125060431",
+        "product_code": "31250-60431",
+        "retail_selling_price": "16,711",
+        "units": "5",
+        "buying_price": "14204.35",
+        "wholesale_selling_price": "15624.785",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Disc 3125012393",
+        "product_code": "31250-12393",
+        "retail_selling_price": "6,304",
+        "units": "5",
+        "buying_price": "5358.4",
+        "wholesale_selling_price": "5894.24",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch Disc 3125012310",
+        "product_code": "31250-12570",
+        "retail_selling_price": "8,491",
+        "units": "5",
+        "buying_price": "7217.35",
+        "wholesale_selling_price": "7939.085",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Clutch  Disc3125060130",
+        "product_code": "31250-60130",
+        "retail_selling_price": "26,752",
+        "units": "5",
+        "buying_price": "22739.2",
+        "wholesale_selling_price": "25013.12",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad",
+        "product_code": "D6Y1-33-28Z,5581068R10",
+        "retail_selling_price": "11,330",
+        "units": "5",
+        "buying_price": "9630.5",
+        "wholesale_selling_price": "10593.55",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pads 26296AE002",
+        "product_code": "26296AE002",
+        "retail_selling_price": "8,372",
+        "units": "5",
+        "buying_price": "7116.2",
+        "wholesale_selling_price": "7827.82",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 26296FE082",
+        "product_code": "26296FE082",
+        "retail_selling_price": "12,839",
+        "units": "5",
+        "buying_price": "10913.15",
+        "wholesale_selling_price": "12004.465",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Fan Clutch1621075060",
+        "product_code": "16210-75060/0W010/75040",
+        "retail_selling_price": "25,862",
+        "units": "5",
+        "buying_price": "21982.7",
+        "wholesale_selling_price": "24180.97",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Fan Clutch1621067030",
+        "product_code": "16210-67030",
+        "retail_selling_price": "31,991",
+        "units": "5",
+        "buying_price": "27192.35",
+        "wholesale_selling_price": "29911.585",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Fan Clutch1621050051",
+        "product_code": "16210-50050,50051",
+        "retail_selling_price": "27,207",
+        "units": "5",
+        "buying_price": "23125.95",
+        "wholesale_selling_price": "25438.545",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Fan Clutch1621017050",
+        "product_code": "16210-17050",
+        "retail_selling_price": "22,236",
+        "units": "5",
+        "buying_price": "18900.6",
+        "wholesale_selling_price": "20790.66",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Free Wheel Hub",
+        "product_code": "8-97062-018-0",
+        "retail_selling_price": "22,929",
+        "units": "5",
+        "buying_price": "19489.65",
+        "wholesale_selling_price": "21438.615",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Free Wheel Hub4353060130",
+        "product_code": "43530-60130",
+        "retail_selling_price": "18,500",
+        "units": "5",
+        "buying_price": "15725",
+        "wholesale_selling_price": "17297.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Free Wheel Hub4353060042",
+        "product_code": "43530-60042",
+        "retail_selling_price": "18,500",
+        "units": "5",
+        "buying_price": "15725",
+        "wholesale_selling_price": "17297.5",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Radiator Fan Blade 1636175020",
+        "product_code": "16361-75021",
+        "retail_selling_price": "5,958",
+        "units": "5",
+        "buying_price": "5064.3",
+        "wholesale_selling_price": "5570.73",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Radiator Fan Blade1636131060",
+        "product_code": "16361-31060",
+        "retail_selling_price": "7,116",
+        "units": "5",
+        "buying_price": "6048.6",
+        "wholesale_selling_price": "6653.46",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Radiator Fan Blade1636150040",
+        "product_code": "16361-50040",
+        "retail_selling_price": "8,603",
+        "units": "5",
+        "buying_price": "7312.55",
+        "wholesale_selling_price": "8043.805",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Radiator Fan Blade1636150110",
+        "product_code": "16361-50110",
+        "retail_selling_price": "7,444",
+        "units": "5",
+        "buying_price": "6327.4",
+        "wholesale_selling_price": "6960.14",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Radiator Fan Blade 1636154111",
+        "product_code": "16361-54111",
+        "retail_selling_price": "6,289",
+        "units": "5",
+        "buying_price": "5345.65",
+        "wholesale_selling_price": "5880.215",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Radiator Fan Blade 1636117040",
+        "product_code": "16361-17040",
+        "retail_selling_price": "7,776",
+        "units": "5",
+        "buying_price": "6609.6",
+        "wholesale_selling_price": "7270.56",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 0446597402",
+        "product_code": "04465-97402/97216/97402/97404",
+        "retail_selling_price": "5,973",
+        "units": "5",
+        "buying_price": "5077.05",
+        "wholesale_selling_price": "5584.755",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad DMAX",
+        "product_code": "8-980791040",
+        "retail_selling_price": "7,511",
+        "units": "5",
+        "buying_price": "6384.35",
+        "wholesale_selling_price": "7022.785",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 26296AE160",
+        "product_code": "26296AE160",
+        "retail_selling_price": "10,969",
+        "units": "5",
+        "buying_price": "9323.65",
+        "wholesale_selling_price": "10256.015",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pads AY0410NS110",
+        "product_code": "AY040-NS110",
+        "retail_selling_price": "9,628",
+        "units": "5",
+        "buying_price": "8183.8",
+        "wholesale_selling_price": "9002.18",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Advics Brake Pad 26696AG031",
+        "product_code": "26696AG031",
+        "retail_selling_price": "13,111",
+        "units": "5",
+        "buying_price": "11144.35",
+        "wholesale_selling_price": "12258.785",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Water Pump X2111AA033",
+        "product_code": "X2111-AA033",
+        "retail_selling_price": "7,541",
+        "units": "5",
+        "buying_price": "6409.85",
+        "wholesale_selling_price": "7050.835",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    },
+    {
+        "item_name": "Water Pump 1610029415",
+        "product_code": "16100-29415",
+        "retail_selling_price": "9,825",
+        "units": "5",
+        "buying_price": "8351.25",
+        "wholesale_selling_price": "9186.375",
+        "minimum_order_quantity": "1",
+        "discount": "0"
+    }
+]

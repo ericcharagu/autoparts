@@ -1,0 +1,119 @@
+version: "3.8"
+services:
+  llm_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app_server
+    depends_on:
+      ollama:
+        condition: service_healthy
+      ollama_embedding:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    volumes:
+      - ./:/app
+      - ./logs:/app/logs
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - autoparts_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command:
+      - "uvicorn"
+      - "main:app"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "8000"
+      - "--log-level"
+      - "info"
+      - "--reload" # Remove in production
+    ports:
+      - "8000:8000"
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: llm_server
+    ports:
+      - "11434:11434"
+    volumes:
+      - autoparts_ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://ollama:11434/api/tags"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    entrypoint: >
+      sh -c "
+        ollama serve &
+        sleep 10 &&
+        ollama pull qwen3:0.6b &&
+        tail -f /dev/null
+      "
+    networks:
+      - autoparts_network
+
+  ollama_embedding:
+    image: ollama/ollama:latest
+    container_name: lembedding_server
+    ports:
+      - "11435:11434" # Internal port remains 11434, but host maps to 11435
+    volumes:
+      - autoparts_embeddings_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://ollama_embedding:11434/api/tags"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+      start_period: 30s
+    entrypoint: >
+      sh -c "
+        ollama serve &
+        sleep 10 &&
+        ollama pull nomic-embed-text &&
+        tail -f /dev/null
+      "
+    networks:
+      - autoparts_network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: always
+    container_name: qdrant
+    ports:
+      - 6333:6333
+      - 6334:6334
+    expose:
+      - 6333
+      - 6334
+      - 6335
+    configs:
+      - source: qdrant_config
+        target: /qdrant/config/production.yaml
+    volumes:
+      - autoparts_qdrant_data:/qdrant/storage
+
+configs:
+  qdrant_config:
+    content: |
+      log_level: INFO
+
+networks:
+  autoparts_network:
+    driver: bridge
+
+volumes:
+  autoparts_ollama_data:
+  autoparts_embeddings_data:
+  autoparts_qdrant_data:
+
+secrets:
+  whatsapp_secrets:
+    file: ./secrets/whatsapp_secrets.txt

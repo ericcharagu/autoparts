@@ -1,0 +1,2582 @@
+[
+    {
+        "item_name": "Apollo 12.4-24 8PR KRISHAK PREMIUM-EAgriculture",
+        "product_code": "RTC4KDKPR1A0A",
+        "retail_selling_price": "39600",
+        "units": "10",
+        "buying_price": "32500",
+        "wholesale_selling_price": "35750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 14.00-24 16PR ARG 217 TL -E",
+        "product_code": "RLM7BHAG71A0A",
+        "retail_selling_price": "75900",
+        "units": "10",
+        "buying_price": "60500",
+        "wholesale_selling_price": "66550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 16.9-28 12PR FX515 -E",
+        "product_code": "RTC4RFFX54A0A",
+        "retail_selling_price": "78100",
+        "units": "10",
+        "buying_price": "59500",
+        "wholesale_selling_price": "65450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 17.5-25 20PR Terra L3 TL -E",
+        "product_code": "RLM7NLTER1A0A",
+        "retail_selling_price": "154000",
+        "units": "10",
+        "buying_price": "130000",
+        "wholesale_selling_price": "143000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 175/65R14 82H ZE914ER",
+        "product_code": "M10591596FJ",
+        "retail_selling_price": "6380",
+        "units": "10",
+        "buying_price": "5000",
+        "wholesale_selling_price": "5500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 175/70R13(TE301)82H",
+        "product_code": "CBPTE30117F13HHJ",
+        "retail_selling_price": "6050",
+        "units": "10",
+        "buying_price": "5000",
+        "wholesale_selling_price": "5500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 175/70R14(TE301)88H",
+        "product_code": "CBPTE30120G18VHJ",
+        "retail_selling_price": "6050",
+        "units": "10",
+        "buying_price": "5000",
+        "wholesale_selling_price": "5500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 175R13C 8PR 97/95P R51",
+        "product_code": "M11391120FJ",
+        "retail_selling_price": "12650",
+        "units": "10",
+        "buying_price": "9500",
+        "wholesale_selling_price": "10450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 18.4-30 14PR POWERHAUL HD -E",
+        "product_code": "RTC4TGFX23A0A",
+        "retail_selling_price": "99000",
+        "units": "10",
+        "buying_price": "85000",
+        "wholesale_selling_price": "93500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 185/70R13(TE301)86T",
+        "product_code": "CBPTE30118F13THJ",
+        "retail_selling_price": "6050",
+        "units": "10",
+        "buying_price": "4500",
+        "wholesale_selling_price": "4950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 185/70R14 88H SN832A",
+        "product_code": "R10551053F1",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "8000",
+        "wholesale_selling_price": "8800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 185/70R14 88T SN832i",
+        "product_code": "M10491115FJ",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "7500",
+        "wholesale_selling_price": "8250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 185/70R14(TE301)88H",
+        "product_code": "CBPTR92818F15HF0",
+        "retail_selling_price": "8800",
+        "units": "10",
+        "buying_price": "7500",
+        "wholesale_selling_price": "8250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 185/70R14PR -RP28",
+        "product_code": "MIX000068",
+        "retail_selling_price": "7700",
+        "units": "10",
+        "buying_price": "6000",
+        "wholesale_selling_price": "6600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 185R14C-8PR(TR645)102/100S",
+        "product_code": "CBCTR64518C14DHJ",
+        "retail_selling_price": "8800",
+        "units": "10",
+        "buying_price": "7000",
+        "wholesale_selling_price": "7700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 185R14C-8PR-SC328",
+        "product_code": "MIX000081",
+        "retail_selling_price": "9350",
+        "units": "10",
+        "buying_price": "7500",
+        "wholesale_selling_price": "8250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195/50R15 82V ZE914ER MFS",
+        "product_code": "M10591607FJ",
+        "retail_selling_price": "12100",
+        "units": "10",
+        "buying_price": "7500",
+        "wholesale_selling_price": "8250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Dunlop 195/55R15 (DUNLOP)",
+        "product_code": "MIX000010",
+        "retail_selling_price": "7700",
+        "units": "10",
+        "buying_price": "6000",
+        "wholesale_selling_price": "6600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 195/55R16 87V APOLLO",
+        "product_code": "MIX000004",
+        "retail_selling_price": "5500",
+        "units": "10",
+        "buying_price": "4500",
+        "wholesale_selling_price": "4950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195/55R16 87V ZE914ER MFS",
+        "product_code": "M10591617FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195/55R16 91V ZE310R XL",
+        "product_code": "M10591847FJ",
+        "retail_selling_price": "13750",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 195/60R16(TC101)89V",
+        "product_code": "CBPTC10119H16VHJ",
+        "retail_selling_price": "6600",
+        "units": "10",
+        "buying_price": "5500",
+        "wholesale_selling_price": "6050",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195/65R15 91V ZIEX ZE310R",
+        "product_code": "M10592012FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "9500",
+        "wholesale_selling_price": "10450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 195/65R15(TE307)91H",
+        "product_code": "CBPTE30719G15HHJ",
+        "retail_selling_price": "8250",
+        "units": "10",
+        "buying_price": "6500",
+        "wholesale_selling_price": "7150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 195/70R14(TE301)95H",
+        "product_code": "CBPTE30119F14HFJ",
+        "retail_selling_price": "7700",
+        "units": "10",
+        "buying_price": "6500",
+        "wholesale_selling_price": "7150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195R14C 8PR 106/104P R51",
+        "product_code": "M11391314FJ",
+        "retail_selling_price": "11000",
+        "units": "10",
+        "buying_price": "7500",
+        "wholesale_selling_price": "8250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 195R14C 8PY356 XL EICC",
+        "product_code": "E3125",
+        "retail_selling_price": "11550",
+        "units": "10",
+        "buying_price": "8500",
+        "wholesale_selling_price": "9350",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 195R14C-8PR H188",
+        "product_code": "MIX000082",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "8000",
+        "wholesale_selling_price": "8800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195R15C 8PR 106/104R R2",
+        "product_code": "M11391152FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "9500",
+        "wholesale_selling_price": "10450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 195R15C 8PR 106/104S LNVN01",
+        "product_code": "M11291582FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "9500",
+        "wholesale_selling_price": "10450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 195R15C-8PR(TR645)106/104S",
+        "product_code": "CBCTR64519A15DHJ",
+        "retail_selling_price": "8800",
+        "units": "10",
+        "buying_price": "6800",
+        "wholesale_selling_price": "7480",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 205/55R16 91V ZE310R",
+        "product_code": "M10591848FJ",
+        "retail_selling_price": "17600",
+        "units": "10",
+        "buying_price": "13000",
+        "wholesale_selling_price": "14300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 205/55R16PR SA57",
+        "product_code": "MIX000083",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "8000",
+        "wholesale_selling_price": "8800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 205/60R16 96V ZE310R XL",
+        "product_code": "M10591850FJ",
+        "retail_selling_price": "15400",
+        "units": "10",
+        "buying_price": "11000",
+        "wholesale_selling_price": "12100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 205/60R16PR RP28",
+        "product_code": "MIX000067",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "8000",
+        "wholesale_selling_price": "8800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 205/65R15 94H ZE914ER",
+        "product_code": "M10591602FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 205/65R15 94V ZE310R",
+        "product_code": "M10591845FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 205/65R15(TE301)94V",
+        "product_code": "CBPTE30120G15VHJ",
+        "retail_selling_price": "8800",
+        "units": "10",
+        "buying_price": "6500",
+        "wholesale_selling_price": "7150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 205/65R15(TE307)94V",
+        "product_code": "CBPTE30120G16VHJ",
+        "retail_selling_price": "8800",
+        "units": "10",
+        "buying_price": "6500",
+        "wholesale_selling_price": "7150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 205/65R15(TR928)94H",
+        "product_code": "CBPTR92820G15HH0",
+        "retail_selling_price": "8800",
+        "units": "10",
+        "buying_price": "7000",
+        "wholesale_selling_price": "7700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 205/65R16 95HES32 X  L TPE4",
+        "product_code": "R2460",
+        "retail_selling_price": "15950",
+        "units": "10",
+        "buying_price": "12500",
+        "wholesale_selling_price": "13750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/35R19 85Y AZENIS FK453 XL MFS -19 INCH",
+        "product_code": "MIX000020",
+        "retail_selling_price": "22440",
+        "units": "10",
+        "buying_price": "19400",
+        "wholesale_selling_price": "21340",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/40R18 89Y FK453 XL MFS",
+        "product_code": "M10691621FJ",
+        "retail_selling_price": "7150",
+        "units": "10",
+        "buying_price": "5000",
+        "wholesale_selling_price": "5500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/50R16 90V ZIEX ZE912 MFS - 16 INCH",
+        "product_code": "MIX000018",
+        "retail_selling_price": "11550",
+        "units": "10",
+        "buying_price": "9500",
+        "wholesale_selling_price": "10450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/50R17 91W ZE914ER",
+        "product_code": "M10692030FJ",
+        "retail_selling_price": "19250",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 215/55R16 93HES32 X L SEGF",
+        "product_code": "R2464",
+        "retail_selling_price": "18700",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/55R16 97W ZE914ER XL",
+        "product_code": "M10692029FJ",
+        "retail_selling_price": "18700",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/55R17 94V ZE310R",
+        "product_code": "M10591854FJ",
+        "retail_selling_price": "15950",
+        "units": "10",
+        "buying_price": "12500",
+        "wholesale_selling_price": "13750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 215/55R17 94VES32 X  L I7EI",
+        "product_code": "R2466",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "12000",
+        "wholesale_selling_price": "13200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 215/55R17(TH202)98Y",
+        "product_code": "CBPTH20221J17YFJ",
+        "retail_selling_price": "14300",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 215/60R16 95HES32 X  L SEJL",
+        "product_code": "R2467",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 215/60R16 95HG015 XRRL W7RP",
+        "product_code": "R2239",
+        "retail_selling_price": "22550",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/60R16 95V ZE310R",
+        "product_code": "M10591851FJ",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "12000",
+        "wholesale_selling_price": "13200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/60R16 99H WPATTR XL",
+        "product_code": "M11291736FJ",
+        "retail_selling_price": "18700",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 215/60R16(TE307)99V",
+        "product_code": "CBPTE30721H16VFJ",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "7000",
+        "wholesale_selling_price": "7700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 215/60R16PR RP28",
+        "product_code": "MIX000071",
+        "retail_selling_price": "10450",
+        "units": "10",
+        "buying_price": "8500",
+        "wholesale_selling_price": "9350",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/60R17 100H WPATTR XL",
+        "product_code": "M11291740FJ",
+        "retail_selling_price": "18700",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 215/60R17(TR259)96H",
+        "product_code": "CBPTR25921H17HHJ",
+        "retail_selling_price": "14300",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/65R16 102H WPATTR XL",
+        "product_code": "M11291737FJ",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/65R16 98H WILDPEAK A/T AT3WA",
+        "product_code": "M11291341FJ",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 215/65R16(TR259)102V",
+        "product_code": "CBPTR25921H18HHJ",
+        "retail_selling_price": "14300",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 215/70R15 98HGO15 XOLL WORP",
+        "product_code": "R2234",
+        "retail_selling_price": "19250",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/70R15 98T SN832I",
+        "product_code": "M10491130FJ",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "13000",
+        "wholesale_selling_price": "14300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 215/70R15(TE301)98H",
+        "product_code": "CBPTE30121F15HHJ",
+        "retail_selling_price": "10450",
+        "units": "10",
+        "buying_price": "8000",
+        "wholesale_selling_price": "8800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 215/70R16 104H WPATTR XL",
+        "product_code": "M11291738FJ",
+        "retail_selling_price": "20900",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 215/70R16 A0HG015 XRRL WORP",
+        "product_code": "R1154",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "17000",
+        "wholesale_selling_price": "18700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 215/70R16(TR292)100T",
+        "product_code": "CBPTR29221F16THJ",
+        "retail_selling_price": "12650",
+        "units": "10",
+        "buying_price": "10500",
+        "wholesale_selling_price": "11550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 215/75R17.5 JA767 135/133L 16 PR",
+        "product_code": "3302001879",
+        "retail_selling_price": "17600",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 215/75R17.5 JF518 135/133L 16PR",
+        "product_code": "3302001541",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/40R18 92Y FK510 XL MFS",
+        "product_code": "M10691744FJ",
+        "retail_selling_price": "25850",
+        "units": "10",
+        "buying_price": "22000",
+        "wholesale_selling_price": "24200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/40R18 92Y FK520L XL",
+        "product_code": "M10692170FJ",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "19000",
+        "wholesale_selling_price": "20900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Firestone 225/40R18 MF-192W TL XL",
+        "product_code": "MIX000033",
+        "retail_selling_price": "14410",
+        "units": "10",
+        "buying_price": "12100",
+        "wholesale_selling_price": "13310",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/40R19 93Y FK520L XL",
+        "product_code": "M10692171FJ",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "19000",
+        "wholesale_selling_price": "20900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/45R17 94W ZE310R XL",
+        "product_code": "M10692041FJ",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/45R17 94Y FK520L XL",
+        "product_code": "M10692172FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/45R18 95W ZIEX ZE310R",
+        "product_code": "M10692160FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/45R18 95WAE51 XRBL EC11",
+        "product_code": "R4586",
+        "retail_selling_price": "29150",
+        "units": "10",
+        "buying_price": "23000",
+        "wholesale_selling_price": "25300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/45R18 95Y FK510 XL MFS",
+        "product_code": "M10691704FJ",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/45R19 96Y FK520L XL",
+        "product_code": "M10692174FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/50R15 91V ZE912 MFS",
+        "product_code": "M10591516FJ",
+        "retail_selling_price": "7700",
+        "units": "10",
+        "buying_price": "4500",
+        "wholesale_selling_price": "4950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/50R17 94VES32AXRBL SEGF",
+        "product_code": "R2472",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "20500",
+        "wholesale_selling_price": "22550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/50R17 98W ZE310R XL",
+        "product_code": "M10692043FJ",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/50R17 98Y FK520L XL",
+        "product_code": "M10692175FJ",
+        "retail_selling_price": "23650",
+        "units": "10",
+        "buying_price": "19500",
+        "wholesale_selling_price": "21450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/50R18 99W FK520L XL",
+        "product_code": "M10692176FJ",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "19000",
+        "wholesale_selling_price": "20900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/55R16 95VES32AX L SEGF",
+        "product_code": "R2473",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "14500",
+        "wholesale_selling_price": "15950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/55R17 101V WPATTR XL",
+        "product_code": "M11291741FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/55R17 101W ZE310R XL",
+        "product_code": "M10692045FJ",
+        "retail_selling_price": "24750",
+        "units": "10",
+        "buying_price": "17000",
+        "wholesale_selling_price": "18700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/55R17 97VG95A X  L FJI7",
+        "product_code": "F2408",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "15500",
+        "wholesale_selling_price": "17050",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/55R17 A1WAE51 XL CD",
+        "product_code": "R6002",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/55R18 102V WPATTR XL",
+        "product_code": "M11291746FJ",
+        "retail_selling_price": "31900",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/55R18 102W FK510 SUV XL",
+        "product_code": "M11291311FJ",
+        "retail_selling_price": "31350",
+        "units": "10",
+        "buying_price": "24000",
+        "wholesale_selling_price": "26400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 225/55R18(TH202)102Y",
+        "product_code": "CBPTR20122J20YFJ",
+        "retail_selling_price": "15950",
+        "units": "10",
+        "buying_price": "13500",
+        "wholesale_selling_price": "14850",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/55R19 99W FK520L",
+        "product_code": "M10692178FJ",
+        "retail_selling_price": "33000",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/60R16 98VES32AX  L I7EI",
+        "product_code": "R2474",
+        "retail_selling_price": "22550",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/60R17 103H WPATTER XL",
+        "product_code": "M11291742FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/60R17 99HG015 XRRL SDRP",
+        "product_code": "R4802",
+        "retail_selling_price": "22550",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/60R17 99V ZE310R",
+        "product_code": "M10591856FJ",
+        "retail_selling_price": "20020",
+        "units": "10",
+        "buying_price": "16200",
+        "wholesale_selling_price": "17820",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/60R17 99V ZE914ER",
+        "product_code": "M10591619FJ",
+        "retail_selling_price": "20020",
+        "units": "10",
+        "buying_price": "15200",
+        "wholesale_selling_price": "16720",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/60R17 99VG91F X  L FJI7",
+        "product_code": "F4952",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "18500",
+        "wholesale_selling_price": "20350",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/60R18 104H WPATTR XL",
+        "product_code": "M11291747FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "19000",
+        "wholesale_selling_price": "20900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/60R18 A4HG015 XRRL FERP",
+        "product_code": "R5960",
+        "retail_selling_price": "26400",
+        "units": "10",
+        "buying_price": "21000",
+        "wholesale_selling_price": "23100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 225/60R18PR SU318 H/T",
+        "product_code": "MIX000070",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "11000",
+        "wholesale_selling_price": "12100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 225/65R17 (TR259) 106V",
+        "product_code": "MIX000077",
+        "retail_selling_price": "17050",
+        "units": "10",
+        "buying_price": "14500",
+        "wholesale_selling_price": "15950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/65R17 102T WILDPEAK A/T AT3W",
+        "product_code": "M11291670FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "19500",
+        "wholesale_selling_price": "21450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/65R17 A2HG015 XRRL WOC3",
+        "product_code": "R1137",
+        "retail_selling_price": "25850",
+        "units": "10",
+        "buying_price": "20500",
+        "wholesale_selling_price": "22550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 225/65R17PR SL369",
+        "product_code": "MIX000069",
+        "retail_selling_price": "14300",
+        "units": "10",
+        "buying_price": "12000",
+        "wholesale_selling_price": "13200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 225/70R15(TE301)100T",
+        "product_code": "CBPTE30118F14THJ",
+        "retail_selling_price": "12650",
+        "units": "10",
+        "buying_price": "9500",
+        "wholesale_selling_price": "10450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/70R15C 112/110R R51",
+        "product_code": "M11391322FJ",
+        "retail_selling_price": "13750",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 225/70R15C-8PR(TR652)112/110R",
+        "product_code": "CBCTR65222F15DHJ",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "12500",
+        "wholesale_selling_price": "13750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 225/70R17 A8TG015 XRRL SDRP",
+        "product_code": "R2244",
+        "retail_selling_price": "28600",
+        "units": "10",
+        "buying_price": "22000",
+        "wholesale_selling_price": "24200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/75R15 102S H/T01 OWL MFS",
+        "product_code": "M11291485FJ",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 225/75R16C-8PR(TR652)116/114Q",
+        "product_code": "CBCTR65222E16DHJ",
+        "retail_selling_price": "17050",
+        "units": "10",
+        "buying_price": "14500",
+        "wholesale_selling_price": "15950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 225/75R16LT 115/112S WILDPEAK A/T AT3W",
+        "product_code": "M11391221FJ",
+        "retail_selling_price": "28600",
+        "units": "10",
+        "buying_price": "22000",
+        "wholesale_selling_price": "24200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 23.5-25 24 PR L-3 Terra TL",
+        "product_code": "RLM8BNTER1A0A",
+        "retail_selling_price": "231000",
+        "units": "10",
+        "buying_price": "190000",
+        "wholesale_selling_price": "209000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/35R19 91Y FK520L XL",
+        "product_code": "M10692179FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/40R18 95Y FK510 XL MFS",
+        "product_code": "M10691705FJ",
+        "retail_selling_price": "23650",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/40R18 95Y FK520L XL",
+        "product_code": "M10692181FJ",
+        "retail_selling_price": "26950",
+        "units": "10",
+        "buying_price": "19500",
+        "wholesale_selling_price": "21450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/40R19 96WAE51 XRBL ECII",
+        "product_code": "R4638",
+        "retail_selling_price": "30800",
+        "units": "10",
+        "buying_price": "25000",
+        "wholesale_selling_price": "27500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Firestone 235/45R17 197W XL TL",
+        "product_code": "MIX000032",
+        "retail_selling_price": "14410",
+        "units": "10",
+        "buying_price": "12100",
+        "wholesale_selling_price": "13310",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/45R17 97Y FK510 XL MFS",
+        "product_code": "M10691743FJ",
+        "retail_selling_price": "26400",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 235/45R17(TH202)97Y",
+        "product_code": "CBPTR25722G110TH0",
+        "retail_selling_price": "14850",
+        "units": "10",
+        "buying_price": "11500",
+        "wholesale_selling_price": "12650",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/45R18 98Y FK510 XL MFS",
+        "product_code": "M10691745FJ",
+        "retail_selling_price": "25850",
+        "units": "10",
+        "buying_price": "22000",
+        "wholesale_selling_price": "24200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/50R18 101V WPATTR XL",
+        "product_code": "M11291748FJ",
+        "retail_selling_price": "29700",
+        "units": "10",
+        "buying_price": "24000",
+        "wholesale_selling_price": "26400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/50R18 101W  ZE914EC",
+        "product_code": "M10691248FJ",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/55R17 103V WPATTR XL",
+        "product_code": "M11291744FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/55R17 103W FK510 SUV XL",
+        "product_code": "M11291303FJ",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/55R17 99W ZE914ER",
+        "product_code": "M10692032FJ",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/55R17 99WAE51 X  L ECII",
+        "product_code": "R4624",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/55R18 104Y FK520L XL",
+        "product_code": "M10692186FJ",
+        "retail_selling_price": "28600",
+        "units": "10",
+        "buying_price": "22500",
+        "wholesale_selling_price": "24750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 235/55R18PR SU318 H/T",
+        "product_code": "MIX000085",
+        "retail_selling_price": "17050",
+        "units": "10",
+        "buying_price": "14500",
+        "wholesale_selling_price": "15950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/55R19 A5YV107 WRBL TPWO",
+        "product_code": "R7553",
+        "retail_selling_price": "42900",
+        "units": "10",
+        "buying_price": "35000",
+        "wholesale_selling_price": "38500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/60R18 A3HG99B X  L MIRH",
+        "product_code": "R5986",
+        "retail_selling_price": "23100",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/60R18 A7HG015 XRRL WORP",
+        "product_code": "R1145",
+        "retail_selling_price": "30250",
+        "units": "10",
+        "buying_price": "24000",
+        "wholesale_selling_price": "26400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 235/60R18(TR292)103T",
+        "product_code": "CBPTR29223H18THJ",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Mastercraft 235/65R17 104T COURSER AXT OWL",
+        "product_code": "MIX000043",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "17300",
+        "wholesale_selling_price": "19030",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/65R17 108H WILDPEAK A/T AT3WA XL",
+        "product_code": "M11291557FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/65R17 108W FK510 SUV XL",
+        "product_code": "M11291305FJ",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "19000",
+        "wholesale_selling_price": "20900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/65R17 A8HG015 XRRL I2RP",
+        "product_code": "R1138",
+        "retail_selling_price": "27500",
+        "units": "10",
+        "buying_price": "22000",
+        "wholesale_selling_price": "24200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/65R18 106W FK510 SUV",
+        "product_code": "M11291315FJ",
+        "retail_selling_price": "38500",
+        "units": "10",
+        "buying_price": "29500",
+        "wholesale_selling_price": "32450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 235/65R18(TR259)106H",
+        "product_code": "CBPTR25923G18HHJ",
+        "retail_selling_price": "19250",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/70R16 109T WILDPEAK A/T AT3W XL",
+        "product_code": "M11291659FJ",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "17000",
+        "wholesale_selling_price": "18700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/70R16 A6HG015 XRRL SDRP",
+        "product_code": "R1152",
+        "retail_selling_price": "26400",
+        "units": "10",
+        "buying_price": "20500",
+        "wholesale_selling_price": "22550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/75R15 109T WILDPEAK A/T AT3W XL",
+        "product_code": "M11291660FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "17000",
+        "wholesale_selling_price": "18700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/75R15 A9HG015 XRRL SDRP",
+        "product_code": "R1164",
+        "retail_selling_price": "22550",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 235/75R15(TR292)109S",
+        "product_code": "CBCTR29223E16DHJ",
+        "retail_selling_price": "16500",
+        "units": "10",
+        "buying_price": "13000",
+        "wholesale_selling_price": "14300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/75R15LT 104/101S A/T01 OWL",
+        "product_code": "M11291487FJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/75R15LT A4SG015 XOLL SCRP",
+        "product_code": "E4519",
+        "retail_selling_price": "24750",
+        "units": "10",
+        "buying_price": "19500",
+        "wholesale_selling_price": "21450",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 235/75R17.5 JA767 143/141L 18PR",
+        "product_code": "3302002149",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 235/75R17.5 JF518 143/141L 18PR",
+        "product_code": "3302001572",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 235/85R16LT 120/116Q M/T01",
+        "product_code": "M11291242FJ",
+        "retail_selling_price": "33550",
+        "units": "10",
+        "buying_price": "28000",
+        "wholesale_selling_price": "30800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/85R16LT C0QG003 XRRL WO",
+        "product_code": "E4698",
+        "retail_selling_price": "41250",
+        "units": "10",
+        "buying_price": "34500",
+        "wholesale_selling_price": "37950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 235/85R16LT C0RG015 XOLL SCRP",
+        "product_code": "E4454",
+        "retail_selling_price": "36850",
+        "units": "10",
+        "buying_price": "29000",
+        "wholesale_selling_price": "31900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/35R19 93Y FK520L XL",
+        "product_code": "M10692189FJ",
+        "retail_selling_price": "28600",
+        "units": "10",
+        "buying_price": "23000",
+        "wholesale_selling_price": "25300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/40R17 95Y FK510 XL MFS",
+        "product_code": "M10691702FJ",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/40R18 97Y FK520L XL",
+        "product_code": "M10692192FJ",
+        "retail_selling_price": "25850",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/40R19 98Y FK510 XL MFS",
+        "product_code": "M10691782FJ",
+        "retail_selling_price": "33550",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/40R20 99Y FK510 XL MFS",
+        "product_code": "M10691796FJ",
+        "retail_selling_price": "35750",
+        "units": "10",
+        "buying_price": "29000",
+        "wholesale_selling_price": "31900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/45R17 99Y FK510 XL MFS",
+        "product_code": "M10691703FJ",
+        "retail_selling_price": "23100",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/45R18 100Y FK520L XL",
+        "product_code": "M10692195FJ",
+        "retail_selling_price": "30250",
+        "units": "10",
+        "buying_price": "22500",
+        "wholesale_selling_price": "24750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 245/45R18 AOWAE51 XRBL EC11",
+        "product_code": "R4576",
+        "retail_selling_price": "32450",
+        "units": "10",
+        "buying_price": "25000",
+        "wholesale_selling_price": "27500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/45R19 102Y FK520L XL",
+        "product_code": "M10692196FJ",
+        "retail_selling_price": "30800",
+        "units": "10",
+        "buying_price": "25000",
+        "wholesale_selling_price": "27500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/45R20 103Y FK510 XL MFS",
+        "product_code": "M10691728FJ",
+        "retail_selling_price": "42900",
+        "units": "10",
+        "buying_price": "32500",
+        "wholesale_selling_price": "35750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/65R17 107S WILDPEAK A/T01 - INCH 17",
+        "product_code": "M11291436FJ",
+        "retail_selling_price": "13750",
+        "units": "10",
+        "buying_price": "7000",
+        "wholesale_selling_price": "7700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/65R17 107S WILDPEAK H/T01 MFS -INC17",
+        "product_code": "MIX000021",
+        "retail_selling_price": "19580",
+        "units": "10",
+        "buying_price": "16800",
+        "wholesale_selling_price": "18480",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/65R17 111H AT3WA XL",
+        "product_code": "M11291558FJ",
+        "retail_selling_price": "13750",
+        "units": "10",
+        "buying_price": "7000",
+        "wholesale_selling_price": "7700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 245/70R16 111T WILDPEAK A/T AT3W XL",
+        "product_code": "M11291661FJ",
+        "retail_selling_price": "22000",
+        "units": "10",
+        "buying_price": "18500",
+        "wholesale_selling_price": "20350",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 245/70R16 B1HG015 XRRL WORP",
+        "product_code": "R1148",
+        "retail_selling_price": "28050",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Mastercraft 245/75R17LT 121/118S COURSER AXT OWL",
+        "product_code": "MIX000045",
+        "retail_selling_price": "31350",
+        "units": "10",
+        "buying_price": "27500",
+        "wholesale_selling_price": "30250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Accelera 255/35r18 PHI",
+        "product_code": "MIX000075",
+        "retail_selling_price": "9900",
+        "units": "10",
+        "buying_price": "8000",
+        "wholesale_selling_price": "8800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/40R18 99Y FK510 XL MFS",
+        "product_code": "M10691711FJ",
+        "retail_selling_price": "35750",
+        "units": "10",
+        "buying_price": "27500",
+        "wholesale_selling_price": "30250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/40R20 101Y FK510 XL MFS",
+        "product_code": "M10691798FJ",
+        "retail_selling_price": "33000",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/50R19 107Y FK510 SUV XL MFS",
+        "product_code": "M11291317FJ",
+        "retail_selling_price": "37950",
+        "units": "10",
+        "buying_price": "29000",
+        "wholesale_selling_price": "31900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 255/50R19(TR259)107V",
+        "product_code": "CBPTR25925K19VFJ",
+        "retail_selling_price": "19250",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/55R18 109H AT3WA XL",
+        "product_code": "M11291563FJ",
+        "retail_selling_price": "29700",
+        "units": "10",
+        "buying_price": "22500",
+        "wholesale_selling_price": "24750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 255/55R18 A9HG015 XRRL WORP",
+        "product_code": "R4064",
+        "retail_selling_price": "34100",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/55R19 111H WILDPEAK A/T AT3WA XL",
+        "product_code": "M11291568FJ",
+        "retail_selling_price": "34100",
+        "units": "10",
+        "buying_price": "28000",
+        "wholesale_selling_price": "30800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/55R19 111W FK510 SUV XL",
+        "product_code": "M11291321FJ",
+        "retail_selling_price": "44000",
+        "units": "10",
+        "buying_price": "35000",
+        "wholesale_selling_price": "38500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 255/55R19 B1YV107 WRBL TPWO",
+        "product_code": "R7567",
+        "retail_selling_price": "36300",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Firestone 255/55R19 LE-02 111V TL XL",
+        "product_code": "MIX000024",
+        "retail_selling_price": "22990",
+        "units": "10",
+        "buying_price": "17900",
+        "wholesale_selling_price": "19690",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 255/55R20 B0YV107 WRBL TPWO",
+        "product_code": "R7568",
+        "retail_selling_price": "49500",
+        "units": "10",
+        "buying_price": "42000",
+        "wholesale_selling_price": "46200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 255/65R16 109T A/T01",
+        "product_code": "M11291448FJ",
+        "retail_selling_price": "13200",
+        "units": "10",
+        "buying_price": "9000",
+        "wholesale_selling_price": "9900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 255/70R22.5 JU555 144/142J 18PR",
+        "product_code": "3302002155",
+        "retail_selling_price": "29150",
+        "units": "10",
+        "buying_price": "24500",
+        "wholesale_selling_price": "26950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/35R18 97Y FK510 XL MFS",
+        "product_code": "M10691713FJ",
+        "retail_selling_price": "26400",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/35R18 97Y FK520L XL",
+        "product_code": "M10692210FJ",
+        "retail_selling_price": "26950",
+        "units": "10",
+        "buying_price": "21000",
+        "wholesale_selling_price": "23100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/35R19 98Y FK520L XL",
+        "product_code": "M10692211FJ",
+        "retail_selling_price": "36300",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/40R21 105Y FK520L XL",
+        "product_code": "M10692212FJ",
+        "retail_selling_price": "52800",
+        "units": "10",
+        "buying_price": "45000",
+        "wholesale_selling_price": "49500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/45R20 108Y FK520L XL",
+        "product_code": "M10692213FJ",
+        "retail_selling_price": "36300",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/55R19 109Y FK510 SUV",
+        "product_code": "M11291322FJ",
+        "retail_selling_price": "41800",
+        "units": "10",
+        "buying_price": "35000",
+        "wholesale_selling_price": "38500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/60R18 114T WILDPEAK A/T AT3W XL",
+        "product_code": "M11291715FJ",
+        "retail_selling_price": "35200",
+        "units": "10",
+        "buying_price": "28000",
+        "wholesale_selling_price": "30800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 265/60R18(TR292)114H",
+        "product_code": "CBPTR29226H18HFJ",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/60R18LT B9SG015 XOLL FERP",
+        "product_code": "E5156",
+        "retail_selling_price": "39050",
+        "units": "10",
+        "buying_price": "32500",
+        "wholesale_selling_price": "35750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/65R17 116T WILDPEAK A/T AT3W XL",
+        "product_code": "M11291664FJ",
+        "retail_selling_price": "29700",
+        "units": "10",
+        "buying_price": "23500",
+        "wholesale_selling_price": "25850",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/65R17LT C0QG016 XRRL FM",
+        "product_code": "E5165",
+        "retail_selling_price": "36850",
+        "units": "10",
+        "buying_price": "30500",
+        "wholesale_selling_price": "33550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/65R17LT C0RG015 XOLL FERP",
+        "product_code": "E5154",
+        "retail_selling_price": "33550",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Chaoyang 265/65R17PR SL369",
+        "product_code": "MIX000086",
+        "retail_selling_price": "19250",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/65R18 B4HG015 XRRL WORP",
+        "product_code": "R1132",
+        "retail_selling_price": "29150",
+        "units": "10",
+        "buying_price": "22000",
+        "wholesale_selling_price": "24200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/65R18 B4VG31B X  L TORI",
+        "product_code": "R7089",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Primewell 265/65R18P 112S VALERA AT OWL PRIMEWELL",
+        "product_code": "MIX000052",
+        "retail_selling_price": "12650",
+        "units": "10",
+        "buying_price": "10000",
+        "wholesale_selling_price": "11000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/70R15 B2HG015 XRRL SDRP",
+        "product_code": "R1151",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Dunlop 265/70R15 DUNLOP",
+        "product_code": "MIX000061",
+        "retail_selling_price": "8250",
+        "units": "10",
+        "buying_price": "6500",
+        "wholesale_selling_price": "7150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/70R16 B2HG015 XRRL WORP",
+        "product_code": "R1147",
+        "retail_selling_price": "25850",
+        "units": "10",
+        "buying_price": "20500",
+        "wholesale_selling_price": "22550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/70R17LT 121/118Q M/T01",
+        "product_code": "M11291244FJ",
+        "retail_selling_price": "39600",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/70R17LT C1QG003 XRRL WOC3",
+        "product_code": "E4650",
+        "retail_selling_price": "49500",
+        "units": "10",
+        "buying_price": "41000",
+        "wholesale_selling_price": "45100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/70R17LT C1QG016 XRRL FM",
+        "product_code": "E4906",
+        "retail_selling_price": "44000",
+        "units": "10",
+        "buying_price": "37500",
+        "wholesale_selling_price": "41250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 265/70R19.5 JA767 143/141J 18PR",
+        "product_code": "3302001941",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 265/70R19.5 JD727 143/141K 18PR",
+        "product_code": "3302002028",
+        "retail_selling_price": "24750",
+        "units": "10",
+        "buying_price": "20500",
+        "wholesale_selling_price": "22550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 265/70R19.5 JF518 143/141J 18PR",
+        "product_code": "3302001537",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 265/75R16LT 119/116R WILDPEAK A/T AT3WA",
+        "product_code": "M11291345FJ",
+        "retail_selling_price": "30800",
+        "units": "10",
+        "buying_price": "25000",
+        "wholesale_selling_price": "27500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/75R16LT C3QG003 XRRL WO",
+        "product_code": "E4694",
+        "retail_selling_price": "41800",
+        "units": "10",
+        "buying_price": "35000",
+        "wholesale_selling_price": "38500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 265/75R16LT C3RG015 XOLL SCRP",
+        "product_code": "E4456",
+        "retail_selling_price": "36300",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/35R18 99Y FK453 XL MFS",
+        "product_code": "M10691619FJ",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/35R18 99Y FK510 XL MFS",
+        "product_code": "M10691749FJ",
+        "retail_selling_price": "20900",
+        "units": "10",
+        "buying_price": "16000",
+        "wholesale_selling_price": "17600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/40R19 105Y FK510 XL MFS",
+        "product_code": "M10691723FJ",
+        "retail_selling_price": "34650",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/40R20 106Y FK510 SUV XL MFS",
+        "product_code": "M11291301FJ",
+        "retail_selling_price": "33000",
+        "units": "10",
+        "buying_price": "24500",
+        "wholesale_selling_price": "26950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 275/40R21 A7WG057 XRBL EFTP",
+        "product_code": "R4548",
+        "retail_selling_price": "61600",
+        "units": "10",
+        "buying_price": "50000",
+        "wholesale_selling_price": "55000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 275/40R22 A8WGO57 XRBL WO",
+        "product_code": "R4553",
+        "retail_selling_price": "88000",
+        "units": "10",
+        "buying_price": "71500",
+        "wholesale_selling_price": "78650",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/45R20 110W FK510 SUV XL MFS",
+        "product_code": "M11291326FJ",
+        "retail_selling_price": "42350",
+        "units": "10",
+        "buying_price": "34000",
+        "wholesale_selling_price": "37400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 275/45R20(TH201)110Y",
+        "product_code": "CBPTH20127L20YFJ",
+        "retail_selling_price": "21450",
+        "units": "10",
+        "buying_price": "18000",
+        "wholesale_selling_price": "19800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 275/45R21 B0WV105TWRBL TPWO",
+        "product_code": "R0163",
+        "retail_selling_price": "66000",
+        "units": "10",
+        "buying_price": "53000",
+        "wholesale_selling_price": "58300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/50R20 113Y FK510 SUV XL MFS",
+        "product_code": "M11291330FJ",
+        "retail_selling_price": "45650",
+        "units": "10",
+        "buying_price": "36500",
+        "wholesale_selling_price": "40150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 275/55R20 117T WILDPEAK A/T AT3W XL",
+        "product_code": "M11291719FJ",
+        "retail_selling_price": "37400",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Primewell 275/60R20P 114T VALERA AT PRIMEWELL",
+        "product_code": "MIX000053",
+        "retail_selling_price": "14900",
+        "units": "10",
+        "buying_price": "12500",
+        "wholesale_selling_price": "13750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 275/65R17 B5HG015 XRRL SDRP",
+        "product_code": "R1162",
+        "retail_selling_price": "35750",
+        "units": "10",
+        "buying_price": "28500",
+        "wholesale_selling_price": "31350",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 285/45R19 111W FK453CC XL MFS",
+        "product_code": "M10691607FJ",
+        "retail_selling_price": "35750",
+        "units": "10",
+        "buying_price": "28500",
+        "wholesale_selling_price": "31350",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/45R22 B4HG015 XRRL WO",
+        "product_code": "R2246",
+        "retail_selling_price": "66000",
+        "units": "10",
+        "buying_price": "53000",
+        "wholesale_selling_price": "58300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 285/50R20 116H WILDPEAK A/T AT3W XL",
+        "product_code": "M11291721FJ",
+        "retail_selling_price": "38500",
+        "units": "10",
+        "buying_price": "32000",
+        "wholesale_selling_price": "35200",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Firestone 285/60R18  LE-02 116V TL (FIRESTONE)",
+        "product_code": "MIX000026",
+        "retail_selling_price": "24090",
+        "units": "10",
+        "buying_price": "18900",
+        "wholesale_selling_price": "20790",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/60R18 B6HG015 XRRL SDRP",
+        "product_code": "R1165",
+        "retail_selling_price": "36300",
+        "units": "10",
+        "buying_price": "29000",
+        "wholesale_selling_price": "31900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/60R18LT C2QG016 XRRL FM",
+        "product_code": "E5166",
+        "retail_selling_price": "38500",
+        "units": "10",
+        "buying_price": "30000",
+        "wholesale_selling_price": "33000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/65R17 B6HG015 XRRL WORP",
+        "product_code": "R2235",
+        "retail_selling_price": "37400",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/65R18 C5QG016 XRRL FM",
+        "product_code": "E4935",
+        "retail_selling_price": "44000",
+        "units": "10",
+        "buying_price": "38000",
+        "wholesale_selling_price": "41800",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Mastercraft 285/65R18LT  125/112Q COURSER MXT OWL",
+        "product_code": "MIX000044",
+        "retail_selling_price": "26400",
+        "units": "10",
+        "buying_price": "23000",
+        "wholesale_selling_price": "25300",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/65R18LT C5QG003 XRRL WO",
+        "product_code": "E4685",
+        "retail_selling_price": "62150",
+        "units": "10",
+        "buying_price": "50000",
+        "wholesale_selling_price": "55000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 285/75R16LT 126R WILDPEAK A/T AT3W",
+        "product_code": "M11291698FJ",
+        "retail_selling_price": "46200",
+        "units": "10",
+        "buying_price": "36000",
+        "wholesale_selling_price": "39600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 285/75R16LT 8PR 122/119Q A/T02 OWL",
+        "product_code": "M11291541FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "19000",
+        "wholesale_selling_price": "20900",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 285/75R16LT C6QG003 XRRL WO",
+        "product_code": "E4693",
+        "retail_selling_price": "46200",
+        "units": "10",
+        "buying_price": "40000",
+        "wholesale_selling_price": "44000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 295/40R21 B1WG057 XRBL WOTP",
+        "product_code": "R4551",
+        "retail_selling_price": "71500",
+        "units": "10",
+        "buying_price": "60000",
+        "wholesale_selling_price": "66000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Mastercraft 305/70R16LT 124/121Q COURSER MXT OWL",
+        "product_code": "MIX000042",
+        "retail_selling_price": "23650",
+        "units": "10",
+        "buying_price": "20500",
+        "wholesale_selling_price": "22550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Dunlop 31 X10.5 R 15 DUNLOP",
+        "product_code": "MIX000013",
+        "retail_selling_price": "14300",
+        "units": "10",
+        "buying_price": "11500",
+        "wholesale_selling_price": "12650",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 31*10.50R15LT-6PR(TR292)109S",
+        "product_code": "CBLTR29205A15CFJ",
+        "retail_selling_price": "17050",
+        "units": "10",
+        "buying_price": "14000",
+        "wholesale_selling_price": "15400",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 315/35R20 110Y FK510 SUV XL MFS",
+        "product_code": "M11291300FJ",
+        "retail_selling_price": "35200",
+        "units": "10",
+        "buying_price": "27000",
+        "wholesale_selling_price": "29700",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 315/70R17LT 121S WILDPEAK A/T AT3W",
+        "product_code": "M11291704FJ",
+        "retail_selling_price": "42900",
+        "units": "10",
+        "buying_price": "36000",
+        "wholesale_selling_price": "39600",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Yokohama 31X10.50R15A9SG015 XOLL SCRP",
+        "product_code": "E4518",
+        "retail_selling_price": "25850",
+        "units": "10",
+        "buying_price": "21000",
+        "wholesale_selling_price": "23100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 31X10.50R15LT 109Q AT3WA",
+        "product_code": "M11291340FJ",
+        "retail_selling_price": "25300",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 31X10.50R15LT 109Q M/T01",
+        "product_code": "M11291241FJ",
+        "retail_selling_price": "29150",
+        "units": "10",
+        "buying_price": "25500",
+        "wholesale_selling_price": "28050",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 31X10.50R15LT 109S WILDPEAK A/T AT3W",
+        "product_code": "M11391215FJ",
+        "retail_selling_price": "26950",
+        "units": "10",
+        "buying_price": "21000",
+        "wholesale_selling_price": "23100",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 385/55R22.5 JT560 160K  20PR",
+        "product_code": "3302000837",
+        "retail_selling_price": "40700",
+        "units": "10",
+        "buying_price": "35000",
+        "wholesale_selling_price": "38500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 385/65R22.5 18PR 158K GI-378",
+        "product_code": "M11591273FJ",
+        "retail_selling_price": "39600",
+        "units": "10",
+        "buying_price": "30500",
+        "wholesale_selling_price": "33550",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 7.50-16 14PR ANCHOR (D)-E",
+        "product_code": "RTE3CGACR2A0B",
+        "retail_selling_price": "26950",
+        "units": "10",
+        "buying_price": "22500",
+        "wholesale_selling_price": "24750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 7.50-16 8PR KRISHAK PREMIUM-E",
+        "product_code": "RTN3CDKPR3A0A",
+        "retail_selling_price": "17600",
+        "units": "10",
+        "buying_price": "14500",
+        "wholesale_selling_price": "15950",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Falken 7.50R16 14PR GI-377 TT",
+        "product_code": "M11391321FJ3",
+        "retail_selling_price": "19800",
+        "units": "10",
+        "buying_price": "15000",
+        "wholesale_selling_price": "16500",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Triangle 7.50R16-14PR(TR624)N TT",
+        "product_code": "CBLTR62475A16GH1M210",
+        "retail_selling_price": "13750",
+        "units": "10",
+        "buying_price": "11500",
+        "wholesale_selling_price": "12650",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 7.50R16LT  JD690 122/118L 14PR",
+        "product_code": "3102000520",
+        "retail_selling_price": "20900",
+        "units": "10",
+        "buying_price": "17500",
+        "wholesale_selling_price": "19250",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Firestone 750R16 FIRESTONE",
+        "product_code": "MIX000056",
+        "retail_selling_price": "23100",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 8.25R16LT  JD690 128/124L 16PR",
+        "product_code": "3102000494",
+        "retail_selling_price": "24200",
+        "units": "10",
+        "buying_price": "20000",
+        "wholesale_selling_price": "22000",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Apollo 9.00-16 16PR APOLLO DHRUV TT (5 Deg.) -E",
+        "product_code": "RTK4AHDR5 1A0A",
+        "retail_selling_price": "28600",
+        "units": "10",
+        "buying_price": "22500",
+        "wholesale_selling_price": "24750",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 9.5R17.5 JD727 143/141M 18PR",
+        "product_code": "3302001968",
+        "retail_selling_price": "20350",
+        "units": "10",
+        "buying_price": "16500",
+        "wholesale_selling_price": "18150",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    },
+    {
+        "item_name": "Jinyu 9.5R17.5 JF568 143/141J 18PR",
+        "product_code": "3302000701",
+        "retail_selling_price": "19470",
+        "units": "10",
+        "buying_price": "15700",
+        "wholesale_selling_price": "17270",
+        "minimum_order_quantity": "1",
+        "discount": "12"
+    }
+]
