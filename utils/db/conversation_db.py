@@ -7,18 +7,20 @@ from sqlalchemy import (
     Boolean,
     LargeBinary,
     JSON,
-    ForeignKey
+    ForeignKey,
 )
-from datetime import datetime, timezone 
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 from loguru import logger
 from typing import Any, List
 from PIL import Image
 import io
 from utils.db.base import Base, Session
+
 # Define logger path
 logger.add("./logs/conversation_db.log", rotation="700 MB")
 load_dotenv()
+
 
 class Conversation(Base):
     """Database model for conversation history with separate timestamps"""
@@ -26,21 +28,21 @@ class Conversation(Base):
     __tablename__ = "conversations"
 
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('users.id'), nullable=False) 
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     user_message = Column(JSON)
     prompt_timestamp = Column(DateTime(timezone=True))
     llm_response = Column(String)
     llm_response_timestamp = Column(DateTime(timezone=True))
     category = Column(String)
     interaction_timestamp = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), default=lambda: datetime.now()
     )
     media_embedding = Column(LargeBinary)
     media_thumbnail = Column(LargeBinary)
     media_type = Column(String)
     is_media_processed = Column(Boolean, default=False)
-    source=Column(String)
-    
+    source = Column(String)
+
     # Relationship to User
     user = relationship("User", back_populates="conversations")
 
@@ -64,18 +66,16 @@ def process_media_input(media_data: Any) -> dict:
     """Process media input for storage"""
     return {
         "original_data": media_data,
-        "thumbnail": compress_image(media_data)
-        if isinstance(media_data, bytes)
-        else None,
+        "thumbnail": (
+            compress_image(media_data) if isinstance(media_data, bytes) else None
+        ),
         "media_type": "image" if isinstance(media_data, bytes) else "text",
         "is_processed": True,
     }
 
+
 @logger.catch
-async def save_conversation(
-    session: Session, 
-    conversation_data:any
-) -> Conversation:
+async def save_conversation(session: Session, conversation_data: any) -> Conversation:
     """
     Save complete conversation with pre-parsed timestamps
     Assumes timestamps are already properly formatted datetime objects
@@ -92,7 +92,7 @@ async def save_conversation(
             media_thumbnail=media_info["thumbnail"],
             media_type=media_info["media_type"],
             is_media_processed=media_info["is_processed"],
-            source=conversation_data.source
+            source=conversation_data.source,
         )
 
         session.add(conversation)
@@ -123,5 +123,3 @@ def get_recent_conversations(session: Session, limit: int = 10) -> List[Conversa
     except ValueError as e:
         logger.debug(f"Failed to fetch conversations: {e}")
         return []
-
-

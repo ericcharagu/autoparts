@@ -38,9 +38,7 @@ class MobileRequestLog(Base):
 
     id = Column(String, primary_key=True, index=True)  # Same as request_id
     client_timestamp = Column(DateTime, nullable=True)  # From mobile client
-    server_timestamp = Column(
-        DateTime, default=datetime.now(timezone.utc)
-    )  # When we received it
+    server_timestamp = Column(DateTime, default=datetime.now())  # When we received it
     prompt = Column(Text, nullable=False)  # User's prompt
     response = Column(Text, nullable=True)  # AI response (nullable for errors)
     status = Column(
@@ -181,8 +179,8 @@ def shutdown_session() -> None:
 
 # Add utility functions that might be used across models
 def current_time() -> datetime:
-    """Get current UTC time"""
-    return datetime.now(timezone.utc)
+    """Get current time"""
+    return datetime.now()
 
 
 def get_db():

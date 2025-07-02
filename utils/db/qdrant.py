@@ -9,7 +9,7 @@ from qdrant_client import AsyncQdrantClient, models
 logger.add("./logs/db.log", rotation="1 week")
 # Constants
 QDRANT_HOST = "http://host.docker.internal:6333"
-
+EMBEDDING_HOST = "http://host.docker.internal:11435"
 COLLECTION_NAME = "autoparts_test"
 DIMENSION = 768
 CHUNK_SIZE = 200
@@ -25,9 +25,20 @@ class HybridRetriever:
         self.collection_name = collection_name
         self.dimension = dimension
         self.chunk_size = chunk_size
-        self.client = AsyncQdrantClient(url=QDRANT_HOST)
-        self.embedding_client = AsyncClient(host="http://host.docker.internal:11435")
+        self.client = None
+        self.embedding_client = AsyncClient(host=EMBEDDING_HOST)
         self.vector_cache: Dict[str, List[Dict]] = {}
+
+    async def initialize(self):
+        """Initialize the Qdrant client connection"""
+        try:
+            self.client = AsyncQdrantClient(url=QDRANT_HOST)
+            # Test the connection
+            await self.client.get_collections()
+            logger.info("Qdrant client initialized successfully")
+        except Exception as e:
+            logger.error(f"Failed to initialize Qdrant client: {e}")
+            raise
 
     async def _get_embedding(self, text: str) -> List[float]:
         """Helper method to get embeddings for text"""
@@ -70,21 +81,27 @@ class HybridRetriever:
 
     async def setup_qdrant_collection(self, chunks: List[Dict]) -> bool:
         try:
-        # Create collection
+            # Ensure client is initialized
+            if self.client is None:
+                await self.initialize()
+
+            # Create collection
             collection_params = dict(
                 collection_name=self.collection_name,
                 vectors_config=models.VectorParams(
-                    size=self.dimension,
-                    distance=models.Distance.COSINE
+                    size=self.dimension, distance=models.Distance.COSINE
                 ),
             )
-
             try:
                 await self.client.create_collection(**collection_params)
-            except qdrant_client.http.exceptions.UnexpectedResponse:
-                await self.client.delete_collection(self.collection_name)
-                await self.client.create_collection(**collection_params)
-            # Insert in batches if needed
+                logger.info(f"Created new collection: {self.collection_name}")
+            except qdrant_client.http.exceptions.UnexpectedResponse as e:
+                if "already exists" in str(e):
+                    logger.info(f"Collection {self.collection_name} already exists")
+                    await self.client.delete_collection(self.collection_name)
+                    await self.client.create_collection(**collection_params)
+                else:
+                    raise
             points = [
                 models.PointStruct(
                     id=chunk["id"],
@@ -100,18 +117,28 @@ class HybridRetriever:
             if not self.client:
                 raise ValueError("Qdrant client is not initialized")
             # Upload points
-            await self.client.upload_points(
-                collection_name=self.collection_name,
-                points=points,
-                wait=True  # Wait until the operation is completed
-            )
+            # await self.client.upload_points(
+            #     collection_name=self.collection_name,
+            #     points=points,
+            #     wait=True,  # Wait until the operation is completed
+            # )
 
-            logger.info(f"Successfully inserted {len(chunks)} chunks into Qdrant")
+            # Upload in batches if large dataset
+            batch_size = 100
+            for i in range(0, len(points), batch_size):
+                batch = points[i : i + batch_size]
+                await self.client.upload_points(
+                    collection_name=self.collection_name, points=batch, wait=True
+                )
+                logger.info(f"Uploaded batch {i // batch_size + 1}")
+
+            logger.success(f"Successfully inserted {len(chunks)} chunks into Qdrant")
             return True
 
         except ValueError as e:
             logger.debug(f"Failed to setup Qdrant collection: {str(e)}")
             logger.debug(f"Collection: {self.collection_name}, Chunks: {len(chunks)}")
+
     async def vector_search(self, question: str, limit: int = 3) -> List[Dict]:
         """Perform vector similarity search"""
         try:

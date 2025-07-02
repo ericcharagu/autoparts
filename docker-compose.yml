@@ -19,6 +19,10 @@ services:
       - ./:/app
       - ./logs:/app/logs
     restart: unless-stopped
+    secrets:
+      - postgres_secrets
+      - whatsapp_secrets
+      - whatsapp_token
     env_file:
       - .env
     networks:
@@ -64,7 +68,7 @@ services:
 
   ollama_embedding:
     image: ollama/ollama:latest
-    container_name: lembedding_server
+    container_name: embedding_server
     ports:
       - "11435:11434" # Internal port remains 11434, but host maps to 11435
     volumes:
@@ -147,3 +151,5 @@ secrets:
     file: ./secrets/postgres_secrets.txt
   whatsapp_secrets:
     file: ./secrets/whatsapp_secrets.txt
+  whatsapp_token:
+    file: ./secrets/whatsapp_token.txt

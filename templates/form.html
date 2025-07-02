@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Autoparts WEB CHAT</title>
+  <title>Lane Web</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -64,8 +64,6 @@
 </head>
 
 <body>
-  <h1>Autoparts Web AI</h1>
-
   <div class="container">
     <h2>Generate Text</h2>
     <form id="generateForm">
@@ -82,7 +80,6 @@ How much are 3 POW-N150-MFR?</textarea>
     <h2>Response</h2>
     <div id="response" class="response">Results will appear here...</div>
   </div>
-
   <script>
     document
       .getElementById("generateForm")
@@ -90,18 +87,17 @@ How much are 3 POW-N150-MFR?</textarea>
         e.preventDefault();
 
         const prompt = document.getElementById("prompt").value;
-        const prompt_timestamp = new Date().toISOString();
+        // The prompt_timestamp is now handled by the Pydantic model's default factory
         const payload = {
           prompt: prompt,
-          prompt_timestamp: prompt_timestamp,
         };
-
 
         const responseDiv = document.getElementById("response");
         responseDiv.textContent = "Generating...";
 
         try {
-          const response = await fetch("/generate", {
+          // IMPORTANT: Update the URL to /api/generate
+          const response = await fetch("/api/generate", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -109,8 +105,21 @@ How much are 3 POW-N150-MFR?</textarea>
             body: JSON.stringify(payload),
           });
 
+          if (!response.ok) {
+              // Handle auth errors and other non-200 responses
+              if (response.status === 401) {
+                  window.location.href = "/auth/login"; // Redirect if not authorized
+              } else {
+                  const errorData = await response.json();
+                  throw new Error(errorData.detail || "Server error");
+              }
+              return;
+          }
+
           const data = await response.json();
-          responseDiv.textContent = JSON.stringify(data, null, 2);
+          // Display the 'response' field from the JSON object
+          responseDiv.textContent = data.response;
+
         } catch (error) {
           responseDiv.textContent = "Error: " + error.message;
         }

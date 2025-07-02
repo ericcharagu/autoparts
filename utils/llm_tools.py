@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 
-from datetime import datetime, timedelta, timezone
+import uuid
+from collections import defaultdict, deque
+from datetime import datetime, timedelta
 from typing import Any, List
 
 from dotenv import load_dotenv
 from duckduckgo_search import DDGS
 from loguru import logger
 from ollama import AsyncClient
-from pydantic import BaseModel
 from transformers.utils import get_json_schema
 
-from utils.db import HybridRetriever
-from utils.orders import Orders
+from schemas import GenerationRequest
+from utils.db.qdrant import HybridRetriever
+from utils.orders import Order, OrderItem
 from utils.payment import Payments
 
 # Load environment variables
@@ -22,22 +24,72 @@ logger.add("./logs/llm_app.log", rotation="500 MB")
 
 # The client based on the container's address
 ollama_client = AsyncClient(host="http://host.docker.internal:11434")
-llm_model="qwen3:0.6b"
+llm_model = "qwen3:0.6b"
 # Initialize the HybridRetriever
 standard_retriever = HybridRetriever()
 
-async def init_qdrant_db(knowledge_base:Any):
+
+class ChatHistory:
+    def __init__(self):
+        self.message_pairs = deque()
+        self.pair_counter = defaultdict(int)
+        self.pair_ids = {}
+
+    def append(self, user_timestamp, user_message, llm_response):
+        # Create a unique hashable key for the message pair
+        pair_key = (tuple(user_message), tuple(llm_response))
+
+        # If this pair already exists, increment its count
+        if pair_key in self.pair_ids:
+            pair_id = self.pair_ids[pair_key]
+            self.pair_counter[pair_id] += 1
+
+            # If count reached 3, remove the oldest occurrence
+            if self.pair_counter[pair_id] >= 10:
+                self._remove_oldest_occurrence(pair_id)
+        else:
+            # Create a new unique ID for this pair
+            pair_id = str(uuid.uuid4())
+            self.pair_ids[pair_key] = pair_id
+            self.pair_counter[pair_id] = 1
+
+            # Add to history
+            self.message_pairs.append(
+                {
+                    "user_timestamp": user_timestamp,
+                    "user_message": user_message,
+                    "llm_response": llm_response,
+                    "pair_id": pair_id,
+                }
+            )
+
+    def _remove_oldest_occurrence(self, pair_id):
+        # Find and remove the oldest occurrence of this pair
+        for i, msg in enumerate(self.message_pairs):
+            if msg["pair_id"] == pair_id:
+                del self.message_pairs[i]
+                break
+
+        # Reset the counter for this pair
+        self.pair_counter[pair_id] = 2  # Set to 2 since we removed one
+
+    def get_history(self):
+        return list(self.message_pairs)
+
+
+async def init_qdrant_db(knowledge_base: Any):
     # Get the chunked and embedded data from the model
     chunks = await standard_retriever.initialize_knowledge_base(knowledge_base)
 
     # Load the chunks into the collection
     await standard_retriever.setup_qdrant_collection(chunks)
 
+
 SYSTEM_DATE = datetime.now().date()  # Current system time
 PAYMENT_DEADLINE = SYSTEM_DATE + timedelta(
     days=14
 )  # Assuming the customer is expected to pay within 14 days
-#TODO:Add language model or set have the model be multlingual based on a system message setting
+# TODO:Add language model or set have the model be multlingual based on a system message setting
 # Language code mapping
 language_codes = {
     "English": "eng_Latn",
@@ -55,7 +107,7 @@ language_codes = {
 }
 # System message
 SYSTEM_PROMPT = """
-Role: You are an enthusiastic customer care assistant for Autoparts, Kenya's leading wholesale car parts supplier helping customers save money on quality auto parts.
+Role: You are an enthusiastic customer care assistant for Lane, Kenya's leading wholesale car parts supplier helping customers save money on quality auto parts.
 
 Key Responsibilities:
 1. Order Processing:
@@ -114,47 +166,49 @@ def format_quotation(
     name: str,
     location: str,
     items: List[str],
-    quantity: List[int],
-    price: List[float],
-    total: float,
-    created_at: datetime,
-    payment_status: str,
-    payment_date: datetime,
-):
+    quantities: List[int],
+    prices: List[float],
+) -> Order:
     """
     Your only task is to generate a summary of the interaction and the customer's requirements. If any of the values are missing, ask the user kindly
 
     Args:
-        quote_id: Generate a random uniq ID for each quotation generated per interation.
-        cus_id: A unique customer id that is given to each user. Similar to IP addresses
-        garage_id:A unique garage identifier associated with each user
-        name: Name of the customer
-        location: Location of the customer for delivery
-        items: User order items
-        quantity: Number of individual products
-        total: Total price of goods. Sum of the total products of the quantity and the price in each quotation
-        price: The price of each product
-        created_at: Current date of the interaction/system
-        payment_status: Describes the current stage of the order fulfilment. Options are [processing, pending,shipped, delivered]
-        payment_date: Date omn which the customer paid the invoice. By default they are given 14 days from the {created_at} date"""
+          quote_id: Generate a random uniq ID for each quotation generated per interation.
+          cus_id: A unique customer id that is given to each user. Similar to IP addresses
+          garage_id:A unique garage identifier associated with each user
+          name: Name of the customer
+          location: Location of the customer for delivery
+          items: User order items
+          quantities:List of item quantities
+          prices: List of item prices
+    Returns:
+          Order: Validated order object with PDF invoice
+    """
+    # Validate input lengths
+    if not (len(items) == len(quantities) == len(prices)):
+        raise ValueError("Items, quantities, and prices must have the same length")
 
-    new_order = Orders(
-        quote_id,
-        cus_id,
-        garage_id,
-        name,
-        location,
-        items,
-        quantity,
-        price,
-        total,
-        created_at=SYSTEM_DATE,
-        payment_status="pending",
-        payment_date=SYSTEM_DATE + timedelta(days=14),
+    # Create order items
+    order_items = [
+        OrderItem(name=item, quantity=qty, price=price)
+        for item, qty, price in zip(items, quantities, prices)
+    ]
+
+    # Create order
+    order = Order(
+        quote_id=quote_id,
+        cus_id=cus_id,
+        garage_id=garage_id,
+        name=name,
+        location=location,
+        items=order_items,
     )
 
-    logger.info(f"The new order details are {new_order}")
-    return new_order
+    # Generate invoice
+    invoice_path = order.create_invoice_pdf()
+    logger.info(f"Created order {order.quote_id}, invoice at {invoice_path}")
+
+    return order
 
 
 def payment_methods(
@@ -166,7 +220,7 @@ def payment_methods(
         receipt_id:Generate a random unique ID for each payment request prompted
         quote_id: Quote associated with each order
         name: Name of the customer
-        total: Total price of goods. Sum of the total products of the quantity and the price in each quotation.
+        total: Sum of the total products of the quantity and the price in each quotation.
         name: Name of the customer
         option: prompt the user for a payment method:
     - Mpesa :Paybill: 111000, Account Number: quote_id,  Amount: order total
@@ -184,7 +238,8 @@ def payment_methods(
     logger.info(f"the new payment object is {new_payment}")
     return new_payment
 
-#Tool 3: Ibternet search after low embedding similarity resukts
+
+# Tool 3: Ibternet search after low embedding similarity resukts
 def low_similarity(user_input: str):
     """
     If the vector db search results yields search results of less than 70% for a 3 items. Sieve through the input to identify the item and quantity requried. After:
@@ -208,18 +263,17 @@ def low_similarity(user_input: str):
 
 # Convert the tools to json format before parsing to model
 
-tools = [get_json_schema(format_quotation), get_json_schema(payment_methods), get_json_schema(low_similarity)]
+tools = [
+    get_json_schema(format_quotation),
+    get_json_schema(payment_methods),
+    get_json_schema(low_similarity),
+]
 
-# Define request models
-class GenerationRequest(BaseModel):
-    prompt: str
-    prompt_timestamp: datetime = datetime.now(timezone.utc)
-
+chat_history = ChatHistory()
 
 
 # Optimized LLM pipeline
-async def llm_pipeline(request:GenerationRequest, source:str, top_k=3) -> Any:
-
+async def llm_pipeline(request: GenerationRequest, source: str, top_k=3) -> Any:
     try:
         # Load the context as the questions generated fron the OCR
         vector_search_results = await standard_retriever.vector_search(request.prompt)
@@ -227,10 +281,12 @@ async def llm_pipeline(request:GenerationRequest, source:str, top_k=3) -> Any:
 
         # Add current user input(Refined version)
         system_message = [
-            {"role":"system", "content":SYSTEM_PROMPT},{
-            "role": "user",
-            "content": f"Use {vector_search_results} to answer {request.prompt} as per your instructions. "
-        }]
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {
+                "role": "user",
+                "content": f"Use {vector_search_results} to answer {request.prompt} as per your instructions. Refer to {chat_history} for additional context for the response.",
+            },
+        ]
         if source == "WEB":
             response = await ollama_client.chat(
                 model=llm_model,
@@ -265,7 +321,7 @@ async def llm_pipeline(request:GenerationRequest, source:str, top_k=3) -> Any:
                     "enable_thinking": False,
                 },
             )
-        llm_response_timestamp = datetime.now(timezone.utc)
+        llm_response_timestamp = datetime.now()
         # Extract the response content
         if "message" in response and "content" in response["message"]:
             content = response["message"]["content"]
@@ -275,10 +331,13 @@ async def llm_pipeline(request:GenerationRequest, source:str, top_k=3) -> Any:
                 "llm_response": content,
                 "llm_response_timestamp": llm_response_timestamp,
                 "source": source,
-            } #for loggingg purposes
-
-
-
+            }  # for logging purposes
+            # Convert the responses to vectors for semantic search
+            chat_history.append(
+                request.prompt_timestamp,
+                standard_retriever.get_embedding(request.prompt),
+                standard_retriever.get_embedding(content),
+            )
         return response
     except ValueError as e:
         print(f"Error generating repsonse with llm  {str(e)}")

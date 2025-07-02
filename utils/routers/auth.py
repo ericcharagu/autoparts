@@ -102,11 +102,9 @@ def authenticate_user(username: str, password: str, db: Session):
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
     if expires_delta:
-        expire = datetime.now(timezone.utc) + expires_delta
+        expire = datetime.now() + expires_delta
     else:
-        expire = datetime.now(timezone.utc) + timedelta(
-            days=ACCESS_TOKEN_EXPIRE_MINUTES
-        )
+        expire = datetime.now() + timedelta(days=ACCESS_TOKEN_EXPIRE_MINUTES)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
@@ -165,7 +163,7 @@ async def login_for_access_token(
     )
 
     # Update last login
-    user.last_login = datetime.now(timezone.utc)
+    user.last_login = datetime.now()
     db.commit()
 
     return {"access_token": access_token, "token_type": "bearer"}
@@ -221,7 +219,7 @@ async def handle_registration(
             email=user_data["email"],
             phone_number=user_data["phone_number"],
             password_hash=get_password_hash(user_data["password"]),
-            created_at=datetime.now(timezone.utc),
+            created_at=datetime.now(),
             is_active=True,
         )
 
@@ -347,7 +345,7 @@ async def register_form_submit(
             email=user_data["email"],
             phone_number=user_data["phone_number"],
             password_hash=get_password_hash(user_data["password"]),
-            created_at=datetime.now(timezone.utc),
+            created_at=datetime.now(),
             is_active=True,
         )
 
