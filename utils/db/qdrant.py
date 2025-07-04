@@ -1,14 +1,13 @@
+# utils/db/qdrant.py
+
 from typing import Dict, List
 
-import qdrant_client.http.exceptions
 from loguru import logger
 from ollama import AsyncClient
 from qdrant_client import AsyncQdrantClient, models
 
-# initiate logging
-logger.add("./logs/db.log", rotation="1 week")
 # Constants
-QDRANT_HOST = "http://host.docker.internal:6333"
+QDRANT_HOST = "http://qdrant:6333"
 EMBEDDING_HOST = "http://host.docker.internal:11435"
 COLLECTION_NAME = "autoparts_test"
 DIMENSION = 768
@@ -32,7 +31,8 @@ class HybridRetriever:
     async def initialize(self):
         """Initialize the Qdrant client connection"""
         try:
-            self.client = AsyncQdrantClient(url=QDRANT_HOST)
+            # Increased timeout for robustness during startup
+            self.client = AsyncQdrantClient(url=QDRANT_HOST, timeout=60.0)
             # Test the connection
             await self.client.get_collections()
             logger.info("Qdrant client initialized successfully")
@@ -73,35 +73,33 @@ class HybridRetriever:
                             }
                         )
                         chunk_id += 1
-            except ValueError as e:
+            except Exception as e:
                 logger.exception(f"Error processing {path}: {str(e)}")
                 continue
 
         return chunks
 
-    async def setup_qdrant_collection(self, chunks: List[Dict]) -> bool:
+    async def setup_qdrant_collection(self, chunks: List[Dict]):
+        """
+        Atomically re-creates the collection and uploads points.
+        This is a robust method to ensure a fresh state on each startup.
+        """
         try:
-            # Ensure client is initialized
             if self.client is None:
                 await self.initialize()
 
-            # Create collection
-            collection_params = dict(
+            logger.info(
+                f"Re-creating collection '{self.collection_name}' to ensure it is fresh."
+            )
+            await self.client.recreate_collection(
                 collection_name=self.collection_name,
                 vectors_config=models.VectorParams(
                     size=self.dimension, distance=models.Distance.COSINE
                 ),
+                timeout=60,  # Use a longer timeout for this combined operation
             )
-            try:
-                await self.client.create_collection(**collection_params)
-                logger.info(f"Created new collection: {self.collection_name}")
-            except qdrant_client.http.exceptions.UnexpectedResponse as e:
-                if "already exists" in str(e):
-                    logger.info(f"Collection {self.collection_name} already exists")
-                    await self.client.delete_collection(self.collection_name)
-                    await self.client.create_collection(**collection_params)
-                else:
-                    raise
+            logger.info(f"Collection '{self.collection_name}' re-created successfully.")
+
             points = [
                 models.PointStruct(
                     id=chunk["id"],
@@ -113,31 +111,24 @@ class HybridRetriever:
                 )
                 for chunk in chunks
             ]
-            # Verify client connection
-            if not self.client:
-                raise ValueError("Qdrant client is not initialized")
-            # Upload points
-            # await self.client.upload_points(
-            #     collection_name=self.collection_name,
-            #     points=points,
-            #     wait=True,  # Wait until the operation is completed
-            # )
-
-            # Upload in batches if large dataset
+            # Upload points in batches
             batch_size = 100
+            logger.info(f"Uploading {len(points)} points in batches of {batch_size}...")
             for i in range(0, len(points), batch_size):
                 batch = points[i : i + batch_size]
-                await self.client.upload_points(
-                    collection_name=self.collection_name, points=batch, wait=True
+                self.client.upload_points(
+                    collection_name=self.collection_name,
+                    points=batch,
+                    wait=True,
+                    parallel=6,
                 )
                 logger.info(f"Uploaded batch {i // batch_size + 1}")
 
             logger.success(f"Successfully inserted {len(chunks)} chunks into Qdrant")
-            return True
 
-        except ValueError as e:
-            logger.debug(f"Failed to setup Qdrant collection: {str(e)}")
-            logger.debug(f"Collection: {self.collection_name}, Chunks: {len(chunks)}")
+        except Exception as e:
+            logger.critical(f"Failed to setup Qdrant collection: {e}", exc_info=True)
+            raise
 
     async def vector_search(self, question: str, limit: int = 3) -> List[Dict]:
         """Perform vector similarity search"""
@@ -148,14 +139,29 @@ class HybridRetriever:
 
             embedded_question = await self._get_embedding(question)
 
-            search_res = await self.client.search(
+            search_res = await self.client.query_points(
                 collection_name=self.collection_name,
-                query_vector=embedded_question,
+                query=embedded_question,
                 limit=limit,
+                # score_threshold=0.7,
             )
 
             return search_res
 
-        except ValueError as e:
+        except Exception as e:
             logger.debug(f"Search error: {str(e)}")
             raise
+
+    async def close(self):
+        """Clean up resources"""
+        if self.client:
+            try:
+                await self.client.close()
+            except Exception as e:
+                logger.warning(f"Error closing Qdrant client: {e}")
+            finally:
+                self.client = None
+
+
+# Create a single, shared instance of the retriever
+standard_retriever = HybridRetriever()

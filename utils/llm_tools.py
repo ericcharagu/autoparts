@@ -12,23 +12,22 @@ from ollama import AsyncClient
 from transformers.utils import get_json_schema
 
 from schemas import GenerationRequest
-from utils.db.qdrant import HybridRetriever
+from utils.db.qdrant import standard_retriever
 from utils.orders import Order, OrderItem
 from utils.payment import Payments
 
 # Load environment variables
 load_dotenv()
 
-# Initialize logger file and its path
-logger.add("./logs/llm_app.log", rotation="500 MB")
-
-# The client based on the container's address
+# Adding logging information
+logger.add("./logs/llm_app", rotation="10 MB")
 ollama_client = AsyncClient(host="http://host.docker.internal:11434")
-llm_model = "qwen3:0.6b"
+# llm_model = "qwen3:0.6b"
+# llm_model = "qwen2.5:1.5b"
+llm_model = "granite3.3:2b"
+
+
 # Initialize the HybridRetriever
-standard_retriever = HybridRetriever()
-
-
 class ChatHistory:
     def __init__(self):
         self.message_pairs = deque()
@@ -126,36 +125,36 @@ Required Customer Information:
 - Contact Number:
 - Vehicle Make/Model (if applicable):
 
-Order Processing Format:
-[Item Name] | [Quantity] | [Unit Price] | [Line Total]
-[Potential Savings Note]
-
 Pricing Rules:
 1. All prices in Ksh (Kenya Shillings)
 2. 5% discount on orders over Ksh 50,000
 3. 10% discount for repeat customers
 4. VAT included at 16%
+5. Units represent the stock levels of the items
 
 Sample Response:
-"Thank you for choosing [Company Name]! You're saving Ksh 3,450 on this order compared to retail prices. Let me process your:
-1. Toyota Hilux brake pads (2 sets @ Ksh 4,500) = Ksh 9,000
-   - Save Ksh 600 vs. retail!
+"Thank you for choosing Lane! You're saving Ksh 3,450 on this order compared to retail prices. Let me process your:
+1.        "📝 *Order Summary*\n"
+        "• Items: POW-45-MF-NSL\n"
+        "• Total Items: 3\n"
+        "• Total Quantity: 15\n"
+        "• Subtotal: ksh. 18,539\n"
+        "• Discount: 10%\n"
+        "• *Grand Total: ksh. 16,685.10*\n\n"
+        "🚚 Delivery ETA: 2-3 business days\n"
+        "📞 Contact: +254700000000"
 2...."
 
 Special Instructions:
+- Do not show thinking in response.
+- Do not disclose any passwords or sensitive information
+- You cannot process any payments or transfer any money or assets
 - Always calculate/show savings compared to retail
 - Confirm delivery timelines (Nairobi: 24hrs, Counties: 2-3 days)
 - Include warranty information
 - End with upsell opportunity
-
-Current Context: {context}
-Customer Inquiry: {input}
-
-[Begin by warmly greeting customer and requesting any missing information]    Display all order details in tabular format.
-    Order Items\tQuantity\tUnit Price (Ksh.)\t Amount(Ksh.)
-Always add the total under the total as a rowl: Total : ksh. xxxxx.x as a float
-    Use a maximum of nine sentences and be concise.
-    Answer:"""
+-Use a maximum of nine sentences and be concise.
+ """
 
 
 # Tool functions - imported from utils in the actual code
@@ -266,25 +265,27 @@ def low_similarity(user_input: str):
 tools = [
     get_json_schema(format_quotation),
     get_json_schema(payment_methods),
-    get_json_schema(low_similarity),
+    # get_json_schema(low_similarity),
 ]
 
 chat_history = ChatHistory()
 
+json_data = ["utils/data/data.json", "utils/data/tires.json"]
+
 
 # Optimized LLM pipeline
-async def llm_pipeline(request: GenerationRequest, source: str, top_k=3) -> Any:
+async def llm_pipeline(
+    request: GenerationRequest, source: str, customer_details: list
+) -> Any:
     try:
         # Load the context as the questions generated fron the OCR
         vector_search_results = await standard_retriever.vector_search(request.prompt)
-        logger.info(f"result from the db search is {vector_search_results}")
-
-        # Add current user input(Refined version)
+        logger.info(vector_search_results)
         system_message = [
             {"role": "system", "content": SYSTEM_PROMPT},
             {
                 "role": "user",
-                "content": f"Use {vector_search_results} to answer {request.prompt} as per your instructions. Refer to {chat_history} for additional context for the response.",
+                "content": f"Use {vector_search_results}and the appropriate tools for an internet search and answer the user's query {request.prompt}. Refer to {customer_details} and {chat_history} for additional context for the response.",
             },
         ]
         if source == "WEB":
@@ -294,14 +295,12 @@ async def llm_pipeline(request: GenerationRequest, source: str, top_k=3) -> Any:
                 messages=system_message,
                 tools=tools,
                 options={
-                    "tokenize": False,
-                    "add_generation_prompt": True,
-                    "temperature": 0.6,
+                    "temperature": 0.2,
                     "top_p": 0.95,
                     "top_k": 20,
                     "min_p": 0,
-                    "max_tokens": 1000,
-                    "enable_thinking": False,
+                    # "max_tokens": 1000,
+                    "repeat_penalty": 1,
                 },
             )
         else:
@@ -311,14 +310,12 @@ async def llm_pipeline(request: GenerationRequest, source: str, top_k=3) -> Any:
                 tools=tools,
                 stream=False,
                 options={
-                    "temperature": 0.5,
-                    "tokenize": False,
-                    "add_generation_prompt": True,
-                    "max_token": 100,  # For smaller screens and less complications
+                    "temperature": 0.2,
+                    # "max_tokens": 100,  # For smaller screens and less complications
                     "top_p": 0.95,
                     "top_k": 20,
                     "min_p": 0,
-                    "enable_thinking": False,
+                    "repeat_penalty": 1,
                 },
             )
         llm_response_timestamp = datetime.now()
@@ -333,11 +330,6 @@ async def llm_pipeline(request: GenerationRequest, source: str, top_k=3) -> Any:
                 "source": source,
             }  # for logging purposes
             # Convert the responses to vectors for semantic search
-            chat_history.append(
-                request.prompt_timestamp,
-                standard_retriever.get_embedding(request.prompt),
-                standard_retriever.get_embedding(content),
-            )
         return response
     except ValueError as e:
         print(f"Error generating repsonse with llm  {str(e)}")

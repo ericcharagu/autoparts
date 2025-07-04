@@ -1,5 +1,5 @@
 # user_db.py
-from datetime import datetime, timezone
+from datetime import datetime
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -7,13 +7,8 @@ from loguru import logger
 from typing import Optional
 from utils.db.base import (
     Base,
-    Session,
+    AsyncSession,
 )  # Assuming you have a base.py with these defined
-
-# Import the engine from your conversation file or from a shared base file
-
-# Set up logging
-logger.add("./logs/user_db.log", rotation="1 week")
 
 
 class User(Base):
@@ -50,7 +45,7 @@ class UserManager:
 
     def create_user(
         self,
-        db: Session,
+        db: AsyncSession,
         username: str,
         email: str,
         password: str,
@@ -80,7 +75,7 @@ class UserManager:
             return None
 
     def authenticate_user(
-        self, db: Session, username_or_email: str, password: str
+        self, db: AsyncSession, username_or_email: str, password: str
     ) -> Optional[User]:
         """Authenticate a user and update last login"""
         try:
@@ -103,16 +98,16 @@ class UserManager:
             logger.error(f"Authentication error: {str(e)}")
             return None
 
-    def get_user_by_id(self, db: Session, user_id: int) -> Optional[User]:
-        """Retrieve a user by their ID"""
+    def get_user_by_id(self, db: AsyncSession, user_id: int) -> Optional[User]:
+        """Retrieve a user by their ID."""
         try:
             return db.query(User).get(user_id)
         except ValueError as e:
             logger.error(f"Error getting user by ID: {str(e)}")
             return None
 
-    def update_user(self, db: Session, user_id: int, **kwargs) -> Optional[User]:
-        """Update user information"""
+    def update_user(self, db: AsyncSession, user_id: int, **kwargs) -> Optional[User]:
+        """Update user information."""
         try:
             user = db.query(User).get(user_id)
             if not user:
@@ -130,7 +125,7 @@ class UserManager:
             return None
 
     def change_password(
-        self, db: Session, user_id: int, old_password: str, new_password: str
+        self, db: AsyncSession, user_id: int, old_password: str, new_password: str
     ) -> bool:
         """Change user password"""
         try:
@@ -146,6 +141,6 @@ class UserManager:
             logger.error(f"Error changing password: {str(e)}")
             return False
 
-    def __del__(self):
-        """Clean up session when manager is destroyed"""
+    def __del__(self, db: AsyncSession):
+        """Clean up session when manager is destroyed."""
         db.close()

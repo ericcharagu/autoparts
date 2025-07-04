@@ -18,7 +18,6 @@ import io
 from utils.db.base import Base, Session
 
 # Define logger path
-logger.add("./logs/conversation_db.log", rotation="700 MB")
 load_dotenv()
 
 
@@ -74,7 +73,6 @@ def process_media_input(media_data: Any) -> dict:
     }
 
 
-@logger.catch
 async def save_conversation(session: Session, conversation_data: any) -> Conversation:
     """
     Save complete conversation with pre-parsed timestamps

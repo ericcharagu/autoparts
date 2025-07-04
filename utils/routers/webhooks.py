@@ -12,7 +12,11 @@ from schemas import GenerationRequest
 from utils.llm_tools import llm_pipeline
 from utils.whatsapp import whatsapp_messenger
 from utils.text_processing import convert_llm_output_to_readable
+from loguru import logger
+from utils.db.query import get_customer_details
 
+# Adding loggers
+logger.add("./logs/webhooks.log", rotation="10 MB")
 router = APIRouter(
     prefix="/webhooks",
     tags=["Webhooks"],
@@ -52,11 +56,11 @@ async def verify_whatsapp_webhook(
 @router.post("")
 async def handle_whatsapp_message(request: Request):
     """Handles incoming messages from WhatsApp."""
-    signature = (
-        request.headers.get("x-hub-signature-256", "").split("sha256=")[-1].strip()
-    )
-    if not verify_signature(await request.body(), signature):
-        raise HTTPException(status_code=403, detail="Invalid signature")
+    # signature = (
+    #     request.headers.get("x-hub-signature-256", "").split("sha256=")[-1].strip()
+    # )
+    # if not verify_signature(await request.body(), signature):
+    #     raise HTTPException(status_code=403, detail="Invalid signature")
 
     try:
         data = await request.json()
@@ -66,7 +70,12 @@ async def handle_whatsapp_message(request: Request):
         # Simplified message extraction
         message_text = None
         for entry in data.get("entry", []):
+            entry_id = entry.get("id", " ")
             for change in entry.get("changes", []):
+                contact_info = change.get("value", {}).get("contacts", [])
+                if contact_info:
+                    user_number = contact_info[0].get("wa_id")
+                    user_name = contact_info[0].get("profile", "").get("name", "")
                 messages = change.get("value", {}).get("messages", [])
                 if messages and messages[0].get("type") == "text":
                     message_text = messages[0].get("text", {}).get("body")
@@ -77,16 +86,22 @@ async def handle_whatsapp_message(request: Request):
         if not message_text:
             return PlainTextResponse("No text message found", status_code=200)
 
+        # Query customer db for data
+        customer_details = await get_customer_details(user_number)
         # Create request object for the LLM pipeline
         mobile_request = GenerationRequest(prompt=message_text)
 
         # Get AI response
-        llm_response = await llm_pipeline(request=mobile_request, source="MOBILE")
+        llm_response = await llm_pipeline(
+            request=mobile_request, source="MOBILE", customer_details=customer_details
+        )
         content = llm_response.get("message", {}).get("content", "")
 
         # Clean and send response
         cleaned_response = convert_llm_output_to_readable(content)
-        whatsapp_messenger(cleaned_response)
+        whatsapp_messenger(
+            llm_text_output=cleaned_response, recipient_number=user_number
+        )
 
         return PlainTextResponse("Message processed", status_code=200)
 
