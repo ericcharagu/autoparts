@@ -1,23 +1,15 @@
-from sqlalchemy.orm import relationship
-from sqlalchemy import (
-    Column,
-    Integer,
-    String,
-    DateTime,
-    Boolean,
-    LargeBinary,
-    JSON,
-    ForeignKey,
-)
-from datetime import datetime, timezone
+import io
+from typing import Any, List
+
 from dotenv import load_dotenv
 from loguru import logger
-from typing import Any, List
 from PIL import Image
-import io
-from utils.db.base import Base, Session
+from sqlalchemy import JSON, Column, DateTime, ForeignKey, Integer, String
+from sqlalchemy.orm import relationship
+from utils.db.base import AsyncSession, Base
 
 # Define logger path
+logger.add("./logs/conversation_db.log", rotation="1 week")
 load_dotenv()
 
 
@@ -32,14 +24,6 @@ class Conversation(Base):
     prompt_timestamp = Column(DateTime(timezone=True))
     llm_response = Column(String)
     llm_response_timestamp = Column(DateTime(timezone=True))
-    category = Column(String)
-    interaction_timestamp = Column(
-        DateTime(timezone=True), default=lambda: datetime.now()
-    )
-    media_embedding = Column(LargeBinary)
-    media_thumbnail = Column(LargeBinary)
-    media_type = Column(String)
-    is_media_processed = Column(Boolean, default=False)
     source = Column(String)
 
     # Relationship to User
@@ -73,7 +57,10 @@ def process_media_input(media_data: Any) -> dict:
     }
 
 
-async def save_conversation(session: Session, conversation_data: any) -> Conversation:
+@logger.catch
+async def save_conversation(
+    session: AsyncSession, conversation_data: any
+) -> Conversation:
     """
     Save complete conversation with pre-parsed timestamps
     Assumes timestamps are already properly formatted datetime objects
@@ -94,7 +81,7 @@ async def save_conversation(session: Session, conversation_data: any) -> Convers
         )
 
         session.add(conversation)
-        session.commit()
+        await session.commit()
         logger.success(
             f"Saved conversation {conversation.id} | "
             f"Prompt: {conversation_data.prompt_timestamp} | "
@@ -102,12 +89,14 @@ async def save_conversation(session: Session, conversation_data: any) -> Convers
         )
         return conversation
     except ValueError as e:
-        session.rollback()
+        await session.rollback()
         logger.debug(f"Failed to save conversation: {e}")
         raise
 
 
-def get_recent_conversations(session: Session, limit: int = 10) -> List[Conversation]:
+def get_recent_conversations(
+    session: AsyncSession, limit: int = 10
+) -> List[Conversation]:
     """
     Retrieve recent conversations with all timestamps
     """

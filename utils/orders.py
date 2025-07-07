@@ -1,24 +1,3 @@
-import os
-from datetime import datetime
-from reportlab.lib.pagesizes import letter
-from reportlab.lib import colors
-from reportlab.platypus import (
-    SimpleDocTemplate,
-    Paragraph,
-    Spacer,
-    Table,
-    TableStyle,
-    Image,
-)
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import inch
-from dotenv import load_dotenv
-from typing import Any
-
-# load environment
-load_dotenv()
-
-
 from datetime import datetime, timedelta
 from typing import List, Optional
 from pydantic import BaseModel, Field, validator
@@ -27,10 +6,13 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
 import os
-import logging
+from loguru import logger 
+from dotenv import load_dotenv
 
-logger = logging.getLogger(__name__)
+#Env
+load_dotenv()
 
+#Setting the system time
 SYSTEM_DATE = datetime.now()
 
 class OrderItem(BaseModel):

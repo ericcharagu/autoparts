@@ -1,5 +1,4 @@
 # main.py
-import asyncio
 from concurrent.futures import ProcessPoolExecutor
 from contextlib import asynccontextmanager
 
@@ -10,16 +9,14 @@ from fastapi.staticfiles import StaticFiles
 from loguru import logger
 
 from middleware.auth_middleware import auth_middleware
-from utils.llm_tools import init_qdrant_db
-from utils.routers import auth, chat, webhooks, pages
-from utils.db.qdrant import HybridRetriever
+from utils.db.qdrant import standard_retriever
+from utils.routers import auth, chat, pages, webhooks
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Define knowledge base files
 knowledge_base = ["utils/data/data.csv", "utils/data/tires.csv"]
-retriever = HybridRetriever()
 
 
 # --- Application Lifespan ---
@@ -32,19 +29,15 @@ async def lifespan(app: FastAPI):
     app.state.process_pool = ProcessPoolExecutor(max_workers=7)
     try:
         # Await the task directly
-        await retriever.initialize()
-        chunks = await retriever.initialize_knowledge_base(knowledge_base)
-        await retriever.setup_qdrant_collection(chunks)
-        yield {"retriever": retriever}
-        # await init_qdrant_db(knowledge_base)
+        await standard_retriever.initialize()
+        chunks = await standard_retriever.initialize_knowledge_base(knowledge_base)
+        await standard_retriever.setup_qdrant_collection(chunks)
+
     except Exception as e:
         logger.critical(f"Failed to initialize Qdrant DB: {e}")
         raise
-    # Initialize the vector database in the background
-    asyncio.create_task(init_qdrant_db(knowledge_base))
 
-    yield
-
+    yield {"retriever": standard_retriever}
     # --- Shutdown logic ---
     if app.state.process_pool:
         app.state.process_pool.shutdown(wait=True)

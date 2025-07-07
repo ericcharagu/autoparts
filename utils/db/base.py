@@ -35,6 +35,36 @@ load_dotenv()
 Base = declarative_base()
 
 
+class CameraTraffic(Base):
+    __tablename__ = "camera_traffic"
+    id = Column(Integer, primary_key=True)
+    timestamp = Column(DateTime(timezone=True))
+    camera_name = Column(String(50))
+    count = Column(Integer)
+    location = Column(String(50))
+    direction = Column(String(10))
+    day_of_week = Column(String(10))
+    is_holiday = Column(Boolean)
+
+
+class MobileRequestLog(Base):
+    __tablename__ = "mobile_request_logs"
+
+    id = Column(String, primary_key=True, index=True)
+    client_timestamp = Column(DateTime, nullable=True)
+    server_timestamp = Column(DateTime, default=datetime.now())
+    prompt = Column(Text, nullable=False)
+    response = Column(Text, nullable=True)
+    status = Column(String(50), nullable=False)
+    model = Column(String(100), nullable=True)
+    response_time = Column(Float, nullable=True)
+    prompt_hash = Column(String(64), index=True)
+    error_message = Column(Text, nullable=True)
+
+    def __repr__(self):
+        return f"<MobileRequestLog(id={self.id}, status={self.status}, model={self.model})>"
+
+
 def get_async_connection_string() -> str:
     """Construct the ASYNCHRONOUS database connection string."""
     try:

@@ -1,5 +1,5 @@
 # user_db.py
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -9,6 +9,11 @@ from utils.db.base import (
     Base,
     AsyncSession,
 )  # Assuming you have a base.py with these defined
+
+# Import the engine from your conversation file or from a shared base file
+
+# Set up logging
+logger.add("./logs/user_db.log", rotation="1 week")
 
 
 class User(Base):
@@ -43,7 +48,7 @@ class User(Base):
 class UserManager:
     """Handles user operations including login and registration"""
 
-    def create_user(
+    async def create_user(
         self,
         db: AsyncSession,
         username: str,
@@ -65,22 +70,22 @@ class UserManager:
             new_user = User(username=username, email=email, phone_number=phone_number)
             new_user.set_password(password)
 
-            db.add(new_user)
-            db.commit()
+            await db.add(new_user)
+            await db.commit()
             logger.info(f"Created new user: {username}")
             return new_user
         except ValueError as e:
-            db.rollback()
+            await db.rollback()
             logger.error(f"Error creating user: {str(e)}")
             return None
 
-    def authenticate_user(
+    async def authenticate_user(
         self, db: AsyncSession, username_or_email: str, password: str
     ) -> Optional[User]:
         """Authenticate a user and update last login"""
         try:
             user = (
-                db.query(User)
+                await db.query(User)
                 .filter(
                     (User.username == username_or_email)
                     | (User.email == username_or_email)
@@ -90,7 +95,7 @@ class UserManager:
 
             if user and user.check_password(password):
                 user.last_login = datetime.now()
-                db.commit()
+                await db.commit()
                 logger.info(f"User {user.username} authenticated successfully")
                 return user
             return None
@@ -98,18 +103,20 @@ class UserManager:
             logger.error(f"Authentication error: {str(e)}")
             return None
 
-    def get_user_by_id(self, db: AsyncSession, user_id: int) -> Optional[User]:
-        """Retrieve a user by their ID."""
+    async def get_user_by_id(self, db: AsyncSession, user_id: int) -> Optional[User]:
+        """Retrieve a user by their ID"""
         try:
-            return db.query(User).get(user_id)
+            return await db.query(User).get(user_id)
         except ValueError as e:
             logger.error(f"Error getting user by ID: {str(e)}")
             return None
 
-    def update_user(self, db: AsyncSession, user_id: int, **kwargs) -> Optional[User]:
-        """Update user information."""
+    async def update_user(
+        self, db: AsyncSession, user_id: int, **kwargs
+    ) -> Optional[User]:
+        """Update user information"""
         try:
-            user = db.query(User).get(user_id)
+            user = await db.query(User).get(user_id)
             if not user:
                 return None
 
@@ -117,30 +124,30 @@ class UserManager:
                 if hasattr(user, key) and key not in ["id", "password_hash"]:
                     setattr(user, key, value)
 
-            db.commit()
+            await db.commit()
             return user
         except ValueError as e:
-            db.rollback()
+            await db.rollback()
             logger.error(f"Error updating user: {str(e)}")
             return None
 
-    def change_password(
+    async def change_password(
         self, db: AsyncSession, user_id: int, old_password: str, new_password: str
     ) -> bool:
         """Change user password"""
         try:
-            user = db.query(User).get(user_id)
+            user = await db.query(User).get(user_id)
             if not user or not user.check_password(old_password):
                 return False
 
             user.set_password(new_password)
-            db.commit()
+            await db.commit()
             return True
         except ValueError as e:
-            db.rollback()
+            await db.rollback()
             logger.error(f"Error changing password: {str(e)}")
             return False
 
-    def __del__(self, db: AsyncSession):
-        """Clean up session when manager is destroyed."""
-        db.close()
+    async def __del__(self):
+        """Clean up session when manager is destroyed"""
+        await db.close()

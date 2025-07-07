@@ -4,12 +4,14 @@ from loguru import logger
 import os
 from datetime import datetime
 
+# Logger file path
+logger.add("./logs/whatsapp.log", rotation="1 week")
 # Configuration
 API_VERSION = "v22.0"
 PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
-ACCESS_TOKEN = "EAARQrAKzcHUBPGjjWJLxuEmZBG17MBwR071qOqAEIdUDW48H4iFPmw1mUn3rZBUlyT6J7OJZCqmqTmXrWZAQLjkJj02XZCGY9zBKmZBjhD3ZCvYEVkcUI4KWyEI0YM17o8loZBRwZAcEnZBSKIeEgcX7467mXpwf7ZBshtAwFpy4lLMjw6y7msCDsGGZCPjg4iLEHRKlnlvp5CsBKzJbsczLIDeVXm56qgfjfaL1UU7gqT0CCrLP"
+ACCESS_TOKEN = "EAARQrAKzcHUBPHUtSTLnz9WOnXXUeOzenyln7vnh2OBQvuhV0ZB3N63gxtGWO3P7fBD76XZBUP792KAZAAddU8wxWMKgwNkUkDzZAgypkoCGxVYiVOGye3KtNGBZA4ujITmQ8QLKlZCBGJtUhZAdP77LqDiFiaZADstgo3gxC2UI49hY3XrFYIOG2WRIh5XuNq5d3OAI9PBcS50kiPiaWXf97mPpnwQ3QMIZAU7T3A9gEFZCwZD"
 # RECIPIENT_NUMBER = "447709769066"
-# RECIPIENT_NUMBER = "+254736391323"
+RECIPIENT_NUMBER = "+254736391323"
 current_time = datetime.now()
 
 
@@ -30,7 +32,7 @@ def whatsapp_messenger(llm_text_output: Any, recipient_number: str):
     payload = {
         "messaging_product": "whatsapp",
         "recipient_type": "individual",
-        "to": f"{recipient_number:}",  # for prod
+        "to": f"{recipient_number}",  # for prod
         # "to": f"{RECIPIENT_NUMBER}",  # for testing
         "type": "text",
         "text": {
@@ -62,7 +64,7 @@ def send_invoice_whatsapp(invoice_file_path: str, recipient_number: str):
     payload = {
         "messaging_product": "whatsapp",
         "recipient_type": "individual",
-        "to": f"{recipient_number:}",  # for prod
+        "to": f"{recipient_number}",  # for prod
         # "to": f"{RECIPIENT_NUMBER}",  # for testing
         "type": "document",
         "document": {

@@ -14,7 +14,8 @@ services:
         condition: service_healthy
       postgres:
         condition: service_healthy
-
+      valkey:
+        condition: service_healthy
     volumes:
       - ./:/app
       - ./logs:/app/logs
@@ -39,6 +40,8 @@ services:
       - "--log-level"
       - "info"
       - "--reload" # Remove in production
+      - "--workers"
+      - "6"
     ports:
       - "8000:8000"
 
@@ -87,6 +90,21 @@ services:
         ollama pull nomic-embed-text &&
         tail -f /dev/null
       "
+    networks:
+      - autoparts_network
+  valkey:
+    image: valkey/valkey:8.1-alpine
+    container_name: valkey_server
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - autoparts_valkey_data:/data
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     networks:
       - autoparts_network
 
@@ -144,7 +162,7 @@ volumes:
   autoparts_embeddings_data:
   autoparts_qdrant_data:
   autoparts_postgres_data:
-
+  autoparts_valkey_data:
 
 secrets:
   postgres_secrets:
