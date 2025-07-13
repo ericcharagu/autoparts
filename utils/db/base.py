@@ -1,8 +1,8 @@
 # db/base.py
 # db/base.py
 import contextlib
-import os
 from datetime import datetime
+import os
 from typing import Any, AsyncIterator, Dict, List, Optional, Union
 
 from dotenv import load_dotenv
@@ -18,11 +18,7 @@ from sqlalchemy import (
     insert,
     text,
 )
-from sqlalchemy.ext.asyncio import (
-    AsyncSession,
-    async_sessionmaker,
-    create_async_engine,
-)
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.future import select
 
@@ -33,6 +29,23 @@ load_dotenv()
 
 # Base class for all models
 Base = declarative_base()
+
+class MobileRequestLog(Base):
+    __tablename__ = "mobile_request_logs"
+
+    id = Column(String, primary_key=True, index=True)
+    client_timestamp = Column(DateTime, nullable=True)
+    server_timestamp = Column(DateTime, default=datetime.now())
+    prompt = Column(Text, nullable=False)
+    response = Column(Text, nullable=True)
+    status = Column(String(50), nullable=False)
+    model = Column(String(100), nullable=True)
+    response_time = Column(Float, nullable=True)
+    prompt_hash = Column(String(64), index=True)
+    error_message = Column(Text, nullable=True)
+
+    def __repr__(self):
+        return f"<MobileRequestLog(id={self.id}, status={self.status}, model={self.model})>"
 
 
 def get_async_connection_string() -> str:

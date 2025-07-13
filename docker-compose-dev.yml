@@ -6,24 +6,29 @@ services:
       dockerfile: Dockerfile
     container_name: app_server
     depends_on:
-      qdrant:
+      ollama:
         condition: service_healthy
       ollama_embedding:
         condition: service_healthy
-      valkey:
+      qdrant:
         condition: service_healthy
+      postgres:
+        condition: service_healthy
+
     volumes:
-      - ./:/app:Z
-      - ./logs:/app/logs:Z
+      - ./:/app
+      - ./logs:/app/logs
     restart: unless-stopped
     secrets:
-      # - postgres_secrets
+      - postgres_secrets
       - whatsapp_secrets
       - whatsapp_token
     env_file:
       - .env
     networks:
       - autoparts_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     command:
       - "uvicorn"
       - "main:app"
@@ -36,27 +41,36 @@ services:
       - "--reload" # Remove in production
     ports:
       - "8000:8000"
-  qdrant:
-    image: qdrant/qdrant:latest
-    restart: always
-    container_name: qdrant
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: llm_server
     ports:
-      - 6333:6333
-      - 6334:6334
-    expose:
-      - 6333
-      - 6334
-      - 6335
-    configs:
-      - source: qdrant_config
-        target: /qdrant/config/production.yaml
+      - "11434:11434"
     volumes:
-      - autoparts_qdrant_data:/qdrant/storage
+      - autoparts_ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://ollama:11434/api/tags"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    entrypoint: >
+      sh -c "
+        ollama serve &
+        sleep 10 &&
+        ollama pull qwen3:0.6b &&
+        tail -f /dev/null
+      "
+    networks:
+      - autoparts_network
+
   ollama_embedding:
     image: ollama/ollama:latest
     container_name: embedding_server
     ports:
-      - "11434:11434"
+      - "11435:11434" # Internal port remains 11434, but host maps to 11435
     volumes:
       - autoparts_embeddings_data:/root/.ollama
     restart: unless-stopped
@@ -76,21 +90,23 @@ services:
     networks:
       - autoparts_network
 
-  valkey:
-    image: valkey/valkey:8.1-alpine
-    container_name: valkey_server
-    restart: unless-stopped
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: always
+    container_name: qdrant
     ports:
-      - "6379:6379"
+      - 6333:6333
+      - 6334:6334
+    expose:
+      - 6333
+      - 6334
+      - 6335
+    configs:
+      - source: qdrant_config
+        target: /qdrant/config/production.yaml
     volumes:
-      - autoparts_valkey_data:/data
-    healthcheck:
-      test: ["CMD", "valkey-cli", "ping"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-    networks:
-      - autoparts_network
+      - autoparts_qdrant_data:/qdrant/storage
+
   postgres:
     image: docker.io/library/postgres:17.5-alpine
     container_name: db_server
@@ -102,8 +118,9 @@ services:
     environment:
       - POSTGRES_DB=autoparts_db
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mysecretpassword
-
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_secrets
+    secrets:
+      - postgres_secrets
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d autoparts_db"]
       interval: 30s
@@ -123,12 +140,15 @@ networks:
     driver: bridge
 
 volumes:
-  autoparts_qdrant_data:
+  autoparts_ollama_data:
   autoparts_embeddings_data:
-  autoparts_valkey_data:
+  autoparts_qdrant_data:
   autoparts_postgres_data:
 
+
 secrets:
+  postgres_secrets:
+    file: ./secrets/postgres_secrets.txt
   whatsapp_secrets:
     file: ./secrets/whatsapp_secrets.txt
   whatsapp_token:

@@ -8,20 +8,18 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from loguru import logger
-
+from ollama import AsyncClient
+import os 
 from middleware.auth_middleware import auth_middleware
 from utils.llm_tools import init_qdrant_db
 from utils.routers import auth, chat, webhooks, pages
 from utils.db.qdrant import HybridRetriever
-
 # Load environment variables from .env file
 load_dotenv()
 
 # Define knowledge base files
-knowledge_base = ["utils/data/data.csv", "utils/data/tires.csv"]
-retriever = HybridRetriever()
-
-
+knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv"]
+retriever: HybridRetriever = HybridRetriever()
 # --- Application Lifespan ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -31,20 +29,16 @@ async def lifespan(app: FastAPI):
     # Initialize a process pool executor
     app.state.process_pool = ProcessPoolExecutor(max_workers=7)
     try:
-        # Await the task directly
+        # Await the vector_database init and setup
         await retriever.initialize()
-        chunks = await retriever.initialize_knowledge_base(knowledge_base)
+        chunks: list[dict[str, int | str | list[float]]] = await retriever.initialize_knowledge_base(knowledge_base)
         await retriever.setup_qdrant_collection(chunks)
         yield {"retriever": retriever}
-        # await init_qdrant_db(knowledge_base)
     except Exception as e:
         logger.critical(f"Failed to initialize Qdrant DB: {e}")
         raise
     # Initialize the vector database in the background
     asyncio.create_task(init_qdrant_db(knowledge_base))
-
-    yield
-
     # --- Shutdown logic ---
     if app.state.process_pool:
         app.state.process_pool.shutdown(wait=True)
@@ -78,10 +72,10 @@ app.add_middleware(
 app.middleware("http")(auth_middleware)
 
 # --- Static Files ---
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="templates"), name="static")
 
 # --- API Routers ---
-app.include_router(auth.router)
+#app.include_router(auth.router)
 app.include_router(pages.router)
 app.include_router(chat.router)
 app.include_router(webhooks.router)

@@ -1,14 +1,18 @@
 # utils/db/qdrant.py
 
-from typing import Dict, List
-
+from typing import Any
 from loguru import logger
 from ollama import AsyncClient
 from qdrant_client import AsyncQdrantClient, models
+from dotenv import load_dotenv
+from dependancies import embedding_client
+import os
 
+#Load environment
+load_dotenv()
 # Constants
 QDRANT_HOST = "http://qdrant:6333"
-EMBEDDING_HOST = "http://host.docker.internal:11435"
+embedding_model_name="nomic-embed-text:latest"
 COLLECTION_NAME = "autoparts_test"
 DIMENSION = 768
 CHUNK_SIZE = 200
@@ -25,8 +29,8 @@ class HybridRetriever:
         self.dimension = dimension
         self.chunk_size = chunk_size
         self.client = None
-        self.embedding_client = AsyncClient(host=EMBEDDING_HOST)
-        self.vector_cache: Dict[str, List[Dict]] = {}
+        self.embedding_client = embedding_client
+        self.vector_cache: dict[str, list[dict]] = {}
 
     async def initialize(self):
         """Initialize the Qdrant client connection"""
@@ -35,34 +39,35 @@ class HybridRetriever:
             self.client = AsyncQdrantClient(url=QDRANT_HOST, timeout=60.0)
             # Test the connection
             await self.client.get_collections()
+            
             logger.info("Qdrant client initialized successfully")
         except Exception as e:
             logger.error(f"Failed to initialize Qdrant client: {e}")
             raise
 
-    async def _get_embedding(self, text: str) -> List[float]:
+    async def _get_embedding(self, text: str | list[str]) -> list[float]:
         """Helper method to get embeddings for text"""
         try:
             response = await self.embedding_client.embeddings(
-                model="nomic-embed-text", prompt=text
+                model=embedding_model_name, prompt=text
             )
             return response["embedding"]
         except Exception as e:
             logger.debug(f"Embedding error for text: {str(e)}")
             raise
 
-    async def initialize_knowledge_base(self, knowledge_paths) -> List[Dict]:
+    async def initialize_knowledge_base(self, knowledge_paths) -> list[dict[str, int | str | list[float]]]:
         """Process files and create chunks with embeddings"""
         chunks = []
         chunk_id = 0
 
         for path in knowledge_paths:
             try:
-                with open(path, "r", encoding="UTF-8") as file:
+                with open(file=path, mode="r", encoding="UTF-8") as file:
                     text = file.read()
                     for i in range(0, len(text), self.chunk_size):
-                        chunk_content = text[i : i + self.chunk_size]
-                        embedding = await self._get_embedding(chunk_content)
+                        chunk_content: str = text[i : i + self.chunk_size]
+                        embedding: list[float] = await self._get_embedding(chunk_content)
 
                         chunks.append(
                             {
@@ -79,7 +84,7 @@ class HybridRetriever:
 
         return chunks
 
-    async def setup_qdrant_collection(self, chunks: List[Dict]):
+    async def setup_qdrant_collection(self, chunks):
         """
         Atomically re-creates the collection and uploads points.
         This is a robust method to ensure a fresh state on each startup.
@@ -115,7 +120,7 @@ class HybridRetriever:
             batch_size = 100
             logger.info(f"Uploading {len(points)} points in batches of {batch_size}...")
             for i in range(0, len(points), batch_size):
-                batch = points[i : i + batch_size]
+                batch: list[Any] = points[i : i + batch_size]
                 self.client.upload_points(
                     collection_name=self.collection_name,
                     points=batch,
@@ -130,18 +135,21 @@ class HybridRetriever:
             logger.critical(f"Failed to setup Qdrant collection: {e}", exc_info=True)
             raise
 
-    async def vector_search(self, question: str, limit: int = 3) -> List[Dict]:
+    async def vector_search(self, question: str, limit: int = 3) -> list[dict]:
         """Perform vector similarity search"""
         try:
+            if self.client is None:
+                await self.initialize()  # Ensure client exists
+
             # Check cache first
             if question in self.vector_cache:
                 return self.vector_cache[question]
 
-            embedded_question = await self._get_embedding(question)
+            embedded_question: list[float] = await self._get_embedding(text=question)
 
-            search_res = await self.client.query_points(
+            search_res:list = await self.client.search(
                 collection_name=self.collection_name,
-                query=embedded_question,
+                query_vector    =embedded_question,
                 limit=limit,
                 # score_threshold=0.7,
             )
@@ -164,4 +172,4 @@ class HybridRetriever:
 
 
 # Create a single, shared instance of the retriever
-standard_retriever = HybridRetriever()
+standard_retriever: HybridRetriever = HybridRetriever()

@@ -6,8 +6,9 @@ from datetime import datetime
 
 # Configuration
 API_VERSION = "v22.0"
-PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
-ACCESS_TOKEN = "EAARQrAKzcHUBPGjjWJLxuEmZBG17MBwR071qOqAEIdUDW48H4iFPmw1mUn3rZBUlyT6J7OJZCqmqTmXrWZAQLjkJj02XZCGY9zBKmZBjhD3ZCvYEVkcUI4KWyEI0YM17o8loZBRwZAcEnZBSKIeEgcX7467mXpwf7ZBshtAwFpy4lLMjw6y7msCDsGGZCPjg4iLEHRKlnlvp5CsBKzJbsczLIDeVXm56qgfjfaL1UU7gqT0CCrLP"
+#PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID", 605403165986839)
+PHONE_NUMBER_ID=605403165986839
+ACCESS_TOKEN = "EAARQrAKzcHUBPEwgZCbpDUdo7iC0Ahz5ZBdp5wArsCnGVHOdjsfKHeIMI5ZA6ytZBhehz0SgpVZBsXYSUSKZCaIjw2nOghZCLbvJ9Lu4RNAfbgnJ6PvccMRbGASIhtZAhLqfNvmPzXbMPhH0QY0R7Nk9d6da96jAyN7VwZBp8SaKYMQCmZBJsGUqI6tSf9HpeEAfGV1KlUajBZBPjJe8bVgW7pFwdLix411lZAa10W8um6wIb3AZD"
 # RECIPIENT_NUMBER = "447709769066"
 # RECIPIENT_NUMBER = "+254736391323"
 current_time = datetime.now()
@@ -22,12 +23,12 @@ def whatsapp_messenger(llm_text_output: Any, recipient_number: str):
 
     url = f"https://graph.facebook.com/v22.0/{PHONE_NUMBER_ID}/messages"
 
-    headers = {
+    headers: dict[str, str] = {
         "Authorization": f"Bearer {ACCESS_TOKEN}",
         "Content-Type": "application/json",
     }
 
-    payload = {
+    payload: dict[str, str | dict[str, Any]] = {
         "messaging_product": "whatsapp",
         "recipient_type": "individual",
         "to": f"{recipient_number:}",  # for prod
@@ -54,12 +55,12 @@ def send_invoice_whatsapp(invoice_file_path: str, recipient_number: str):
 
     url = f"https://graph.facebook.com/v22.0/{PHONE_NUMBER_ID}/messages"
 
-    headers = {
+    headers: dict[str, str] = {
         "Authorization": f"Bearer {ACCESS_TOKEN}",
         "Content-Type": "application/json",
     }
 
-    payload = {
+    payload: dict[str, str | dict[str, str]] = {
         "messaging_product": "whatsapp",
         "recipient_type": "individual",
         "to": f"{recipient_number:}",  # for prod

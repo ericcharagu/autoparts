@@ -3,28 +3,32 @@
 import uuid
 from collections import defaultdict, deque
 from datetime import datetime, timedelta
-from typing import Any, List
+from typing import Any
 
 from dotenv import load_dotenv
 from duckduckgo_search import DDGS
 from loguru import logger
 from ollama import AsyncClient
+from prompts import BTC_SYSTEM_PROMPT
 from transformers.utils import get_json_schema
-
+import os
 from schemas import GenerationRequest
 from utils.db.qdrant import standard_retriever
+from utils.db.query import get_last_order
+from utils.image_processor import read_image
 from utils.orders import Order, OrderItem
 from utils.payment import Payments
-
+from dependancies import llm_client
+from utils.cache import get_chat_history, add_to_chat_history
+from prompts import BTC_SYSTEM_PROMPT, BTB_SYSTEM_PROMPT, SECURITY_POST_PROMPT
 # Load environment variables
 load_dotenv()
 
 # Adding logging information
 logger.add("./logs/llm_app", rotation="10 MB")
-ollama_client = AsyncClient(host="http://host.docker.internal:11434")
 # llm_model = "qwen3:0.6b"
 # llm_model = "qwen2.5:1.5b"
-llm_model = "granite3.3:2b"
+llm_model = "qwen3:8b"
 
 
 # Initialize the HybridRetriever
@@ -78,7 +82,7 @@ class ChatHistory:
 
 async def init_qdrant_db(knowledge_base: Any):
     # Get the chunked and embedded data from the model
-    chunks = await standard_retriever.initialize_knowledge_base(knowledge_base)
+    chunks: list[dict[str, int | str | list[float]]] = await standard_retriever.initialize_knowledge_base(knowledge_base)
 
     # Load the chunks into the collection
     await standard_retriever.setup_qdrant_collection(chunks)
@@ -105,7 +109,7 @@ language_codes = {
     "Afrikaans": "afr_Latn",
 }
 # System message
-SYSTEM_PROMPT = """
+"""SYSTEM_PROMPT =
 Role: You are an enthusiastic customer care assistant for Lane, Kenya's leading wholesale car parts supplier helping customers save money on quality auto parts.
 
 Key Responsibilities:
@@ -156,6 +160,23 @@ Special Instructions:
 -Use a maximum of nine sentences and be concise.
  """
 
+def create_order(request: GenerationRequest, customer_details: list) -> str:
+    """
+    Using the customer's details and the request to generate an invoice pdf for the order and confirmation.Create it and send it to the user via whatsapp
+    Args:
+        - request: Users's request from a whatsapp message.
+        - customer_details: List of containing the customer's information such as:
+                - phone_number: user's registered whatsapp number to the service
+                - dropoff_location: default drop-off location of the user
+                - business_id: unique identifier of the garage or business type the user is registered with.
+                - customer_name: user's registered name or default in whatsapp headers
+                - customer_id: user's unique id
+
+    """
+    order_details = CustomerDetails(**customer_details)
+    customer_invoice = Order(order_details).create_invoice_pdf()
+
+    send_invoice_whatsapp(customer_invoice, customer_details[0]["phone_number"])
 
 # Tool functions - imported from utils in the actual code
 def format_quotation(
@@ -164,9 +185,9 @@ def format_quotation(
     garage_id: str,
     name: str,
     location: str,
-    items: List[str],
-    quantities: List[int],
-    prices: List[float],
+    items: list[str],
+    quantities: list[int],
+    prices: list[float],
 ) -> Order:
     """
     Your only task is to generate a summary of the interaction and the customer's requirements. If any of the values are missing, ask the user kindly
@@ -178,8 +199,8 @@ def format_quotation(
           name: Name of the customer
           location: Location of the customer for delivery
           items: User order items
-          quantities:List of item quantities
-          prices: List of item prices
+          quantities:list of item quantities
+          prices: list of item prices
     Returns:
           Order: Validated order object with PDF invoice
     """
@@ -194,7 +215,7 @@ def format_quotation(
     ]
 
     # Create order
-    order = Order(
+    order: Order = Order(
         quote_id=quote_id,
         cus_id=cus_id,
         garage_id=garage_id,
@@ -204,7 +225,7 @@ def format_quotation(
     )
 
     # Generate invoice
-    invoice_path = order.create_invoice_pdf()
+    invoice_path: str = order.create_invoice_pdf()
     logger.info(f"Created order {order.quote_id}, invoice at {invoice_path}")
 
     return order
@@ -233,7 +254,7 @@ def payment_methods(
     and request for {quote_id}, Amount:{Total} to be paid
     """
 
-    new_payment = Payments(quote_id, receipt_id, total, name, option)
+    new_payment: Payments = Payments(quote_id, receipt_id, total, name, option)
     logger.info(f"the new payment object is {new_payment}")
     return new_payment
 
@@ -259,37 +280,45 @@ def low_similarity(user_input: str):
         logger.error(f"Error during web search: {str(e)}")
         return []
 
-
 # Convert the tools to json format before parsing to model
 
 tools = [
     get_json_schema(format_quotation),
     get_json_schema(payment_methods),
-    # get_json_schema(low_similarity),
+    get_json_schema(read_image),
 ]
 
 chat_history = ChatHistory()
 
-json_data = ["utils/data/data.json", "utils/data/tires.json"]
-
-
 # Optimized LLM pipeline
 async def llm_pipeline(
-    request: GenerationRequest, source: str, customer_details: list
+    request: GenerationRequest, source: str, user_number:str, customer_details:list[dict]
 ) -> Any:
     try:
-        # Load the context as the questions generated fron the OCR
-        vector_search_results = await standard_retriever.vector_search(request.prompt)
-        logger.info(vector_search_results)
-        system_message = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+        # Load the context
+        vector_search_results: list[dict[Any, Any]] = await standard_retriever.vector_search(request.user_message)
+        logger.info(f"Vector Search results:{vector_search_results}")
+        chat_history: list[Any] = await get_chat_history(user_number)
+        last_order=await get_last_order(user_phone_number=user_number)
+        final_user_content: str = (
+            f"Given this context: {vector_search_results}. "
+            #f"And this chat history: {chat_history}. "
+            f"Last user order if available {last_order}"
+            f"And these customer details: {customer_details}. "
+            f"Answer the user's query: '{request.user_message}'.\n\n"
+            #f"{SECURITY_POST_PROMPT}" # Append security rules to every prompt
+        )
+        logger.info(f"Customer details:{customer_details}")
+        
+        system_message: list[dict[str, str]]= [
+            {"role": "system", "content": BTC_SYSTEM_PROMPT},
             {
                 "role": "user",
-                "content": f"Use {vector_search_results}and the appropriate tools for an internet search and answer the user's query {request.prompt}. Refer to {customer_details} and {chat_history} for additional context for the response.",
+                "content": final_user_content,
             },
         ]
         if source == "WEB":
-            response = await ollama_client.chat(
+            response = await llm_client.chat(
                 model=llm_model,
                 stream=False,
                 messages=system_message,
@@ -304,7 +333,7 @@ async def llm_pipeline(
                 },
             )
         else:
-            response = await ollama_client.chat(
+            response = await llm_client.chat(
                 model=llm_model,
                 messages=system_message,
                 tools=tools,
@@ -322,14 +351,17 @@ async def llm_pipeline(
         # Extract the response content
         if "message" in response and "content" in response["message"]:
             content = response["message"]["content"]
-            conversation_data_dict = {
-                "user_message": request.prompt,
-                "prompt_timestamp": request.prompt_timestamp,
+            conversation_data_dict: dict[str, Any | datetime | str] = {
+                "user_message": request.user_message,
+                "prompt_timestamp": request.message_timestamp,
                 "llm_response": content,
                 "llm_response_timestamp": llm_response_timestamp,
                 "source": source,
             }  # for logging purposes
+            
             # Convert the responses to vectors for semantic search
+           
+            await add_to_chat_history(user_number=user_number, user_message=request.user_message, llm_response=content)
         return response
     except ValueError as e:
         print(f"Error generating repsonse with llm  {str(e)}")

@@ -9,11 +9,11 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from fastapi.responses import PlainTextResponse
 
 from schemas import GenerationRequest
+from utils.db.query import get_customer_details
 from utils.llm_tools import llm_pipeline
 from utils.whatsapp import whatsapp_messenger
 from utils.text_processing import convert_llm_output_to_readable
 from loguru import logger
-from utils.db.query import get_customer_details
 
 # Adding loggers
 logger.add("./logs/webhooks.log", rotation="10 MB")
@@ -68,7 +68,8 @@ async def handle_whatsapp_message(request: Request):
             raise HTTPException(status_code=400, detail="Invalid payload structure")
 
         # Simplified message extraction
-        message_text = None
+        message_text= None
+        user_number:str=""
         for entry in data.get("entry", []):
             entry_id = entry.get("id", " ")
             for change in entry.get("changes", []):
@@ -89,11 +90,11 @@ async def handle_whatsapp_message(request: Request):
         # Query customer db for data
         customer_details = await get_customer_details(user_number)
         # Create request object for the LLM pipeline
-        mobile_request = GenerationRequest(prompt=message_text)
+        mobile_request = GenerationRequest(user_message=message_text)
 
         # Get AI response
         llm_response = await llm_pipeline(
-            request=mobile_request, source="MOBILE", customer_details=customer_details
+            request=mobile_request, source="MOBILE", user_number=user_number, customer_details=customer_details
         )
         content = llm_response.get("message", {}).get("content", "")
 

@@ -50,5 +50,6 @@ passlib
 bcrypt
 reportlab
 qdrant-client
-pymilvus
+asyncpg
+redis
 pydantic[email]

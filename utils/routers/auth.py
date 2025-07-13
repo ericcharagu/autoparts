@@ -1,5 +1,5 @@
 # auth.py
-import os
+""" import os
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 from loguru import logger
@@ -91,7 +91,7 @@ def get_password_hash(password: str) -> str:
 
 def get_user(username: str) -> Optional[User]:
     db = AsyncSession()
-    user = """SELECT * FROM users WHERE username=:username;"""
+    user = SELECT * FROM users WHERE username=:username;
     db.close()
     return user
 
@@ -186,7 +186,7 @@ async def login_for_access_token(
     summary="Register a new user via API",
 )
 async def api_register_user(user_data: UserCreate, db: AsyncSession = Depends(get_db)):
-    existing_user_query = """SELECT * FROM users WHERE email=:user_data.email;"""
+    existing_user_query = SELECT * FROM users WHERE email=:user_data.email;
     existing_user = execute_query(existing_user_query)
     if existing_user:
         raise HTTPException(
@@ -299,7 +299,7 @@ async def register_form_submit(
         "phone_number": phone_number if phone_number else None,
     }
     try:
-        # existing_user_query = """SELECT * FROM users WHERE email = :email;"""
+        # existing_user_query = SELECT * FROM users WHERE email = :email;
         # existing_user = execute_query(existing_user_query)
         # logger.info(existing_user)
 
@@ -336,7 +336,7 @@ async def register_form_submit(
             status_code=500,
         )
 
-
+ """
 # Protected endpoint example
 # @router.get("/conversations/")
 # async def read_conversations(current_user: User = Depends(get_current_active_user)):
