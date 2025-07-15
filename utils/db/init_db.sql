@@ -104,6 +104,9 @@ INSERT INTO customers (id, name, phone_number, location, account_type, is_repeat
 (3, 'Salim Fundi', '254736391323', 'Buru Buru, Nairobi', 'B2C', TRUE), -- Your test number
 (4, 'Kipchoge Spares', '254700555888', 'Eldoret Town', 'B2C', TRUE);
 
+--Single Insert 
+INSERT INTO customers (id, name, phone_number, location, account_type, is_repeat_customer) VALUES (5, 'Anthony Karanja', '254721498064', 'Westlands, Nairobi', 'BTB', TRUE);
+
 -- Manually set the sequence to avoid conflicts with SERIAL
 SELECT setval('customers_id_seq', (SELECT MAX(id) FROM customers));
 

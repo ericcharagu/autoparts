@@ -52,4 +52,5 @@ reportlab
 qdrant-client
 asyncpg
 redis
+duckdb
 pydantic[email]

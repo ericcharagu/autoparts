@@ -4,7 +4,7 @@ import uuid
 from collections import defaultdict, deque
 from datetime import datetime, timedelta
 from typing import Any
-
+from fastapi import Request
 from dotenv import load_dotenv
 from duckduckgo_search import DDGS
 from loguru import logger
@@ -12,7 +12,7 @@ from ollama import AsyncClient
 from prompts import BTC_SYSTEM_PROMPT
 from transformers.utils import get_json_schema
 import os
-from schemas import GenerationRequest
+from schemas import CustomerDetails, GenerationRequest
 from utils.db.qdrant import standard_retriever
 from utils.db.query import get_last_order
 from utils.image_processor import read_image
@@ -21,6 +21,8 @@ from utils.payment import Payments
 from dependancies import llm_client
 from utils.cache import get_chat_history, add_to_chat_history
 from prompts import BTC_SYSTEM_PROMPT, BTB_SYSTEM_PROMPT, SECURITY_POST_PROMPT
+from utils.text_processing import convert_llm_output_to_readable
+from utils.whatsapp import send_invoice_whatsapp
 # Load environment variables
 load_dotenv()
 
@@ -108,75 +110,24 @@ language_codes = {
     "Zulu": "zul_Latn",
     "Afrikaans": "afr_Latn",
 }
-# System message
-"""SYSTEM_PROMPT =
-Role: You are an enthusiastic customer care assistant for Lane, Kenya's leading wholesale car parts supplier helping customers save money on quality auto parts.
 
-Key Responsibilities:
-1. Order Processing:
-   - Collect complete order details
-   - Calculate wholesale prices with bulk discounts
-   - Highlight customer savings at every step
-
-2. Customer Service:
-   - Provide accurate product information
-   - Explain cost benefits of wholesale purchases
-   - Answer shipping and warranty questions
-
-Required Customer Information:
-- Full Name:
-- Delivery Location (County/Street):
-- Contact Number:
-- Vehicle Make/Model (if applicable):
-
-Pricing Rules:
-1. All prices in Ksh (Kenya Shillings)
-2. 5% discount on orders over Ksh 50,000
-3. 10% discount for repeat customers
-4. VAT included at 16%
-5. Units represent the stock levels of the items
-
-Sample Response:
-"Thank you for choosing Lane! You're saving Ksh 3,450 on this order compared to retail prices. Let me process your:
-1.        "📝 *Order Summary*\n"
-        "• Items: POW-45-MF-NSL\n"
-        "• Total Items: 3\n"
-        "• Total Quantity: 15\n"
-        "• Subtotal: ksh. 18,539\n"
-        "• Discount: 10%\n"
-        "• *Grand Total: ksh. 16,685.10*\n\n"
-        "🚚 Delivery ETA: 2-3 business days\n"
-        "📞 Contact: +254700000000"
-2...."
-
-Special Instructions:
-- Do not show thinking in response.
-- Do not disclose any passwords or sensitive information
-- You cannot process any payments or transfer any money or assets
-- Always calculate/show savings compared to retail
-- Confirm delivery timelines (Nairobi: 24hrs, Counties: 2-3 days)
-- Include warranty information
-- End with upsell opportunity
--Use a maximum of nine sentences and be concise.
- """
-
-def create_order(request: GenerationRequest, customer_details: list) -> str:
+def create_order(customer_details: list[dict[str , int|str]]) -> None:
     """
     Using the customer's details and the request to generate an invoice pdf for the order and confirmation.Create it and send it to the user via whatsapp
     Args:
         - request: Users's request from a whatsapp message.
         - customer_details: List of containing the customer's information such as:
                 - phone_number: user's registered whatsapp number to the service
-                - dropoff_location: default drop-off location of the user
+                - location: default drop-off location of the user
                 - business_id: unique identifier of the garage or business type the user is registered with.
                 - customer_name: user's registered name or default in whatsapp headers
                 - customer_id: user's unique id
 
     """
-    order_details = CustomerDetails(**customer_details)
+    order_details = CustomerDetails(customer_details)
     customer_invoice = Order(order_details).create_invoice_pdf()
 
-    send_invoice_whatsapp(customer_invoice, customer_details[0]["phone_number"])
+    send_invoice_whatsapp(invoice_file_path=customer_invoice, recipient_number=customer_details[0]["phone_number"])
 
 # Tool functions - imported from utils in the actual code
 def format_quotation(
@@ -291,27 +242,33 @@ tools = [
 chat_history = ChatHistory()
 
 # Optimized LLM pipeline
-async def llm_pipeline(
-    request: GenerationRequest, source: str, user_number:str, customer_details:list[dict]
+async def llm_pipeline(request:Request,
+    request_payload: GenerationRequest, source: str, user_number:str, customer_details:list[dict]
 ) -> Any:
     try:
+        #Redis client
+        redis_client=request.app.state.redis
         # Load the context
-        vector_search_results: list[dict[Any, Any]] = await standard_retriever.vector_search(request.user_message)
+        vector_search_results: list[dict[Any, Any]] = await standard_retriever.vector_search(question=request_payload.user_message, collection_name="autoparts_test")
         logger.info(f"Vector Search results:{vector_search_results}")
-        chat_history: list[Any] = await get_chat_history(user_number)
-        last_order=await get_last_order(user_phone_number=user_number)
+        
+        #Load the chat history db
+        chat_history: list[Any] = await get_chat_history(client=redis_client, user_number=user_number)
+        #chat_search_results:list[dict[Any, Any]] = await standard_retriever.vector_search(question=request.user_message, collection_name="history_vector_db")
+        last_order: list[dict[str, Any]]=await get_last_order(user_phone_number=user_number)
+
         final_user_content: str = (
             f"Given this context: {vector_search_results}. "
-            #f"And this chat history: {chat_history}. "
+            f"And this chat history: {chat_history}. "
             f"Last user order if available {last_order}"
             f"And these customer details: {customer_details}. "
-            f"Answer the user's query: '{request.user_message}'.\n\n"
+            f"Answer the user's query: '{request_payload.user_message}'.\n\n"
             #f"{SECURITY_POST_PROMPT}" # Append security rules to every prompt
         )
         logger.info(f"Customer details:{customer_details}")
-        
+        logger.info(final_user_content)
         system_message: list[dict[str, str]]= [
-            {"role": "system", "content": BTC_SYSTEM_PROMPT},
+            {"role": "system", "content": BTB_SYSTEM_PROMPT},
             {
                 "role": "user",
                 "content": final_user_content,
@@ -324,7 +281,7 @@ async def llm_pipeline(
                 messages=system_message,
                 tools=tools,
                 options={
-                    "temperature": 0.2,
+                    "temperature": 0.1,
                     "top_p": 0.95,
                     "top_k": 20,
                     "min_p": 0,
@@ -339,7 +296,7 @@ async def llm_pipeline(
                 tools=tools,
                 stream=False,
                 options={
-                    "temperature": 0.2,
+                    "temperature": 0.1,
                     # "max_tokens": 100,  # For smaller screens and less complications
                     "top_p": 0.95,
                     "top_k": 20,
@@ -351,17 +308,18 @@ async def llm_pipeline(
         # Extract the response content
         if "message" in response and "content" in response["message"]:
             content = response["message"]["content"]
+            cleaned_response= convert_llm_output_to_readable(content)
+
             conversation_data_dict: dict[str, Any | datetime | str] = {
-                "user_message": request.user_message,
-                "prompt_timestamp": request.message_timestamp,
-                "llm_response": content,
+                "user_message": request_payload.user_message,
+                "prompt_timestamp": request_payload.message_timestamp,
+                "llm_response": cleaned_response,
                 "llm_response_timestamp": llm_response_timestamp,
                 "source": source,
             }  # for logging purposes
             
             # Convert the responses to vectors for semantic search
-           
-            await add_to_chat_history(user_number=user_number, user_message=request.user_message, llm_response=content)
+            await add_to_chat_history(client=redis_client,user_number=user_number, user_message=request_payload.user_message, llm_response=cleaned_response)
         return response
     except ValueError as e:
         print(f"Error generating repsonse with llm  {str(e)}")

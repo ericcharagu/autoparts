@@ -15,6 +15,7 @@ services:
     volumes:
       - ./:/app:Z
       - ./logs:/app/logs:Z
+      - ./media_files:/app/media_files:Z
     restart: unless-stopped
     secrets:
       # - postgres_secrets
@@ -36,6 +37,8 @@ services:
       - "--reload" # Remove in production
     ports:
       - "8000:8000"
+  ports:
+    - "8000:8000"
   qdrant:
     image: qdrant/qdrant:latest
     restart: always

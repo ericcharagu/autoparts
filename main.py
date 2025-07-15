@@ -1,7 +1,11 @@
 # main.py
+from typing import Any, AsyncGenerator, Generator
+
+
 import asyncio
 from concurrent.futures import ProcessPoolExecutor
 from contextlib import asynccontextmanager
+from gc import collect
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -10,8 +14,9 @@ from fastapi.staticfiles import StaticFiles
 from loguru import logger
 from ollama import AsyncClient
 import os 
+import redis.asyncio as redis
 from middleware.auth_middleware import auth_middleware
-from utils.llm_tools import init_qdrant_db
+from utils.llm_tools import chat_history, init_qdrant_db
 from utils.routers import auth, chat, webhooks, pages
 from utils.db.qdrant import HybridRetriever
 # Load environment variables from .env file
@@ -20,6 +25,10 @@ load_dotenv()
 # Define knowledge base files
 knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv"]
 retriever: HybridRetriever = HybridRetriever()
+chat_history: dict[str, str]={"user_message":"", "llm_response":""}
+
+VALKEY_HOST=os.getenv("VALKEY_HOST")
+VALKEY_PORT=int(os.getenv("VALKEY_PORT"))
 # --- Application Lifespan ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -28,11 +37,22 @@ async def lifespan(app: FastAPI):
 
     # Initialize a process pool executor
     app.state.process_pool = ProcessPoolExecutor(max_workers=7)
+        # --- Initialize Clients ---
+    app.state.llm_client = AsyncClient(host=os.getenv("OLLAMA_HOST"))
+   # app.state.embedding_client = AsyncClient(host=os.getenv("OLLAMA_EMBEDDING_HOST"))
+    app.state.embedding_client=AsyncClient("http://ollama_embedding:11434")
+    # Initialize Valkey/Redis client
+    redis_pool = redis.ConnectionPool(host=VALKEY_HOST, port=VALKEY_PORT, db=0, decode_responses=True)
+    app.state.redis = redis.Redis(connection_pool=redis_pool)
+    
     try:
-        # Await the vector_database init and setup
+        # Await the knowledge vector_database init and setup
         await retriever.initialize()
         chunks: list[dict[str, int | str | list[float]]] = await retriever.initialize_knowledge_base(knowledge_base)
-        await retriever.setup_qdrant_collection(chunks)
+        await retriever.setup_qdrant_collection(collection_name="autoparts_test", chunks=chunks)
+
+        #Initialise the chat history database 
+        #await retriever.setup_chat_qdrant_collection(chat_history=chat_history, collection_name="history_vector_db")
         yield {"retriever": retriever}
     except Exception as e:
         logger.critical(f"Failed to initialize Qdrant DB: {e}")

@@ -1,5 +1,5 @@
 # utils/db/qdrant.py
-
+from qdrant_client.models import PointStruct
 from typing import Any
 from loguru import logger
 from ollama import AsyncClient
@@ -83,8 +83,41 @@ class HybridRetriever:
                 continue
 
         return chunks
+    async def setup_chat_qdrant_collection(self, collection_name:str,chat_history:dict[str, str]):
+        try:
+            if self.client is None:
+                await self.initialize()
 
-    async def setup_qdrant_collection(self, chunks):
+            logger.info(
+                f"Re-creating collection '{collection_name}' to ensure it is fresh."
+            )
+            await self.client.recreate_collection(
+                collection_name=collection_name,
+                vectors_config=models.VectorParams(
+                    size=self.dimension, distance=models.Distance.COSINE
+                ),
+                timeout=60,  # Use a longer timeout for this combined operation
+            )
+            logger.info(f"Collection '{collection_name}' re-created successfully.")
+
+            embedded_user_message: list[float]=await self._get_embedding(text=chat_history["user_message"])
+            embedded_llm_response: list[float]=await self._get_embedding(text=chat_history["llm_response"])
+            await self.client.upsert(
+    collection_name=collection_name,
+    wait=True,
+    points=[
+        PointStruct(id=id, vector=embedded_user_message, payload={"user_message": user_message}),
+        PointStruct(id=id, vector=embedded_llm_response, payload={"llm_response": llm_response}),
+       
+    ],
+)
+        
+            logger.success(f"Successfully inserted into the chat vector database")
+
+        except Exception as e:
+            logger.critical(f"Failed to setup chat history collection: {e}", exc_info=True)
+            raise
+    async def setup_qdrant_collection(self, collection_name:str, chunks:list):
         """
         Atomically re-creates the collection and uploads points.
         This is a robust method to ensure a fresh state on each startup.
@@ -94,16 +127,16 @@ class HybridRetriever:
                 await self.initialize()
 
             logger.info(
-                f"Re-creating collection '{self.collection_name}' to ensure it is fresh."
+                f"Re-creating collection '{collection_name}' to ensure it is fresh."
             )
             await self.client.recreate_collection(
-                collection_name=self.collection_name,
+                collection_name=collection_name,
                 vectors_config=models.VectorParams(
                     size=self.dimension, distance=models.Distance.COSINE
                 ),
                 timeout=60,  # Use a longer timeout for this combined operation
             )
-            logger.info(f"Collection '{self.collection_name}' re-created successfully.")
+            logger.info(f"Collection '{collection_name}' re-created successfully.")
 
             points = [
                 models.PointStruct(
@@ -122,7 +155,7 @@ class HybridRetriever:
             for i in range(0, len(points), batch_size):
                 batch: list[Any] = points[i : i + batch_size]
                 self.client.upload_points(
-                    collection_name=self.collection_name,
+                    collection_name=collection_name,
                     points=batch,
                     wait=True,
                     parallel=6,
@@ -135,7 +168,7 @@ class HybridRetriever:
             logger.critical(f"Failed to setup Qdrant collection: {e}", exc_info=True)
             raise
 
-    async def vector_search(self, question: str, limit: int = 3) -> list[dict]:
+    async def vector_search(self, question: str, collection_name:str,limit: int = 3) -> list[dict]:
         """Perform vector similarity search"""
         try:
             if self.client is None:
@@ -148,8 +181,8 @@ class HybridRetriever:
             embedded_question: list[float] = await self._get_embedding(text=question)
 
             search_res:list = await self.client.search(
-                collection_name=self.collection_name,
-                query_vector    =embedded_question,
+                collection_name=collection_name,
+                query_vector=embedded_question,
                 limit=limit,
                 # score_threshold=0.7,
             )
@@ -173,3 +206,4 @@ class HybridRetriever:
 
 # Create a single, shared instance of the retriever
 standard_retriever: HybridRetriever = HybridRetriever()
+

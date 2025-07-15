@@ -110,9 +110,9 @@ async def authenticate_user(username: str, password: str, db: AsyncSession):
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
     if expires_delta:
-        expire = datetime.now(timezone.utc) + expires_delta
+        expire = datetime.now() + expires_delta
     else:
-        expire = datetime.now(timezone.utc) + timedelta(days=TOKEN_VALIDITY_DAYS)
+        expire = datetime.now() + timedelta(days=TOKEN_VALIDITY_DAYS)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
@@ -173,7 +173,7 @@ async def login_for_access_token(
     )
 
     # Update last login
-    user.last_login = datetime.now(timezone.utc)
+    user.last_login = datetime.now()
     await db.commit()
 
     return {"access_token": access_token, "token_type": "bearer"}
@@ -239,7 +239,7 @@ async def login_form_submit(
 
     access_token = create_access_token(data={"sub": user.username})
     # Update last login timestamp
-    user.last_login = datetime.now(timezone.utc)
+    user.last_login = datetime.now()
     db.commit()
 
     response = RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
@@ -319,7 +319,7 @@ async def register_form_submit(
             email=user_data["email"],
             phone_number=user_data["phone_number"],
             password_hash=get_password_hash(user_data["password"]),
-            created_at=datetime.now(timezone.utc),
+            created_at=datetime.now(),
             is_active=True,
         )
 

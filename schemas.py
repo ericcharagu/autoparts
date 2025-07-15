@@ -24,14 +24,18 @@ class GenerationRequest(BaseModel):
 class ConversationData(BaseModel):
     """Logging interaction."""
 
-    user_message: Any
+    user_message: str
     user_number: str
     message_timestamp: datetime
     llm_response: str
     llm_response_timestamp: datetime
     interaction_timestamp: datetime = Field(default_factory=lambda: datetime.now())
-
-
+class CustomerDetails(BaseModel):
+    id:int
+    name:str
+    phone_number:str  
+    location:str 
+    account_type:str
 class UserOrders(BaseModel):
     """LLM generated order object from interaction."""
 
@@ -41,10 +45,10 @@ class UserOrders(BaseModel):
     garage_id: str
     name: str
     location: str
-    items: list
-    quantity: list
-    price: list
+    items: list[str]
+    quantity: list[float]
+    price: list[float]
     total: float
-    created_at: Any
+    created_at: datetime
     payment_status: str
-    payment_date: Any
+    payment_date: datetime
