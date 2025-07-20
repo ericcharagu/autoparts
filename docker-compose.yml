@@ -12,6 +12,13 @@ services:
         condition: service_healthy
       valkey:
         condition: service_healthy
+<<<<<<< HEAD
+=======
+      postgres:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+>>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
     volumes:
       - ./:/app:Z
       - ./logs:/app/logs:Z
@@ -35,8 +42,77 @@ services:
       - "--log-level"
       - "info"
       - "--reload" # Remove in production
+      - "--workers"
+      - "6"
     ports:
       - "8000:8000"
+<<<<<<< HEAD
+=======
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: llm_server
+    ports:
+      - "11434:11434"
+    volumes:
+      - autoparts_ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://ollama:11434/api/tags"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    entrypoint: >
+      sh -c "
+        ollama serve &
+        sleep 10 &&
+        ollama pull qwen3:0.6b &&
+        tail -f /dev/null
+      "
+    networks:
+      - autoparts_network
+
+  ollama_embedding:
+    image: ollama/ollama:latest
+    container_name: embedding_server
+    ports:
+      - "11435:11434" # Internal port remains 11434, but host maps to 11435
+    volumes:
+      - autoparts_embeddings_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://ollama_embedding:11434/api/tags"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+      start_period: 30s
+    entrypoint: >
+      sh -c "
+        ollama serve &
+        sleep 10 &&
+        ollama pull nomic-embed-text &&
+        tail -f /dev/null
+      "
+    networks:
+      - autoparts_network
+  valkey:
+    image: valkey/valkey:8.1-alpine
+    container_name: valkey_server
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - autoparts_valkey_data:/data
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - autoparts_network
+
+>>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
   qdrant:
     image: qdrant/qdrant:latest
     restart: always
@@ -128,6 +204,10 @@ volumes:
   autoparts_embeddings_data:
   autoparts_valkey_data:
   autoparts_postgres_data:
+<<<<<<< HEAD
+=======
+  autoparts_valkey_data:
+>>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
 
 secrets:
   whatsapp_secrets:

@@ -4,10 +4,19 @@ from loguru import logger
 import os
 from datetime import datetime
 
+# Logger file path
+logger.add("./logs/whatsapp.log", rotation="1 week")
 # Configuration
 API_VERSION = "v22.0"
+<<<<<<< HEAD
 PHONE_NUMBER_ID: int = int(os.getenv("PHONE_NUMBER_ID", 0))
 ACCESS_TOKEN="EAARQrAKzcHUBPE9nSo8Ujz38yxtxMFkseBttNOC5HYFGuP8UsC0xCJZCqTfYmeydKBCciQwpzZAdHZAVUk9ixueU2oXurdblZCqP9zZCzcNIGAV3OFZBZA2YPOIXZAHgIvM10SAt5zh2hKNeZAaZBA3F4y7IstZAH8PtLLTUGoas4qDzt66fMUzG2lQBkkWi5WtCgS2eXLpMdmmbQZChZCLmYMhBLDwgG5diEZB186ChVNdBZCvfqAZD"
+=======
+PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
+ACCESS_TOKEN = "EAARQrAKzcHUBPHUtSTLnz9WOnXXUeOzenyln7vnh2OBQvuhV0ZB3N63gxtGWO3P7fBD76XZBUP792KAZAAddU8wxWMKgwNkUkDzZAgypkoCGxVYiVOGye3KtNGBZA4ujITmQ8QLKlZCBGJtUhZAdP77LqDiFiaZADstgo3gxC2UI49hY3XrFYIOG2WRIh5XuNq5d3OAI9PBcS50kiPiaWXf97mPpnwQ3QMIZAU7T3A9gEFZCwZD"
+# RECIPIENT_NUMBER = "447709769066"
+RECIPIENT_NUMBER = "+254736391323"
+>>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
 current_time = datetime.now()
 
 @logger.catch

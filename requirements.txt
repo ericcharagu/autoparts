@@ -50,7 +50,13 @@ passlib
 bcrypt
 reportlab
 qdrant-client
+<<<<<<< HEAD
 asyncpg
 redis
 duckdb
+=======
+>>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
 pydantic[email]
+redis
+asyncpg
+torch
