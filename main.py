@@ -16,19 +16,19 @@ from ollama import AsyncClient
 import os 
 import redis.asyncio as redis
 from middleware.auth_middleware import auth_middleware
-from utils.llm_tools import chat_history, init_qdrant_db
-from utils.routers import auth, chat, webhooks, pages
+from utils.llm_tools import chat_history
+from utils.routers import auth,webhooks, pages
 from utils.db.qdrant import HybridRetriever
 # Load environment variables from .env file
 load_dotenv()
 
 # Define knowledge base files
-knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv"]
+#knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv", "utils/data/Hiview_tyres.txt", "utils/data/Hiview_car_care.txt", "utils/data/green_lubes.txt"]
+knowledge_base:list[str]=["utils/data/data.csv", "utils/data/tires.csv"]
 retriever: HybridRetriever = HybridRetriever()
-chat_history: dict[str, str]={"user_message":"", "llm_response":""}
 
 VALKEY_HOST=os.getenv("VALKEY_HOST")
-VALKEY_PORT=int(os.getenv("VALKEY_PORT"))
+VALKEY_PORT=int(os.getenv("VALKEY_PORT", 6379))
 # --- Application Lifespan ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -51,14 +51,12 @@ async def lifespan(app: FastAPI):
         chunks: list[dict[str, int | str | list[float]]] = await retriever.initialize_knowledge_base(knowledge_base)
         await retriever.setup_qdrant_collection(collection_name="autoparts_test", chunks=chunks)
 
-        #Initialise the chat history database 
-        #await retriever.setup_chat_qdrant_collection(chat_history=chat_history, collection_name="history_vector_db")
         yield {"retriever": retriever}
     except Exception as e:
         logger.critical(f"Failed to initialize Qdrant DB: {e}")
         raise
     # Initialize the vector database in the background
-    asyncio.create_task(init_qdrant_db(knowledge_base))
+    #asyncio.create_task(init_qdrant_db(knowledge_base))
     # --- Shutdown logic ---
     if app.state.process_pool:
         app.state.process_pool.shutdown(wait=True)
@@ -97,7 +95,6 @@ app.mount("/static", StaticFiles(directory="templates"), name="static")
 # --- API Routers ---
 #app.include_router(auth.router)
 app.include_router(pages.router)
-app.include_router(chat.router)
 app.include_router(webhooks.router)
 
 

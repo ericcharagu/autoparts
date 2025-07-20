@@ -37,8 +37,6 @@ services:
       - "--reload" # Remove in production
     ports:
       - "8000:8000"
-  ports:
-    - "8000:8000"
   qdrant:
     image: qdrant/qdrant:latest
     restart: always
@@ -62,7 +60,7 @@ services:
       - "11434:11434"
     volumes:
       - autoparts_embeddings_data:/root/.ollama
-    restart: unless-stopped
+    restart: always
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://ollama_embedding:11434/api/tags"]
       interval: 30s

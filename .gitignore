@@ -17,3 +17,7 @@ secrets/
 #terminal logs
 *.bash_history
 logs/
+
+#All user generated data 
+*.db
+media_files/

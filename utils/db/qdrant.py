@@ -7,7 +7,6 @@ from qdrant_client import AsyncQdrantClient, models
 from dotenv import load_dotenv
 from dependancies import embedding_client
 import os
-
 #Load environment
 load_dotenv()
 # Constants
@@ -15,7 +14,7 @@ QDRANT_HOST = "http://qdrant:6333"
 embedding_model_name="nomic-embed-text:latest"
 COLLECTION_NAME = "autoparts_test"
 DIMENSION = 768
-CHUNK_SIZE = 200
+CHUNK_SIZE = 50
 
 
 class HybridRetriever:
@@ -41,7 +40,7 @@ class HybridRetriever:
             await self.client.get_collections()
             
             logger.info("Qdrant client initialized successfully")
-        except Exception as e:
+        except ValueError as e:
             logger.error(f"Failed to initialize Qdrant client: {e}")
             raise
 
@@ -52,7 +51,7 @@ class HybridRetriever:
                 model=embedding_model_name, prompt=text
             )
             return response["embedding"]
-        except Exception as e:
+        except ValueError as e:
             logger.debug(f"Embedding error for text: {str(e)}")
             raise
 
@@ -78,12 +77,12 @@ class HybridRetriever:
                             }
                         )
                         chunk_id += 1
-            except Exception as e:
-                logger.exception(f"Error processing {path}: {str(e)}")
+            except ValueError as e:
+                logger.ValueError(f"Error processing {path}: {str(e)}")
                 continue
-
         return chunks
-    async def setup_chat_qdrant_collection(self, collection_name:str,chat_history:dict[str, str]):
+    """
+    async def setup_chat_qdrant_collection(self, collection_name:str,chat_history:ChatHistory):
         try:
             if self.client is None:
                 await self.initialize()
@@ -114,9 +113,10 @@ class HybridRetriever:
         
             logger.success(f"Successfully inserted into the chat vector database")
 
-        except Exception as e:
+        except ValueError as e:
             logger.critical(f"Failed to setup chat history collection: {e}", exc_info=True)
             raise
+    """
     async def setup_qdrant_collection(self, collection_name:str, chunks:list):
         """
         Atomically re-creates the collection and uploads points.
@@ -164,7 +164,7 @@ class HybridRetriever:
 
             logger.success(f"Successfully inserted {len(chunks)} chunks into Qdrant")
 
-        except Exception as e:
+        except ValueError as e:
             logger.critical(f"Failed to setup Qdrant collection: {e}", exc_info=True)
             raise
 
@@ -189,7 +189,7 @@ class HybridRetriever:
 
             return search_res
 
-        except Exception as e:
+        except ValueError as e:
             logger.debug(f"Search error: {str(e)}")
             raise
 
@@ -198,7 +198,7 @@ class HybridRetriever:
         if self.client:
             try:
                 await self.client.close()
-            except Exception as e:
+            except ValueError as e:
                 logger.warning(f"Error closing Qdrant client: {e}")
             finally:
                 self.client = None

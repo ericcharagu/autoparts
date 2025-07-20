@@ -192,4 +192,4 @@ class Order(OrderBase):
         elements.append(Paragraph("Thank you for your business!", title_style))
         doc.build(elements)
 
-        return output_path
+        return f"{self.quote_id}.pdf"
