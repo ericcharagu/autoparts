@@ -8,7 +8,6 @@ async def get_customer_details(user_number: str) -> list:
     """
     return await execute_query(query, {"user_number": user_number})
 
-<<<<<<< HEAD
 async def get_last_order(user_phone_number: str) -> list[dict[str, Any]]:
     """
     Get the most recent order details for a customer, including all line items,
@@ -43,11 +42,3 @@ async def get_last_order(user_phone_number: str) -> list[dict[str, Any]]:
     LIMIT 1;
     """
     return await execute_query(query, {"user_phone_number": user_phone_number})
-=======
-async def get_customer_details(user_number: str) -> list:
-    """Get all customer details for personalised LLM responses"""
-    query = """
-    SELECT * FROM customers WHERE phone_number = :user_number;
-    """
-    return await execute_query(query, {"user_number": user_number})
->>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9

@@ -72,7 +72,7 @@ class Order(OrderBase):
         output_path = f"../assets/data/{self.quote_id}.pdf"
         doc = SimpleDocTemplate(output_path, pagesize=letter)
         styles = getSampleStyleSheet()
-
+        inch: float =0.1
         # Custom styles
         title_style = ParagraphStyle(
             "Title",

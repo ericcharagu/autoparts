@@ -21,7 +21,6 @@ class GenerationRequest(BaseModel):
     prompt: str
     prompt_timestamp: datetime = Field(default_factory=lambda: datetime.now())
 
-<<<<<<< HEAD
 class AccountTypes(str, Enum):
     SELLER="seller"
     GARAGE_OWNER ="garage_owner"
@@ -35,19 +34,6 @@ class CustomerDetails(BaseModel):
     phone_number:str  
     location:str 
     account_type:AccountTypes
-=======
-class ConversationData(BaseModel):
-    """Logging interaction."""
-
-    user_message: Any
-    user_number: str
-    message_timestamp: datetime
-    llm_response: str
-    llm_response_timestamp: datetime
-    #interaction_timestamp: datetime = Field(default_factory=lambda: datetime.now())
-
-
->>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
 class UserOrders(BaseModel):
     """LLM generated order object from interaction."""
 
@@ -63,7 +49,6 @@ class UserOrders(BaseModel):
     total: float
     created_at: datetime
     payment_status: str
-<<<<<<< HEAD
     payment_date: datetime
 
 class LlmRequestPayload(BaseModel):
@@ -73,26 +58,3 @@ class LlmRequestPayload(BaseModel):
     media_file_path:str 
     image_caption:str
 
-=======
-    payment_date: Any
-
-
-class CustomerDetails(BaseModel):
-    """Customer data types requiered for order and payment completion"""
-
-    customer_id: str
-    customer_number: str
-    business_id: str
-    customer_name: str
-    dropoff_location: str
-    phone_number: str
-
-
-class Business(BaseModel):
-    """Business type data structure"""
-
-    garage_id: str
-    garage_name: str
-    location: str
-    contact_number: str
->>>>>>> dbe6686fa09af48efe4d8525cb2a790caa1e73f9
