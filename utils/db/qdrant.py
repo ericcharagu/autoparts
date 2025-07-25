@@ -127,16 +127,16 @@ class HybridRetriever:
                 await self.initialize()
 
             logger.info(
-                f"Re-creating collection '{collection_name}' to ensure it is fresh."
+                f"Initialise '{collection_name}' to ensure it is fresh."
             )
-            await self.client.recreate_collection(
+            await self.client.create_collection(
                 collection_name=collection_name,
                 vectors_config=models.VectorParams(
-                    size=self.dimension, distance=models.Distance.COSINE
+                    size=self.dimension, distance=models.Distance.COSINE, on_disk=True
                 ),
                 timeout=60,  # Use a longer timeout for this combined operation
             )
-            logger.info(f"Collection '{collection_name}' re-created successfully.")
+            logger.info(f"Collection '{collection_name}' created successfully.")
 
             points = [
                 models.PointStruct(
@@ -194,7 +194,7 @@ class HybridRetriever:
             raise
 
     async def close(self):
-        """Clean up resources"""
+        """Clean up resources""" 
         if self.client:
             try:
                 await self.client.close()

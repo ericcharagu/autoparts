@@ -1,0 +1,485 @@
+--- Information from page_1.jpg ---
+Here is the information extracted from the image:
+
+**Price List List**
+
+**Date:** 7th July 2025
+
+**Client Details:** Nairobi Region Region Dealers
+
+| Sizes       | RoadCruza | Price | Pattern | Wanda | Price | Pattern | Price |
+|-------------|------------|-------|---------|--------|-------|---------|-------|
+| 13"          | 175/70R13  | 4,000 | RA610  | 4,200 | WR080 | 4,200  | BLAZER HP |
+| 13"          | 185/70R13  | 4,200 | RA510  | 4,200  | BLAZER HP |
+| 14"          | 175/65R14   | 4,800 | RA610  | 4,800  | C187    | 4,500  | BLAZER HP |
+| 14"          | 175/70R14   | 4,400 | RA510  | 4,400  | BLAZER HP |
+| 14"          | 185/70R14   | 4,400 | RA510  | 4,400  | BLAZER HP |
+| 14"          | 195/65R15   | 5,200 | RA510  | 5,200  | C187    | 5,000  | BLAZER HP |
+| 14"          | 195/70R14   | 5,200 | RA510  | 5,200  | BLAZER HP |
+| 15"          | 185/65R15   | 5,200 | RA510  | 5,200  | C187    | 5,000  | BLAZER HP |
+| 15"          | 195/65R15   | 5,200 | RA510  | 5,200  | C187    | 5,000  | BLAZER HP |
+| 15"          | 195/70R14   | 5,200 | RA510  | 5,200  | BLAZER HP |
+| 15"          | 205/60R15   | 5,800 | RA510  | 5,800  | C187    | 5,500  | ULTRAFORCE AT-X |
+| 15"          | 205/65R15   | 5,800 | RA510  | 5,800  | C187    | 5,500  | ULTRAFORCE AT-X |
+| 15"          | 205/70R15   | 5,800 | RA510  | 5,800  | C187    | 5,500  | ULTRAFORCE AT-X |
+| 15"          | 215/60R15   | 6,500 | RA510  | 6,500  | C187    | 6,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R15   | 6,500 | RA510  | 6,500  | C187    | 6,000  | ULTRAFORCE AT-X |
+| 15"          | 215/50R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/60R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/65R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/70R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"          | 215/55R17   | 8,000  | RA710  | 8,000  | WR9096  | 7,000  | ULTRAFORCE AT-X |
+| 15"
+
+--- Information from page_2.jpg ---
+Here is the information extracted from the image:
+
+### Price List
+
+**Date:** 7th July 2025
+**Client Details:** Nairobi Region Region Dealers
+
+| Sizes | Pattern | Price |
+|-------|---------|-------|
+| 18"   | AT RA1100 | 12,500 |
+| 19"   | AT RA1100 (8PR) | 12,000 |
+| 20"   | AT RA1100 | 12,500 |
+| 215/55R18 | AT RA1100 | 12,500 |
+| 225/55R18 | AT RA1100 (8PR) | 12,000 |
+| 225/55ZR18 | AT RA1100 | 12,500 |
+| 225/55ZR18 | HT RA4100 | 15,500 |
+| 225/55ZR18 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000 |
+| 225/55ZR19 | HT RA4100 | 16,000
+
+--- Information from page_3.jpg ---
+Here is the extracted information from the image:
+
+**Price List**
+
+**Date:** 7th July 2025
+
+**Client Details:** Nairobi Region Region Dealers
+
+| **Sizes** | **Road Cruza** | **Wanda** | **Compasal** | **Other Brands** |
+|------------|----------------|------------|---------------|---------------------|
+| 205R16C    | 8PR             | 9,000     | VERSANT AT   | 9,000                |
+| 215/70R16LT| 11,000         | RA350     | ULTRAFORCE AT-X | 11,000               |
+| 215/70R16C | 13,500          | RA1100    | ULTRAFORCE AT-X | 13,500               |
+| 225/75R16LT| 14,000          | RA1100    | ULTRAFORCE AT-X | 14,000               |
+| 225/75R16C | 14,500          | RA1100    | ULTRAFORCE AT-X | 14,500               |
+| 235/75R16LT| 15,500          | RA1100    | ULTRAFORCE AT-X | 15,500               |
+| 235/75R16C | 16,000          | RA1100    | ULTRAFORCE AT-X | 16,000               |
+| 235/75R16LT| 17,000          | RA1100    | ULTRAFORCE AT-X | 17,000               |
+| 235/75R16C | 17,500          | RA1100    | ULTRAFORCE AT-X | 17,500               |
+| 235/75R16LT| 18,000          | RA1100    | ULTRAFORCE AT-X | 18,000               |
+| 235/75R16C | 18,500          | RA1100    | ULTRAFORCE AT-X | 18,500               |
+| 235/75R16LT| 19,000          | RA1100    | ULTRAFORCE AT-X | 19,000               |
+| 235/75R16C | 19,500          | RA1100    | ULTRAFORCE AT-X | 19,500               |
+| 235/75R16LT| 20,000          | RA1100    | ULTRAFORCE AT-X | 20,000               |
+| 235/75R16C | 20,500          | RA1100    | ULTRAFORCE AT-X | 20,500               |
+| 235/75R16LT| 21,000          | RA1100    | ULTRAFORCE AT-X | 21,000               |
+| 235/75R16C | 21,500          | RA1100    | ULTRAFORCE AT-X | 21,500               |
+| 235/75R16LT| 22,000          | RA1100    | ULTRAFORCE AT-X | 22,000               |
+| 235/75R16C | 22,500          | RA1100    | ULTRAFORCE AT-X | 22,500               |
+| 235/75R16LT| 23,000          | RA1100    | ULTRAFORCE AT-X | 23,000               |
+| 235/75R16C | 23,500          | RA1100    | ULTRAFORCE AT-X | 23,500               |
+| 235/75R16LT| 24,000          | RA1100    | ULTRAFORCE AT-X | 24,000               |
+| 235/75R16C | 24,500          | RA1100    | ULTRAFORCE AT-X | 24,500               |
+| 235/75R16LT| 25,000          | RA1100    | ULTRAFORCE AT-X | 25,000               |
+| 235/75R16C | 25,500          | RA1100    | ULTRAFORCE AT-X | 25,500               |
+| 235/75R16LT| 26,000          | RA1100    | ULTRAFORCE AT-X | 26,000               |
+| 235/75R16C | 26,500          | RA1100    | ULTRAFORCE AT-X | 26,500               |
+| 235/75R16LT| 27,000          | RA1100    | ULTRAFORCE AT-X | 27,000               |
+| 235/75R16C | 27,500          | RA1100    | ULTRAFORCE AT-X | 27,500               |
+| 235/75R16LT| 28,000          | RA1100    | ULTRAFORCE AT-X | 28,000               |
+| 235/75R16C | 28,500          | RA1100    | ULTRAFORCE AT-X | 28,500               |
+| 235/75R16LT| 29,000          | RA1100    | ULTRAFORCE AT-X | 29,000               |
+| 235/75R16C | 29,500          | RA1100    | ULTRAFORCE AT-X | 29,500               |
+| 235/75R16LT| 30,000          | RA1100    | ULTRAFORCE AT-X | 30,000               |
+| 235/75R16C | 30,500          | RA1100    | ULTRAFORCE AT-X | 30,500               |
+| 235/75R16LT| 31,000          | RA1100    | ULTRAFORCE AT-X | 31,000               |
+| 235/75R16C | 31,500          | RA1100    | ULTRAFORCE AT-X | 31,500               |
+| 235/75R16LT| 32,000          | RA1100    | ULTRAFORCE AT-X | 32,000               |
+| 235/75R16C | 32,500          | RA1100    | ULTRAFORCE AT-X | 32,500               |
+| 235/75R16LT| 33,000          | RA1100    | ULTRAFORCE AT-X | 33,000               |
+| 235/75R16C | 33,500          | RA1100    | ULTRAFORCE AT-X | 33,500               |
+| 235/75R16LT| 34,000          | RA1100    | ULTRAFORCE AT-X | 34,000               |
+| 235/75R16C | 34,500          | RA1100    | ULTRAFORCE AT-X | 34,500               |
+| 235/75R16LT| 35,000          | RA1100    | ULTRAFORCE AT-X | 35,000               |
+| 235/75R16C | 35,500          | RA1100    | ULTRAFORCE AT-X | 35,500               |
+| 235/75R16LT| 36,000          | RA1100    | ULTRAFORCE AT-X | 36,000               |
+| 235/75R16C | 36,500          | RA1100    | ULTRAFORCE AT-X | 36,500               |
+| 235/75R16LT| 37,000          | RA1100    | ULTRAFORCE AT-X | 37,000               |
+| 235/75R16C | 37,500          | RA1100    | ULTRAFORCE AT-X | 37,500               |
+| 235/75R16LT| 38,000          | RA1100    | ULTRAFORCE AT-X | 38,000               |
+| 235/75R16C | 38,500          | RA1100    | ULTRAFORCE AT-X | 38,500               |
+| 235/75R16LT| 39,000          | RA1100    | ULTRAFORCE AT-X | 39,000               |
+| 235/75R16C | 39,500          | RA1100    | ULTRAFORCE AT-X | 39,500               |
+| 235/75R16LT| 40,000          | RA1100    | ULTRAFORCE AT-X | 40,000               |
+| 235/75R16C | 40,500          | RA1100    | ULTRAFORCE AT-X | 40,500               |
+| 235/75R16LT| 41,000          | RA1100    | ULTRAFORCE AT-X | 41,000               |
+| 235/75R16C | 41,500          | RA1100    | ULTRAFORCE AT-X | 41,500               |
+| 235/75R16LT| 42,000          | RA1100    | ULTRAFORCE AT-X | 42,000               |
+| 235/75R16C | 42,500          | RA1100    | ULTRAFORCE AT-X | 42,500               |
+| 235/75R16LT| 43,000          | RA1100    | ULTRAFORCE AT-X | 43,000               |
+| 235/75R16C | 43,500          | RA1100    | ULTRAFORCE AT-X | 43,500               |
+| 235/75R16LT| 44,000          | RA1100    | ULTRAFORCE AT-X | 44,000               |
+| 235/75R16C | 44,500          | RA1100    | ULTRAFORCE AT-X | 44,500               |
+| 235/75R16LT| 45,000          | RA1100    | ULTRAFORCE AT-X | 45,000               |
+| 235/75R16C | 45,500          | RA1100    | ULTRAFORCE AT-X | 45,500               |
+| 235/75R16LT| 46,000          | RA1100    | ULTRAFORCE AT-X | 46,000               |
+| 235/75R16C | 46,500          | RA1100    | ULTRAFORCE AT-X | 46,500               |
+| 235/75R16LT| 47,000
+
+--- Information from page_4.jpg ---
+**Price List**
+
+**Date:** 7th July 2025
+
+**Client Details:** Nairobi Region Region Dealers
+
+| Sizes       | Compasal | Taitong | GoodTyre | Other Brands |
+|-------------|-----------|----------|-----------|---------------|
+| 265/55R18LT-8PR | AT RA1100 | 18,500 |          |                |
+| 265/55R18LT-10PR | AT RA1100 | 18,000 | XT RA7000 | 20,000       |
+| 265/55R19LT-8PR | AT RA1100 | 14,000 |          |                |
+| 255/55R19LT-10PR | AT RA1100 | 15,000 | XT RA7000 | 20,000       |
+| 255/55R19LT-10PR | AT RA1100 | 15,000 | XT RA7000 | 20,000       |
+| 275/55R19LT-10PR | AT RA1100 | 15,000 | XT RA7000 | 20,000       |
+| 275/55R19LT-10PR | AT RA1100 | 15,000 | XT RA7000 | 20,000       |
+| 275/55R19LT-10PR | AT RA1100 | 15,000 | XT RA7000 | 20,000       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500       |
+| 285/55R20LT-10PR | AT RA1100 | 16,000 | XT RA7000 | 21,500
+
+--- Information from page_5.jpg ---
+Here is the extracted information from the image:
+
+**Price List**
+
+**Date:** 7th July 2025
+
+**Client Details:** Nairobi Region Dealers
+
+| Size | Brand | Price |
+|------|--------|-------|
+| 295/80R22.5 - 18PR | Tailong HS268 (AP) | 23,000 |
+| 315/80R22.5 - 20PR (STEER) | CPS21 | 25,500 |
+| 315/80R22.5 - 20PR (AP) | CPS60 | 25,000 |
+| 315/80R22.5 - 20PR (DIFF) | GT268 (AP) | 30,000 |
+| 315/80R22.5 - 20PR (DIFF) | Habilead BM919 (AP) | 32,000 |
+| 385/55R22.5 - 20PR | CPT76 | 35,000 |
+| 12.00R24 - 20PR | 25,000 |
+| 17.5 x 6.00 - 6 HOLES | HIVIEW | 5,700 |
+| 17.5 x 6.00 - 6 HOLES | 25,000 |
+| 19.5 x 6.75 - 6 HOLES | 28,000 |
+| 17.5 x 6.75 - 6 HOLES | 25,000 |
+| 19.5 x 6.75 - 6 HOLES | 28,000 |
+| 22.5 x 8.25 - 8 HOLES | 25,000 |
+| 22.5 x 8.25 - 8 HOLES | 25,000 |
+| 22.5 x 8.25 - 10 HOLES | 25,000 |
+| 22.5 x 8.25 - 10 HOLES | 25,000 |
+| 22.5 x 9.00 - 10 HOLES | 25,000 |
+| 22.5 x 11.75 - 10 HOLES | 25,000 |
+| 3.00-17 6PR | WANDA TL P6161 | 2,500 |
+| 2.75-18 6PR | WANDA TL P6161 | 2,700 |
+| 3.00-18 6PR | WANDA TL P6231F | 2,700 |
+| 4.00-8 6PR (WITH TUBE) | WANDA TL P227 | 2,900 |
+| 4.00-8 6PR (WITH TUBE) | WANDA TL P6133A | 2,000 |
+
+**Payment Methods:**
+- Cash
+- PayBill
+- Bank Transfer
+
+--- Information from page_6.jpg ---
+**Price List**
+
+**Date:** 7th July 2025
+
+**Client Details:** Nairobi Region Dealers
+
+**Payment:** Payment in full is required prior to the consignment leaving our warehouse.
+
+**Prices:** Prices are inclusive of VAT.
+
+**About Refunds & Returns:**
+
+- Any complaint must be made in writing within 3 days after delivery. Any loss or breakage as a result of storage or in transit is the responsibility of the customer and not the company.
+- Goods once sold are not accepted back. In case of acceptance, a minimum of 10% handling charges will be charged.
+
+**NB:** The above price list overwrites any previous price list. Hiview International reserves the right to change the prices without prior notice.
+

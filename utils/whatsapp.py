@@ -9,7 +9,7 @@ logger.add("./logs/whatsapp.log", rotation="1 week")
 # Configuration
 API_VERSION = "v22.0"
 PHONE_NUMBER_ID: int = int(os.getenv("PHONE_NUMBER_ID", 0))
-ACCESS_TOKEN="EAARQrAKzcHUBPPVZAIxg7gMEwS3xZB8IvPV1YsnS7nrvYZCsWTG3y9mqyU7eOo6AWh4OCqvkU1hNGtW2Lk43ggv9ZACe8iBZAZCPsArTWi4A3CBhtEUiVY43xOEfTkQC6HF33F84ZA3mSKBqTZCqFdJaDQqpXhbz29mtmdERpQh4WNf6n9ZBZAa7ma1xQKXwb5UGZBJyvfXFfFKwMmV1cu3ydEABmxaQNBw7dSiUgV1NwHUAyIZD"
+ACCESS_TOKEN="EAARQrAKzcHUBPNtDgQvrhtZAJOimiaAKaYr44dZAFNkpSpDNbs1PVSK2Ql1ekqhJ72y8jiIKPK4x52exJeuSxCoc8KwjfUtbD77fWy7EkdScLdgTFIDHtRUIrKBZCPYGE3XJb2mEaur3vVR0q5SQ05WzlCqfoKYFhYmQ2sPsx7EjAtogAns0NnudrjhZCmZAc7kohwPpjESN6YKCwZB5FcXT1HYPmvj1InTrRH4pL7"
 current_time = datetime.now()
 
 @logger.catch
@@ -35,16 +35,18 @@ def whatsapp_messenger(llm_text_output: Any, recipient_number: str):
             "body": llm_text_output,
         },
     }
-    try:
-        response = requests.post(url, headers=headers, json=payload)
-        response.raise_for_status()  # Raises exception for HTTP errors
-        logger.info(response)
-        
+  
+    response = requests.post(url, headers=headers, json=payload)
+    #response.raise_for_status()  # Raises exception for HTTP errors
+    if response.status_code != 200:
+        logger.error(f"Failed to send message to {recipient_number}. Status: {response.status_code}")
+    
+    """
     except requests.exceptions.RequestException as e:
         logger.debug(f"Error making request: {e}")
         if hasattr(e, "response") and e.response:
             logger.debug(f"Error details: {e.response.text}")
-
+"""
 def send_invoice_whatsapp( recipient_number: str|int, invoice_filename:str):
     """Send llm response via whatspp."""
     if not ACCESS_TOKEN:
@@ -68,15 +70,19 @@ def send_invoice_whatsapp( recipient_number: str|int, invoice_filename:str):
             "filename": f"{invoice_filename}",
         },
     }
-    try:
-        response = requests.post(url, headers=headers, json=payload)
-        response.raise_for_status()  # Raises exception for HTTP errors
-
+    
+    response = requests.post(url, headers=headers, json=payload)
+    #response.raise_for_status()  # Raises exception for HTTP errors
+    if response.status_code != 200:
+        logger.error(f"Failed to send message to {recipient_number}.Status: {response.status_code}")
+        
+       
+"""
     except requests.exceptions.RequestException as e:
         logger.error(f"Error making request: {e}")
         if hasattr(e, "response") and e.response:
             logger.debug(f"Error details: {e.response.text}")
-
+"""
 
 # used for testing
 # whatsapp_messenger("This is the test for lantern")

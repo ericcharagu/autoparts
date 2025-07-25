@@ -12,6 +12,8 @@ services:
         condition: service_healthy
       valkey:
         condition: service_healthy
+      neo_graph:
+        condition: service_healthy
     volumes:
       - ./:/app:Z
       - ./logs:/app/logs:Z
@@ -78,7 +80,25 @@ services:
       "
     networks:
       - autoparts_network
-
+  neo_graph:
+    image: neo4j:2025.06.2-bullseye
+    container_name: graph_server
+    restart: always
+    ports:
+      - 7474:7474 #Browser
+      - 7687:7687
+    volumes:
+      - autoparts_graph_data:/data
+    environment:
+      - NEO4J_AUTH=none
+      - NEO4J_PLUGINS=["apoc"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7474"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    networks:
+      - autoparts_network
   valkey:
     image: valkey/valkey:8.1-alpine
     container_name: valkey_server
@@ -130,6 +150,7 @@ volumes:
   autoparts_embeddings_data:
   autoparts_valkey_data:
   autoparts_postgres_data:
+  autoparts_graph_data:
 
 secrets:
   whatsapp_secrets:

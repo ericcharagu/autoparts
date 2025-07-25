@@ -24,3 +24,4 @@
 **/*.pyo
 **/*.pyd
 **/*/secrets/
+**/.jpeg 

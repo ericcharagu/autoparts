@@ -13,22 +13,25 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from loguru import logger
 from ollama import AsyncClient
-import os 
+import os
 import redis.asyncio as redis
 from middleware.auth_middleware import auth_middleware
-from utils.llm_tools import chat_history
-from utils.routers import auth,webhooks, pages
+from utils.llm import chat_history
+from utils.routers import auth, webhooks, pages
 from utils.db.qdrant import HybridRetriever
+
 # Load environment variables from .env file
 load_dotenv()
 
 # Define knowledge base files
-#knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv", "utils/data/Hiview_tyres.txt", "utils/data/Hiview_car_care.txt", "utils/data/green_lubes.txt"]
-knowledge_base:list[str]=["utils/data/data.csv", "utils/data/tires.csv"]
+# knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv", "utils/data/hiview_tyres.txt", "utils/data/hiview_care.txt", "utils/data/green_lubes.txt", "utils/data/dealer_tyres.txt"]
+knowledge_base: list[str] = ["utils/data/dealer_tyres.txt"]
 retriever: HybridRetriever = HybridRetriever()
 
-VALKEY_HOST=os.getenv("VALKEY_HOST")
-VALKEY_PORT=int(os.getenv("VALKEY_PORT", 6379))
+VALKEY_HOST = os.getenv("VALKEY_HOST")
+VALKEY_PORT = int(os.getenv("VALKEY_PORT", 6379))
+
+
 # --- Application Lifespan ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -36,31 +39,39 @@ async def lifespan(app: FastAPI):
     logger.info("Starting application...")
 
     # Initialize a process pool executor
-    app.state.process_pool = ProcessPoolExecutor(max_workers=7)
-        # --- Initialize Clients ---
+    # app.state.process_pool = ProcessPoolExecutor(max_workers=7)
+    # --- Initialize Clients ---
     app.state.llm_client = AsyncClient(host=os.getenv("OLLAMA_HOST"))
-   # app.state.embedding_client = AsyncClient(host=os.getenv("OLLAMA_EMBEDDING_HOST"))
-    app.state.embedding_client=AsyncClient("http://ollama_embedding:11434")
+    # app.state.embedding_client = AsyncClient(host=os.getenv("OLLAMA_EMBEDDING_HOST"))
+    app.state.embedding_client = AsyncClient("http://ollama_embedding:11434")
     # Initialize Valkey/Redis client
-    redis_pool = redis.ConnectionPool(host=VALKEY_HOST, port=VALKEY_PORT, db=0, decode_responses=True)
+    redis_pool = redis.ConnectionPool(
+        host=VALKEY_HOST, port=VALKEY_PORT, db=0, decode_responses=True
+    )
     app.state.redis = redis.Redis(connection_pool=redis_pool)
-    
+
     try:
         # Await the knowledge vector_database init and setup
         await retriever.initialize()
-        chunks: list[dict[str, int | str | list[float]]] = await retriever.initialize_knowledge_base(knowledge_base)
-        await retriever.setup_qdrant_collection(collection_name="autoparts_test", chunks=chunks)
+        chunks: list[dict[str, int | str | list[float]]] = (
+            await retriever.initialize_knowledge_base(knowledge_base)
+        )
+        # await retriever.setup_qdrant_collection(collection_name="autoparts_test", chunks=chunks)
 
         yield {"retriever": retriever}
     except Exception as e:
         logger.critical(f"Failed to initialize Qdrant DB: {e}")
         raise
     # Initialize the vector database in the background
-    #asyncio.create_task(init_qdrant_db(knowledge_base))
+    # asyncio.create_task(init_qdrant_db(knowledge_base))
+
     # --- Shutdown logic ---
-    if app.state.process_pool:
-        app.state.process_pool.shutdown(wait=True)
+    # if app.state.process_pool:
+    #    app.state.process_pool.shutdown(wait=True)
     logger.info("...Application shutdown complete.")
+    await app.state.redis.close()
+    await retriever.close()
+    logger.info("All connections closed.")
 
 
 # --- FastAPI App Initialization ---
@@ -93,7 +104,7 @@ app.middleware("http")(auth_middleware)
 app.mount("/static", StaticFiles(directory="templates"), name="static")
 
 # --- API Routers ---
-#app.include_router(auth.router)
+# app.include_router(auth.router)
 app.include_router(pages.router)
 app.include_router(webhooks.router)
 
