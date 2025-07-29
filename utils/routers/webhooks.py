@@ -10,13 +10,14 @@ from fastapi.responses import PlainTextResponse
 import httpx
 import uuid
 from schemas import CustomerDetails, GenerationRequest, LlmRequestPayload
-from utils.cache import is_message_processed
+from utils.cache import add_to_chat_history, is_message_processed
 from utils.db.query import get_customer_details
-from utils.llm import llm_pipeline
+from utils.llm.llm_base import available_functions, llm_model, llm_pipeline, tool_checker, tools
+from utils.llm.prompt import BTB_SYSTEM_PROMPT
 from utils.whatsapp import ACCESS_TOKEN, whatsapp_messenger
-from utils.text_processing import convert_llm_output_to_readable
+from utils.llm.text_processing import convert_llm_output_to_readable
 from loguru import logger
-
+from ollama import chat
 # Add logging path
 logger.add("./logs/webhooks.log", rotation="1 week")
 router = APIRouter(
@@ -68,14 +69,13 @@ async def download_whatsapp_media(media_id: str) -> str:
 
     # 3. Save to a unique file
     file_extension = response.headers.get("content-type", "image/jpeg").split("/")[-1]
-    file_name = f"{uuid.uuid4()}.{file_extension}"
-    file_path = os.path.join("media_files", file_name)
-    with open(file_path, "wb") as f:
+    file_name: str = f"{uuid.uuid4()}.{file_extension}"
+    file_path: str = os.path.join("media_files", file_name)
+    with open(file=file_path, mode="wb") as f:
         f.write(response.content)
 
     logger.info(f"Media {media_id} downloaded and saved to {file_path}")
     return file_path
-
 
 async def process_message_in_background(
     request: Request,
@@ -87,22 +87,31 @@ async def process_message_in_background(
     """This function runs in the background to process and respond to messages."""
     logger.info(f"Background task started for user {user_number}.")
     media_file_path: str = ""
+    final_response_content:str=""
+      # Redis client
+    redis_client = request.app.state.redis
     try:
         customer_details: list[Any] = await get_customer_details(user_number)
         if media_id:
             media_file_path: str = await download_whatsapp_media(media_id=media_id)
         # Prepare the data for llm to ingest
+        messages: list[dict[str, str]] = [
+            {"role": "system", "content": BTB_SYSTEM_PROMPT},     
+        ]
 
-        llm_pipeline_payload = LlmRequestPayload(
+        # Get final response from model with function outputs
+        tool_call_payload = LlmRequestPayload(
             user_message=user_message,
-            user_number=user_number,
-            customer_details=customer_details,
+            user_number="",
+            messages=messages,
+            customer_details=[],
             media_file_path=media_file_path,
             image_caption=image_caption,
         )
-        llm_response = await llm_pipeline(
-            request=request, llm_request_payload=llm_pipeline_payload
-        )
+        llm_response=chat(llm_model,messages=[{"role":"user", "content":user_message or media_file_path}], tools=tools )
+        #llm_response =await tool_checker(user_message=user_message)
+
+        logger.info(llm_response)
         if not llm_response or "message" not in llm_response:
             logger.error(f"Received invalid or None response from LLM pipeline for user {user_number}.")
             # Send a generic error message
@@ -111,16 +120,50 @@ async def process_message_in_background(
                 recipient_number=user_number
             )
             return
-        content: str = llm_response.get("message", {}).get("content", "")
-        if not content:
-             logger.warning(f"LLM returned empty content for user {user_number}. Sending fallback.")
-             content = "I'm not sure how to respond to that. Could you please rephrase your request?"
-        cleaned_response = convert_llm_output_to_readable(content)
+
+        if llm_response.message.tool_calls:
+            for tool in llm_response.message.tool_calls:
+                # Ensure the function is available, and then call it
+                if function_to_call := available_functions.get(tool.function.name):
+                    logger.info(f"Calling function: {tool.function.name}")
+                    logger.info(f"Arguments:'{tool.function.arguments}")        
+                    # Get the actual function object
+                    output = function_to_call(**tool.function.arguments)
+                    logger.info(f"Function output:{output}")
+                else:
+                    logger.info(f"Function {tool.function.name}not found")
+
+            if llm_response.message.tool_calls:
+                messages.append(llm_response.message)
+                messages.append({'role': 'tool', 'content': str(output), 'tool_name': tool.function.name})
+
+            llm_pipeline_payload = LlmRequestPayload(
+            user_message=user_message,
+            user_number=user_number,
+            messages=messages,
+            customer_details=customer_details,
+            media_file_path=media_file_path,
+            image_caption=image_caption,
+        )
+            final_response =await llm_pipeline(request=request, llm_request_payload=llm_pipeline_payload)
+            logger.info('Final response:', final_response.message.content)
+            if not final_response.message.content:
+                logger.warning(f"LLM returned empty content for user {user_number}. Sending fallback.")
+                final_response_content = "I'm not sure how to respond to that. Could you please rephrase your request."
+            else:
+                final_response_content=final_response.message.content 
+        cleaned_response = convert_llm_output_to_readable(final_response_content)
         whatsapp_messenger(
             llm_text_output=cleaned_response, recipient_number=user_number
         )
-        logger.success(f"Response sent to {user_number}.")
-    except ValueError as e:
+        await add_to_chat_history(
+            client=redis_client,
+            user_number=user_number,
+            user_message=user_message,
+            llm_response=cleaned_response,
+        )
+    
+    except Exception as e:
         logger.error(f"Background task failed for {user_number}: {e}", exc_info=True)
 
 
@@ -158,7 +201,6 @@ async def handle_whatsapp_message(request: Request, background_tasks: Background
         user_number: str = ""
         image_caption: str = ""
         for entry in data.get("entry", []):
-            logger.info(entry)
             for change in entry.get("changes", []):
                 contact_info = change.get("value", {}).get("contacts", [])
                 if contact_info:
@@ -170,7 +212,6 @@ async def handle_whatsapp_message(request: Request, background_tasks: Background
                 if messages and messages[0].get("type") == "image":
                     media_id: str = messages[0].get("image", {}).get("id")
                     image_caption: str = messages[0].get("image", {}).get("caption", "")
-                    logger.info(media_id)
                     break
             if user_message or media_id:
                 break

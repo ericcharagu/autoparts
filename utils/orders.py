@@ -8,7 +8,10 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 import os
 from loguru import logger 
 from dotenv import load_dotenv
+import pathlib
 
+BASE_DIR = pathlib.Path(__file__).parent.parent
+ASSETS_DIR = BASE_DIR / "assets"
 #Env
 load_dotenv()
 
@@ -69,8 +72,11 @@ class OrderBase(BaseModel):
 class Order(OrderBase):
     def create_invoice_pdf(self, logo_path: str = "../assets/media/logo.png") -> str:
         """Generate a PDF invoice for the order."""
-        output_path = f"../assets/data/{self.quote_id}.pdf"
-        doc = SimpleDocTemplate(output_path, pagesize=letter)
+        output_dir = ASSETS_DIR / "data"
+        output_dir.mkdir(exist_ok=True, parents=True)
+        output_path = output_dir / f"{self.quote_id}.pdf"
+        #output_path = f"../assets/data/{self.quote_id}.pdf"
+        doc = SimpleDocTemplate(f"{self.quote.id}", pagesize=letter)
         styles = getSampleStyleSheet()
         inch: float =0.1
         # Custom styles

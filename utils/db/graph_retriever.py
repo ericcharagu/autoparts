@@ -15,7 +15,7 @@ load_dotenv()
 class GraphRetriever:
     def __init__(self):
         uri = os.getenv("NEO4J_URI")
-        user = os.getenv("NEO4J_USER", "neo4j")
+        user: str = os.getenv("NEO4J_USER", "neo4j")
         password: str = os.getenv("NEO4J_PASSWORD", "NEO4J_PASSWORD")
         self._driver = AsyncGraphDatabase.driver(uri, auth=(user, password))
 

@@ -1,4 +1,4 @@
--- SQL for creating all database tables for the AutoParts application
+-- SQL for creating all database tables for the Lane AI-Whatsapp application
 
 -- Drop tables in reverse order of dependency to avoid foreign key errors
 DROP TABLE IF EXISTS order_items;
@@ -105,7 +105,7 @@ INSERT INTO customers (id, name, phone_number, location, account_type, is_repeat
 (4, 'Kipchoge Spares', '254700555888', 'Eldoret Town', 'B2C', TRUE);
 
 --Single Insert 
-INSERT INTO customers (id, name, phone_number, location, account_type, is_repeat_customer) VALUES (5, 'Anthony Karanja', '254721498064', 'Westlands, Nairobi', 'BTB', TRUE);
+INSERT INTO customers (id, name, phone_number, location, account_type, is_repeat_customer) VALUES (5, 'Anthony Karanja', '254718109629', 'Westlands, Nairobi', 'BTB', TRUE);
 
 -- Manually set the sequence to avoid conflicts with SERIAL
 SELECT setval('customers_id_seq', (SELECT MAX(id) FROM customers));

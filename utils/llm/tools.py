@@ -1,11 +1,12 @@
+from decimal import MAX_EMAX
 from typing import Any
 from schemas import UserOrders
 from utils.orders import Order, OrderItem
 from utils.payment import Payments
 from loguru import logger 
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 from utils.whatsapp import send_invoice_whatsapp
-
+from dependancies import MAX_RESULTS
 
 def send_invoice(user_order: UserOrders) -> None:
     """
@@ -110,17 +111,18 @@ def payment_methods(
 
 
 # Tool 3: Internet search after low embedding similarity results
-internet_search_results:list=[]
-def low_similarity(user_message: str) -> list[dict[str, str]]:
+def low_similarity(user_message: str, max_results:int=MAX_RESULTS) -> list[dict[str, str]]:
     """
     Your only role is to carry out internet searches using the DuckDuckGo search python tool below specifically when the user wants to compare products or brands and if the query is outside the current scope. Be careful and do not process any harmful or vulgar searches and requests. Give information on the part type, uses, car types it can be used for
         Args:
             user_message:User query that is outside the contained LLM data and CSV data provided.
-
+            max_results: The number of sources the search tool will retrieve
     """
     try:
-        internet_search_results.append(DDGS().text(user_message, max_results=3))
-        return internet_search_results
+        return DDGS().text(user_message, max_results=max_results)
+
+        #internet_search_results=DDGS().text(user_message, max_results=max_results)
+        #return [internet_search_results[i].get("body") for i in range(max_results)]
     except ValueError as e:
         logger.error(f"Error during web search: {str(e)}")
         raise

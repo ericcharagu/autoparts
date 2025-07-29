@@ -1,4 +1,5 @@
 # main.py
+from mimetypes import knownfiles
 from typing import Any, AsyncGenerator, Generator
 
 
@@ -16,7 +17,7 @@ from ollama import AsyncClient
 import os
 import redis.asyncio as redis
 from middleware.auth_middleware import auth_middleware
-from utils.llm import chat_history
+from utils.llm.llm_base import chat_history
 from utils.routers import auth, webhooks, pages
 from utils.db.qdrant import HybridRetriever
 
@@ -24,12 +25,13 @@ from utils.db.qdrant import HybridRetriever
 load_dotenv()
 
 # Define knowledge base files
-# knowledge_base: list[str] = ["utils/data/data.csv", "utils/data/tires.csv", "utils/data/hiview_tyres.txt", "utils/data/hiview_care.txt", "utils/data/green_lubes.txt", "utils/data/dealer_tyres.txt"]
-knowledge_base: list[str] = ["utils/data/dealer_tyres.txt"]
+knowledge_base: list[str] = ["utils/data/data.json", "utils/data/tires.json", "utils/data/hiview_tyres.txt", "utils/data/hiview_care.txt", "utils/data/green_lubes.txt", "utils/data/dealer_tyres.txt"]
+#knowledge_base: list[str] = ["utils/data/green_lubes.txt"]
+#knowledge_base: list[Any]=[]
 retriever: HybridRetriever = HybridRetriever()
 
-VALKEY_HOST = os.getenv("VALKEY_HOST")
-VALKEY_PORT = int(os.getenv("VALKEY_PORT", 6379))
+VALKEY_HOST: str = os.getenv("VALKEY_HOST", "")
+VALKEY_PORT: int = int(os.getenv("VALKEY_PORT", 6379))
 
 
 # --- Application Lifespan ---
@@ -52,19 +54,21 @@ async def lifespan(app: FastAPI):
 
     try:
         # Await the knowledge vector_database init and setup
-        await retriever.initialize()
-        chunks: list[dict[str, int | str | list[float]]] = (
-            await retriever.initialize_knowledge_base(knowledge_base)
-        )
-        # await retriever.setup_qdrant_collection(collection_name="autoparts_test", chunks=chunks)
+            # Initialize the vector database in the background
+        collections = await retriever.initialize()
+        logger.info(f"the collections are {collections}")
+        #chunks: list[dict[str, int | str | list[float]]] = (
+        #    await retriever.initialize_knowledge_base(knowledge_base)
+        #)
+        #await retriever.setup_qdrant_collection(collection_name="lane_data_collection",chunks=chunks)
+        
+        logger.info("Vector DB initialization complete. Application is ready.")
 
         yield {"retriever": retriever}
     except Exception as e:
         logger.critical(f"Failed to initialize Qdrant DB: {e}")
         raise
     # Initialize the vector database in the background
-    # asyncio.create_task(init_qdrant_db(knowledge_base))
-
     # --- Shutdown logic ---
     # if app.state.process_pool:
     #    app.state.process_pool.shutdown(wait=True)

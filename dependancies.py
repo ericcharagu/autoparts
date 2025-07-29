@@ -1,3 +1,4 @@
+from sre_parse import MAX_REPEAT
 from ollama import AsyncClient
 from dotenv import load_dotenv
 import os
@@ -15,3 +16,5 @@ def ollama_llm():
 
 embedding_client=ollama_embedding()
 llm_client=ollama_llm()
+
+MAX_RESULTS:int=3

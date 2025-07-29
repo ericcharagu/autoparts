@@ -26,7 +26,7 @@ services:
     env_file:
       - .env
     networks:
-      - autoparts_network
+      - lane_network
     command:
       - "uvicorn"
       - "main:app"
@@ -56,14 +56,14 @@ services:
       - source: qdrant_config
         target: /qdrant/config/production.yaml
     volumes:
-      - autoparts_qdrant_data:/qdrant/storage
+      - qdrant_data:/qdrant/storage
   ollama_embedding:
     image: ollama/ollama:latest
     container_name: embedding_server
     ports:
       - "11434:11434"
     volumes:
-      - autoparts_embeddings_data:/root/.ollama
+      - embeddings_data:/root/.ollama
     restart: always
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://ollama_embedding:11434/api/tags"]
@@ -79,7 +79,7 @@ services:
         tail -f /dev/null
       "
     networks:
-      - autoparts_network
+      - lane_network
   neo_graph:
     image: neo4j:2025.06.2-bullseye
     container_name: graph_server
@@ -88,7 +88,7 @@ services:
       - 7474:7474 #Browser
       - 7687:7687
     volumes:
-      - autoparts_graph_data:/data
+      - graph_data:/data
     environment:
       - NEO4J_AUTH=none
       - NEO4J_PLUGINS=["apoc"]
@@ -98,7 +98,7 @@ services:
       timeout: 10s
       retries: 5
     networks:
-      - autoparts_network
+      - lane_network
   valkey:
     image: valkey/valkey:8.1-alpine
     container_name: valkey_server
@@ -106,21 +106,21 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - autoparts_valkey_data:/data
+      - valkey_data:/data
     healthcheck:
       test: ["CMD", "valkey-cli", "ping"]
       interval: 5s
       timeout: 5s
       retries: 5
     networks:
-      - autoparts_network
+      - lane_network
   postgres:
     image: docker.io/library/postgres:17.5-alpine
     container_name: db_server
     ports:
       - "5432:5432"
     volumes:
-      - autoparts_postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
     environment:
       - POSTGRES_DB=autoparts_db
@@ -134,7 +134,7 @@ services:
       retries: 3
       start_period: 30s
     networks:
-      - autoparts_network
+      - lane_network
 
 configs:
   qdrant_config:
@@ -142,15 +142,15 @@ configs:
       log_level: INFO
 
 networks:
-  autoparts_network:
+  lane_network:
     driver: bridge
 
 volumes:
-  autoparts_qdrant_data:
-  autoparts_embeddings_data:
-  autoparts_valkey_data:
-  autoparts_postgres_data:
-  autoparts_graph_data:
+  qdrant_data:
+  embeddings_data:
+  valkey_data:
+  postgres_data:
+  graph_data:
 
 secrets:
   whatsapp_secrets:

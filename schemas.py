@@ -54,6 +54,7 @@ class UserOrders(BaseModel):
 class LlmRequestPayload(BaseModel):
     user_message:str 
     user_number:str
+    messages:list[Any]
     customer_details:list[dict[str, str|int|bool|datetime]]
     media_file_path:str 
     image_caption:str
